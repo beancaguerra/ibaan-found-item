@@ -87,7 +87,7 @@
                     ?>
                 </div>
             </section>
-            
+        
             <!--database connection and display section-->
             <section class="form-output" id="form-output">
                 <div class="output-container">
@@ -112,8 +112,8 @@
                         <table style="width:100%">
                             <tr>
                                 <th style="text-align: left; background-color: #cccccc; color: #ec9006"><h3>User Info</h3></th>
-                                <th style="text-align: right; background-color: #cccccc; color: #ec9006"><a style="color:#ec9006; margin: 10px;" href='Update_account.php?accountId=<?php echo $row['accountId']; ?> & fname=<?php echo $row['fname']; ?> & lname=<?php echo $row['lname']; ?> & contact=<?php echo $row['contact']; ?> & address=<?php echo $row['address']; ?> & gender=<?php echo $row['gender']; ?> & email=<?php echo $row['email']; ?> & password=<?php echo $row['password']; ?>'>Edit</a>
-                                    <a style="color:#ec9006; margin: 10px;" href='delete_user_acc.php?id="<?php echo $row['accountId']; ?>"'>Delete</a></th>
+                                <th style="text-align: right; background-color: #cccccc; color: #ec9006"><a style="color:#ec9006; margin: 10px;" href='Update_account.php?accountId=<?php echo $row['accountId']; ?> & fname=<?php echo $row['fname']; ?> & lname=<?php echo $row['lname']; ?> & contact=<?php echo $row['contact']; ?> & address=<?php echo $row['address']; ?> & gender=<?php echo $row['gender']; ?> & email=<?php echo $row['email']; ?> & password=<?php echo $row['password']; ?>'></a>
+                                    <a style="color:#ec9006; margin: 10px;" href='delete_user_acc.php?id="<?php echo $row['accountId']; ?>"'></a></th>
                             </tr>
                             <tr>
                                 <td style="width:50%"><p><span style="font-weight:700;">Name: </span><?php echo $row['fname']; ?>&nbsp<?php echo $row['lname']; ?></p></td>

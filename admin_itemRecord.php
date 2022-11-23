@@ -104,21 +104,31 @@
                     //showing data from tb_iteminfo to the system
 
                     //showing data from tb_iteminfo to the system
-                    $result=$conn->query("SELECT * FROM tb_itemrecord Order By itemNo DESC") or die("Error");
-                    $count=$conn->query("select count(1) FROM tb_itemrecord");
-                    $rows =  $count->fetch_array(MYSQLI_NUM);
+                    $query = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
+                    $result = mysqli_query($conn, $query);
+                    
+                    if ($result)
+                    {
+                        // it return number of rows in the table.
+                        $row = mysqli_num_rows($result);
+                            
+                        if ($row)
+                        {
+                            echo "<p class='total-item'>Number of Found Item: $row </p>";
+                        }
+                        // close the result.
 
-                    $total = $rows[0];
-                    echo "<p class='total-item'>Number of Found Item: $total </p>";
-                    //if table has no data
-                    if ($count->num_rows == 0) {
-                        echo "<div class='nodata'>
+                        //if table has no data
+                        if (mysqli_num_rows($result) == 0) {
+                        echo "<div class='nodata' style='text-align: center'>
                                 <img src='./images/nodata.png' width='120px' height='120px'>
-                                <p>No Data</p>
-                              </div>";
-                        exit;
+                                <p>No Found Item Record</p>
+                            </div>";
+                            exit;
+                        }   
                     }
-                    while($row=$result->fetch_assoc())         
+                    
+                    while($row=mysqli_fetch_assoc($result))         
                     {
                     ?>
                         <div class='output-cont-child' style="width: 115%; margin-left: -5%">

@@ -75,7 +75,7 @@
                         if (mysqli_num_rows($result) == 0) {
                             echo "<div class='nodata'>
                                     <img src='./images/nodata.png' width='120px' height='120px'>
-                                    <p>No Data</p>
+                                    <p>No Item Record</p>
                                   </div>";
                         }
                         while($row=mysqli_fetch_assoc($result))         

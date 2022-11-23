@@ -72,7 +72,7 @@
                     if ($result->num_rows == 0) {
                         echo "<div class='nodata'>
                                 <img src='./images/nodata.png' width='120px' height='120px'>
-                                <p>No Data</p>
+                                <p>No Claimed Item</p>
                               </div>";
                         exit;
                     }
