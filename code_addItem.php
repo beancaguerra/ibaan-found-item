@@ -27,17 +27,16 @@ include('libs/phpqrcode/qrlib.php');
 
     
     //insert data to tb_itemRecord table
-    $sql = "INSERT INTO tb_itemrecord(finder, contact, itemNo, time, date, itemCategory, itemLocation, itemDescription,itemColor,itemBrand) VALUES('$Finder','$Contact','$ItemNo','$Time','$Date', '$ItemCategory','$ItemLoc','$Description','$itemColor','$itemBrand')";
+    $sql = "INSERT INTO tb_itemrecord(finder, contact, itemNo, time, date, itemCategory, itemLocation, itemDescription,itemBrand, itemColor) VALUES('$Finder','$Contact','$ItemNo','$Time','$Date', '$ItemCategory','$ItemLoc','$Description','$itemBrand','$itemColor')";
+    $result = mysqli_query($conn, $sql);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+    if ($result) {
+        $_SESSION['Submit']= "New record created successfully";
+        header('Location: admin_itemRecord.php');
+        exit;
       } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $_SESSION['Submit']= "Failed to add new record!";
+        header('Location: admin_itemRecord.php');
+        exit;
       }
-      
-      $conn->close();
-   header("location: admin_itemRecord.php");
-    exit;
-
-
 ?>

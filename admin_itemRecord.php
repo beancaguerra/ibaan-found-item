@@ -53,23 +53,6 @@
         </div>
 
         <main>
-            <section class="forms-input">
-
-                <div class="submit-bar">
-                    <?php
-                    if(isset($_SESSION['Submit'])){
-                        ?>
-                        <div class="submit-btn" id="btnClose" style="border:1px solid #bbb; border-radius: 8px; padding:5px; margin:10px 0px; background:#eee; text-align:left; width: 84%"> 
-                            <?php echo $_SESSION['Submit']; ?>
-                            <button style="border:none; margin-left: 68%; padding: 2px; cursor: pointer; font-size: 20px" type="button" onclick="closeForm()">&times</button>
-                        </div>
-
-                        <?php
-                        unset($_SESSION['Submit']);
-                    }
-                    ?>
-                </div>
-            </section>
             <div class="forms-input">
                 <!--form inputs-->
                 <form class='form' action="code_addItem.php" method="POST" enctype="multipart/form-data">
@@ -95,13 +78,27 @@
                 </form>
             </div>
         </main>
+        <section class="forms-input">
+            <div class="submit-bar">
+                <?php
+                if(isset($_SESSION['Submit'])){
+                    ?>
+                    <div class="submit-btn" id="btnClose" style="border:1px solid #bbb; border-radius: 8px; padding:5px; margin:10px 0px; background:#eee; text-align:left; width: 84%"> 
+                        <?php echo $_SESSION['Submit']; ?>
+                        <button style="border:none; margin-left: 68%; padding: 2px; cursor: pointer; font-size: 20px" type="button" onclick="closeForm()">&times</button>
+                    </div>
 
+                    <?php
+                    unset($_SESSION['Submit']);
+                }
+                ?>
+            </div>
+        </section>
         <section class="form-output" id="form-output">
             <div class="output-container">
                 <?php
 
                     include 'connect_db.php';
-                    //showing data from tb_iteminfo to the system
 
                     //showing data from tb_iteminfo to the system
                     $query = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
