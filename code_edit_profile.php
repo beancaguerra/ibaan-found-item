@@ -68,7 +68,8 @@
                                 height: 95%;
                                 border-radius: 20px;
                                 border: 2px solid var(--color-gray);
-                                background-color: #fe6e00de;
+                                box-shadow:  1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+                                background-color: #ffffff;
                                 padding: 0 5px;">
 
                         <?php
@@ -131,7 +132,7 @@
                                     margin-top: 2px;
                                     ">
                                 
-                                <h1 style="text-align: center; margin: 20px; color: #ffffff;">Update Profile</h1>
+                                <h1 style="text-align: center; margin: 20px; color: black;">Update Profile</h1>
                                 <div class="first-three">
                                     <input class="input big" type="text" name="fname" placeholder="First name" value="<?php echo $fname; ?>" required/>
                                     <input class="input big" type="text" name="lname" placeholder="Last name" value="<?php echo $lname; ?>" />

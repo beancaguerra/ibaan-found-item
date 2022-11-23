@@ -86,32 +86,32 @@
                             }
                             ?>
                             <tr>
-                                <th colspan="2" style="border: none;"><h1 style="text-align: center; margin: 20px; color: #ffffff;">My Profile</h1></th>
+                                <th colspan="2" style="border: none;"><h1 style="text-align: center; margin: 20px; color: black;">My Profile</h1></th>
                             </tr>
                             <tr>
-                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: #ffffff;">Fullname:</p></td>
-                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: #ffffff;"><?php echo $fname; ?> &nbsp <?php echo $lname; ?></p></td>
+                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: black;">Fullname:</p></td>
+                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: black;"><?php echo $fname; ?> &nbsp <?php echo $lname; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: #ffffff;">AccountId:</p></td>
-                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: #ffffff;"><?php echo $loggedin_id; ?></p></td>
+                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: black;">AccountId:</p></td>
+                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: black;"><?php echo $loggedin_id; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: #ffffff;">Contact No.:</p></td>
-                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: #ffffff;"><?php echo $contact; ?></p></td>
+                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: black;">Contact No.:</p></td>
+                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: black;"><?php echo $contact; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: #ffffff;">Gender:</p></td>
-                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: #ffffff;"><?php echo $gender; ?></p></td>
+                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: black;">Gender:</p></td>
+                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: black;"><?php echo $gender; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: #ffffff;">Address:</p></td>
-                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: #ffffff;"><?php echo $address; ?></p></td>
+                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: black;">Address:</p></td>
+                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: black;"><?php echo $address; ?></p></td>
                             </tr>
                             
                             <tr>
-                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: #ffffff;">Email:</p></td>
-                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: #ffffff;"><?php echo $loggedin_session; ?></p></td>
+                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: black;">Email:</p></td>
+                                <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: black;"><?php echo $loggedin_session; ?></p></td>
                             </tr>
                             <!--<tr>
                                 <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: #ffffff;">Password:</p></td>
@@ -121,7 +121,7 @@
                             </tr>
                             <tr>
                                 <td style="width: 30%; border: none;"></td>
-                                <td style="width: 70%; border: none;"><a style= "text-decoration: none; color: white;" href="code_edit_profile.php?accountId=<?php echo $row['accountId']; ?> & fname=<?php echo $row['fname']; ?> & lname=<?php echo $row['lname']; ?> & contact=<?php echo $row['contact']; ?> & address=<?php echo $row['address']; ?> & gender=<?php echo $row['gender']; ?> & email=<?php echo $row['email']; ?> & password=<?php echo $row['password']; ?>"><input class="input big" type="button" value="Edit Profile"></a></button></td>
+                                <td style="width: 70%; border: none;"><a style= "text-decoration: none; color: black;" href="code_edit_profile.php?accountId=<?php echo $row['accountId']; ?> & fname=<?php echo $row['fname']; ?> & lname=<?php echo $row['lname']; ?> & contact=<?php echo $row['contact']; ?> & address=<?php echo $row['address']; ?> & gender=<?php echo $row['gender']; ?> & email=<?php echo $row['email']; ?> & password=<?php echo $row['password']; ?>"><input class="input big" type="button" value="Edit Profile"></a></button></td>
                             </tr>
                         </table>
                     </div>
