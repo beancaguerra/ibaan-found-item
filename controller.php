@@ -150,7 +150,7 @@
                 if ($updateResult) {
                     $subject = 'Email Verification Code';
                     $message = "our verification code is $code";
-                    $sender = 'From: guerrayas2@gmail.com';
+                    $sender = 'From: viabeanca.guerra@g.batstate-u.edu.ph';
 
                     if (mail($email, $subject, $message, $sender)) {
                         $message = "We've sent a verification code to your Email <br> $email";
