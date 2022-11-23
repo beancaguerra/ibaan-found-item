@@ -9,7 +9,7 @@ Error_reporting(0);
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbname = "db_ibaanrecord";
+$dbname = "ibaanrecord_db";
 
 $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbname);
 

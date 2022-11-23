@@ -1,7 +1,8 @@
 <?php
 $id = $_GET['id'];
 
-$dbname = "db_ibaanrecord";
+include 'connect_db.php';
+
 $conn = mysqli_connect("localhost", "root", "", $dbname);
 // Check connection
 if (!$conn) {

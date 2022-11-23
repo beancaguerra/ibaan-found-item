@@ -16,8 +16,8 @@ include('libs/phpqrcode/qrlib.php');
 
     $Finder         =   $_POST['finder'];
     $Contact        =   $_POST['contact'];
-    //$ItemNo         =   $_POST['itemNo'];
-    $Time           =   $_POST['time'];
+    $ItemNo1         =   $_POST['itemNo'];
+    $Time           =  $_POST['time'];
     $Date           =   $_POST['date'];
     $ItemCategory   =   $_POST['itemCategory'];
     $ItemLoc        =  str_replace("'","''",$_POST['itemLocation']);
@@ -25,18 +25,26 @@ include('libs/phpqrcode/qrlib.php');
     $itemBrand    =   str_replace("'","''",$_POST['itemBrand']);
     $itemColor    =   str_replace("'","''",$_POST['itemColor']);
 
-    
-    //insert data to tb_itemRecord table
-    $sql = "INSERT INTO tb_itemrecord(finder, contact, itemNo, time, date, itemCategory, itemLocation, itemDescription,itemBrand, itemColor) VALUES('$Finder','$Contact','$ItemNo','$Time','$Date', '$ItemCategory','$ItemLoc','$Description','$itemBrand','$itemColor')";
-    $result = mysqli_query($conn, $sql);
+    // $ItemLoc        =  $_POST['itemLocation'];
+    // $Description    =   $_POST['itemDescription'] ;
+    // $itemBrand    =   $_POST['itemBrand'];
+    // $itemColor    =  $_POST['itemColor'];
+  
 
-    if ($result) {
-        $_SESSION['Submit']= "New record created successfully";
-        header('Location: admin_itemRecord.php');
-        exit;
-      } else {
-        $_SESSION['Submit']= "Failed to add new record!";
-        header('Location: admin_itemRecord.php');
-        exit;
+
+    //insert data to tb_itemRecord table
+    $sql = "INSERT INTO tb_itemrecord(finder, contact, itemNo, time, date, itemCategory, itemLocation, itemDescription,itemColor,itemBrand) VALUES('$Finder','$Contact','$ItemNo','$Time','$Date', '$ItemCategory','$ItemLoc','$Description','$itemColor','$itemBrand')";
+
+    if ($conn->query($sql) === TRUE) { 
+        echo "<script>alter('$sql')</script>";
+        echo "New record created successfully";
+      } else { 
+        echo "<script>alter('$sql')</script>";
+        echo "Error: " . $sql . "<br>" . $conn->error;
       }
+       
+    header("location: admin_itemRecord.php");
+    exit;
+
+
 ?>
