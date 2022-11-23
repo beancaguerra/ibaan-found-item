@@ -74,8 +74,8 @@
                                 <p class="post-two"><span style='color:#000000; font-size: 16px; font-weight:500; margin-right: 20px;'><?php echo $row['caption']; ?></span></p>
                             </div>
                             <div class="post-result-child-two">
-                                <a style="color:#006400; margin-top:4px; font-size:12px" href='edit_announcement.php?id="<?php echo $row['id']; ?>"'>Edit</a>
-                                <a style="color:#006400; margin-top:4px; font-size:12px" href='delete_announcement.php?id="<?php echo $row['id']; ?>"'>Delete</a>
+                                <!-- <a style="color:#ff6f3c; margin-top:4px; font-size:12px; margin-right:10px;" href='edit_announcement.php?announceId="//php echo $row['announceId']; " & subject="//php echo $row['subject'];" & '>Edit</a> -->
+                                <a style="color:#ff6f3c; margin-top:4px; font-size:12px; margin-right:10px;" href='delete_announcement.php?id="<?php echo $row['announceId']; ?>"'>Delete</a>
                             </div>
                         </div>
                         <?php } ?>
