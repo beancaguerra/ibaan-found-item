@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="divider">
-                <p>Municipality of Ibaan</p>
+                <p>Municipality</p>
             </div>
         </header>
         <nav class="navigation" id="navigation">
