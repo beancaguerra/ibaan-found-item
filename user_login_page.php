@@ -32,6 +32,46 @@
         <div class="offer_container">
             <div class="container ">
                 <div class="row">
+                    <!-- announcement -->
+                    <div class="col-md-6  ">
+                        <div class="box ">
+                            <div class="detail-box" style = "margin: 10px 20px;">
+                                <div class="announce-class">
+                                    <h5 class="announce-title">
+                                    Announcement
+                                    </h5>
+                                    <div class="items">
+                                        <?php
+
+                                            include 'connect_db.php';
+
+                                            //showing data from tb_iteminfo to the system
+                                            $result=$conn->query("SELECT * FROM tb_announcement Order By timedate DESC") or die("Error");
+                                            //if table has no data
+                                            if ($result->num_rows == 0) {
+                                                echo "<div class='nodata'>
+                                                        <img src='./images/nodata.png' width='120px' height='120px'>
+                                                        <p>No Post</p>
+                                                        </div>";
+                                            }
+                                            while($row=$result->fetch_assoc())         
+                                            {
+                                            ?>
+                                            <div class='post-result'>
+                                                <div class="post-result-child">
+                                                    <p class="post-one"><span style='color:#ec9006; font-size: 20px; font-weight:700; margin-right: 20px;'><?php echo $row['subject']; ?></span> </p>
+                                                    <p><span style='color:#000000; font-size: 13px; font-weight:500; margin-right: 20px;'><?php echo $row['timedate']; ?></span></p>
+                                                    <p class="post-two"><span style='text-align: justify; color:#000000; font-size: 16px; font-weight:500; margin-right: 20px;'><?php echo $row['caption']; ?></span></p>
+                                                </div>
+                                            </div>
+                                            <?php } ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end announcement -->
+
                     <!-- found item list -->
                     <div class="col-md-6  ">
                         <div class="box ">
@@ -88,115 +128,10 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-6  ">
-                        <div class="box ">
-                            <div class="detail-box" style = "margin: 10px 20px;">
-                                <div class="announce-class">
-                                    <h5 class="announce-title">
-                                    Announcement
-                                    </h5>
-                                    <div class="items">
-                                        <?php
-
-                                            include 'connect_db.php';
-
-                                            //showing data from tb_iteminfo to the system
-                                            $result=$conn->query("SELECT * FROM tb_announcement Order By timedate DESC") or die("Error");
-                                            //if table has no data
-                                            if ($result->num_rows == 0) {
-                                                echo "<div class='nodata'>
-                                                        <img src='./images/nodata.png' width='120px' height='120px'>
-                                                        <p>No Post</p>
-                                                    </div>";
-                                            }
-                                            while($row=$result->fetch_assoc())         
-                                            {
-                                            ?>
-                                            <div class='post-result'>
-                                                <div class="post-result-child">
-                                                    <p class="post-one"><span style='color:#ec9006; font-size: 20px; font-weight:700; margin-right: 20px;'><?php echo $row['subject']; ?></span> </p>
-                                                    <p><span style='color:#000000; font-size: 13px; font-weight:500; margin-right: 20px;'><?php echo $row['timedate']; ?></span></p>
-                                                    <p class="post-two"><span style='text-align: justify; color:#000000; font-size: 16px; font-weight:500; margin-right: 20px;'><?php echo $row['caption']; ?></span></p>
-                                                </div>
-                                            </div>
-                                            <?php } ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <!-- guideliness -->
-                    <div class="col-md">
-                        <div class="box ">
-                            <div class="detail-box" style = "background-color: wheat; margin: 10px 20px;">
-                                <h5 class="guidelines-title">
-                                    Guidelines
-                                </h5>
-                                <div class="guide">
-                                    <div class="row grid">
-                                        <div class="col-sm-6 col-lg-6">
-                                            <div class="box">
-                                                <div>
-                                                    <div class="detail-box">
-                                                        <p class="procedure">
-                                                            1
-                                                        </p>
-                                                        <p style="font-size: 22px; text-align: justify;">
-                                                            You should register first on this website before you login. You may check the list of found items even if you didn’t login yet.
-                                                        </p>
-                                                    </div>
-                                                    <div class="detail-box" style="margin-bottom: 20px;">
-                                                        <img src="./images/first-page.png" width="100%" height="100%">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-lg-6">
-                                            <div class="box">
-                                                <div>
-                                                    <div class="detail-box">
-                                                        <p class="procedure">
-                                                            2
-                                                        </p>
-                                                        <p style="font-size: 22px; text-align: justify;">
-                                                            If your item is in the list of found items, you should send a proof including image , location, brand, color and description of your item depending on the item. You may click the icon to pop up the form.
-                                                        </p>
-                                                        <div class="detail-box" style="margin-bottom: 20px;">
-                                                            <img src="./images/send-form.png" width="100%" height="100%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-lg-6">
-                                            <div class="box">
-                                                <div>
-                                                    <div class="detail-box">
-                                                        <p class="procedure">
-                                                            3
-                                                        </p>
-                                                        <p style="font-size: 22px; text-align: justify;">
-                                                            The administrator will send you a message if your proof of ownership is match or unmatch. If the item you send matches, the administrator will verify and send the QR Code of the item and also the password of the qr code. You will present the qr code in the office of administrator.
-                                                        </p>
-                                                        <div class="detail-box" style="margin-bottom: 20px;">
-                                                            <img src="./images/message.png" width="100%" height="100%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- end found item list -->
                 </div>
             </div>
-        </div>
+        </div>  
     </section>
 </body>
 </html>

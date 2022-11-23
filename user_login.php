@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
  $c_rows    =   mysqli_num_rows($result);
 
  if ($c_rows!=$email || $c_rows!=$password) {
-  header("location: user_login_page.php?remark_login=failed");
+  header("location: login-page-user.php?remark_login=failed");
  }
 
  $sql = "SELECT accountId FROM tb_residentsacc WHERE email='$email' and password='$password'";
