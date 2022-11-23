@@ -36,5 +36,15 @@
                 <a href="logout.php" class="nav-link"><img src="./images/logout-icon.png" width="18" height="18" style="margin-right: 3px;">Logout</a>
             </div>
         </nav>
+
+        <main>
+            <section class="profile-form">
+                <div class="profile-cont">
+                    <div class="container">
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
