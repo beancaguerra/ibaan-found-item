@@ -8,7 +8,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
  $result 	= 	mysqli_query($conn,"SELECT * FROM tb_admin");
  $c_rows 	= 	mysqli_num_rows($result);
  if ($c_rows!=$email || $c_rows!=$password) {
-  header("location: admin_login.php?remark_login=failed");
+  //header("location: admin_login.php?remark_login=failed");
+  header("location: index.php?remark_login=failed");
  }
  $sql="SELECT admin_id FROM tb_admin WHERE admin_email='$email' and admin_password='$password'";
  $result=mysqli_query($conn,$sql);
