@@ -13,31 +13,28 @@
 
 //$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbname);
 
-<?php
     
-include 'config.php';
+//include 'config.php';
 
-if($environment == "prod"){
+//if($environment == "prod"){
 
     $dbname = "u538504999_ibaanrecord_db";
     // Create connection
-    //("htp.ibaanfounditem.online", "", "", $dbname)
     $conn = mysqli_connect("ftp.ibaanfounditem.online", "u538504999_ibaanrecord", "Qwert@bbdSKL08",$dbname);
-}
-else{
+//}
+//else{
 
-$dbname = "ibaanrecord_db";
+//$dbname = "ibaanrecord_db";
 // Create connection
-$conn = mysqli_connect("localhost", "root", "",$dbname);
+//$conn = mysqli_connect("localhost", "root", "",$dbname);
 
-}
+//}
 
 
 // Check connection
-if (mysqli_connect_errno())
-{
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
-} 
-?>
+//if (mysqli_connect_errno())
+//{
+//echo "Failed to connect to MySQL: " . mysqli_connect_error();
+//} 
 
 ?>
