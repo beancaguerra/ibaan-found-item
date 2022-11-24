@@ -12,7 +12,7 @@
 //$dbname = "ibaanrecord_db";
 
 //$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbname);
-
+/*
 include 'config.php';
 
 if($environment == "prod"){
@@ -36,4 +36,14 @@ if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 } 
+*/
+
+<?php
+
+$dbname = "u538504999_ibaanrecord_db";
+$con= mysqli_connect("localhost","u538504999_ibaanrecord","Qwert@bbdSKL08","$dbname") or die("Error: " . mysqli_error($con));
+
+mysqli_query($con, "SET NAMES 'utf8' ");
+date_default_timezone_set('Asia/Manila');
+//OnAidOrg.com
 ?>
