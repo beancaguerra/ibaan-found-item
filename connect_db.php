@@ -22,7 +22,7 @@ if($environment == "prod"){
     $dbname = "u538504999_ibaanrecord_db";
     // Create connection
     //("htp.ibaanfounditem.online", "", "", $dbname)
-    $conn = mysqli_connect("htp.ibaanfounditem.online", "u538504999_ibaanrecord", "Qwert@bbdSKL08",$dbname);
+    $conn = mysqli_connect("ftp.ibaanfounditem.online", "u538504999_ibaanrecord", "Qwert@bbdSKL08",$dbname);
 }
 else{
 
