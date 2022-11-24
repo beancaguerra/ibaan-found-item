@@ -1,7 +1,6 @@
 <?php
 session_start();
-$dbname = "db_ibaanrecord";
-$conn = mysqli_connect("localhost", "root", "", $dbname);
+include 'connect_db.php';
 // Check connection
 if($_SERVER["REQUEST_METHOD"] == "POST") {
  $email 	=	mysqli_real_escape_string($conn,$_POST['admin_email']);
