@@ -1,7 +1,13 @@
 <?php
+
+    ini_set('display_errors',1);
+    //error_reporting(E_ALL & ~E_NOTICE);
+    Error_reporting(0);
+
     include 'connect_db.php';
     //echo" Connected to database ";
     
+    $Id=$_POST['annunceId'];
     $Subject=$_POST['subject'];
     $Caption=$_POST['caption'];
 
@@ -9,7 +15,7 @@
     $today = date("Y-m-d H:i:s");
     
     //insert data to tb_iteminfo table
-    mysql_query("INSERT INTO tb_announcement(subject, caption, timedate) VALUES('$Subject', '$Caption', '$today')");
+    $sql="INSERT INTO tb_announcement(announceId, subject, caption, timedate) VALUES('$Id', $Subject', '$Caption', '$today')";
 
     header("location: admin_home.php");
     exit;

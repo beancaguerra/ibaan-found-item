@@ -53,6 +53,7 @@
                     //error_reporting(E_ALL & ~E_NOTICE);
                     Error_reporting(0);
                     include 'connect_db.php';
+                    
                     $admin_id = $_SESSION['admin_id'];
 
                     //echo" Connected to database ";
