@@ -1,3 +1,4 @@
+<?php include_once ("controller.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,58 +22,71 @@
         </div>
 
         <div class="topnav">
-            <p>ADMINISTRATOR</p>
+            <a href="login-page-user.php" style="float:right">Sign in/Sign up</a>
+            
         </div>
+    </div>
     <!-- End Header -->
 
-    <div class="offer_section layout_padding-bottom">
+    <section class="offer_section layout_padding-bottom">
         <div class="offer_container">
-            <div class="container" style="padding: 30px 20% 30px 20%;">
-                <!-- log in form -->
-                <div class="col-md justify-content-center">
-                    <div class="box">
-                        <div class="detail-box vh-40" style = "margin: 10px 20px;">
-                            <div class="vh-100 gradient-custom">
-                                <div class="container py-12 h-100">
-                                    <div class="row d-flex justify-content-center align-items-center h-100">
-                                        <div class="col-10 col-md-10 col-lg-10 col-xl-10">
-                                            <div class="card bg-light text-black">
-                                                <div class="card-body p-4">
-                                                    <div class="mb-md-4 mt-md-4 pb-4">
-                                                        <h2 class="fw-bold mb-4 text-center">Log in</h2>
-                                                        <hr class="mb-2 ">
-                                                        <form action="admin_signin.php" method="POST">
-
-                                                            <?php
-                                                                $remarks = isset($_GET['remark_login']) ? $_GET['remark_login'] : '';
-                                                                if ($remarks=='failed') {
-                                                                    echo ' <div style="height: auto;
-                                                                                width: 100%;
-                                                                                background: #ec9006;
-                                                                                padding: 0 15px;
-                                                                                font-size: 19px;
-                                                                                line-height: 40px;
-                                                                                margin: 10px 0;
-                                                                                color: #000;
-                                                                                border-radius: 4px;"> Incorrect email or password</div> ';
-                                                                }
-                                                            ?>
-
-                                                            <div class="form-outline form-white mb-2">
-                                                                <label for="email">Email</label>
-                                                                <input type="email" id="email" class="form-control form-control-lg" name="admin_email" placeholder="Enter your email..." required/>
-                                                                
-                                                            </div>
-
-                                                            <div class="form-outline form-white mb-4">
-                                                                <label for="password">Password</label>
-                                                                <input type="password" id="password" class="form-control form-control-lg" name="admin_password" placeholder="Enter your password..." required/>
-                                                                
-                                                                <input style="margin-top: 22px; margin-bottom:25px; margin-right: 12px;" type="checkbox" onclick="myFunction()">Show Password
-                                                            </div>
-
-                                                            <button class="sign-btn" type="submit">Log in</button>
-                                                        </form>
+            <div class="container ">
+            <div class="row">
+                <!-- guideliness -->
+                <div class="col-md">
+                    <div class="box ">
+                        <div class="detail-box" style = "background-color: wheat; margin: 10px 20px;">
+                            <h5 class="guidelines-title">
+                                Guidelines
+                            </h5>
+                            <div class="guide">
+                                <div class="row grid">
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="box">
+                                            <div>
+                                                <div class="detail-box">
+                                                    <p class="procedure">
+                                                        1
+                                                    </p>
+                                                    <p style="font-size: 22px; text-align: justify;">
+                                                        You should register first on this website before you login. You may check the list of found items even if you didn’t login yet.
+                                                    </p>
+                                                </div>
+                                                <div class="detail-box" style="margin-bottom: 20px;">
+                                                    <img src="./images/first-page.png" width="100%" height="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="box">
+                                            <div>
+                                                <div class="detail-box">
+                                                    <p class="procedure">
+                                                        2
+                                                    </p>
+                                                    <p style="font-size: 22px; text-align: justify;">
+                                                        If your item is in the list of found items, you should send a proof including image , location, brand, color and description of your item depending on the item. You may click the icon to pop up the form.
+                                                    </p>
+                                                    <div class="detail-box" style="margin-bottom: 20px;">
+                                                        <img src="./images/send-form.png" width="100%" height="100%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="box">
+                                            <div>
+                                                <div class="detail-box">
+                                                    <p class="procedure">
+                                                        3
+                                                    </p>
+                                                    <p style="font-size: 22px; text-align: justify;">
+                                                        The administrator will send you a message if your proof of ownership is match or unmatch. If the item you send matches, the administrator will verify and send the QR Code of the item and also the password of the qr code. You will present the qr code in the office of administrator.
+                                                    </p>
+                                                    <div class="detail-box" style="margin-bottom: 20px;">
+                                                        <img src="./images/message.png" width="100%" height="100%">
                                                     </div>
                                                 </div>
                                             </div>
@@ -84,23 +98,108 @@
                     </div>
                 </div>
             </div>
+            <!-- end guidelines -->
+                <div class="row">
+                    <!-- announcement -->
+                    <div class="col-md-6  ">
+                        <div class="box ">
+                            <div class="detail-box" style = "margin: 10px 20px;">
+                                <div class="announce-class">
+                                    <h5 class="announce-title">
+                                    Announcement
+                                    </h5>
+                                    <div class="items">
+                                        <?php
+
+                                            include 'connect_db.php';
+
+                                            //showing data from tb_iteminfo to the system
+                                            $result=$conn->query("SELECT * FROM tb_announcement Order By timedate DESC") or die("Error");
+                                            //if table has no data
+                                            if ($result->num_rows == 0) {
+                                                echo "<div class='nodata' style='text-align:center'>
+                                                        <img src='./images/announce.png' width='120px' height='120px'>
+                                                        <p>No Announcement</p>
+                                                      </div>";
+                                            }
+                                            while($row=$result->fetch_assoc())         
+                                            {
+                                            ?>
+                                            <div class='post-result'>
+                                                <div class="post-result-child">
+                                                    <p class="post-one"><span style='color:#ec9006; font-size: 20px; font-weight:700; margin-right: 20px;'><?php echo $row['subject']; ?></span> </p>
+                                                    <p><span style='color:#000000; font-size: 13px; font-weight:500; margin-right: 20px;'><?php echo $row['timedate']; ?></span></p>
+                                                    <p class="post-two"><span style='text-align: justify; color:#000000; font-size: 16px; font-weight:500; margin-right: 20px;'><?php echo $row['caption']; ?></span></p>
+                                                </div>
+                                            </div>
+                                            <?php } ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end announcement -->
+
+                    <!-- found item list -->
+                    <div class="col-md-6  ">
+                        <div class="box ">
+                            <div class="detail-box" style = "margin: 10px 20px;">
+                                <div class="found-class">
+                                    <h5 class="found-title">
+                                        Found Item List
+                                    </h5>
+                                
+                                    <div class="item-list">
+                                        <?php
+                                            include 'connect_db.php';
+                                        
+                                            //showing data from tb_iteminfo to the system
+                                            $query = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
+                                            $result = mysqli_query($conn, $query);
+                                            
+                                            if ($result)
+                                            {
+                                                // it return number of rows in the table.
+                                                $row = mysqli_num_rows($result);
+                                                    
+                                                if ($row)
+                                                {
+                                                    echo "<p class='total-item'>Number of Found Item: $row </p>";
+                                                }
+                                                // close the result.
+
+                                                //if table has no data
+                                                if (mysqli_num_rows($result) == 0) {
+                                                echo "<div class='nodata' style='text-align: center'>
+                                                        <img src='./images/nodata.png' width='120px' height='120px'>
+                                                        <p>No Found Item Record</p>
+                                                    </div>";
+                                                    exit;
+                                                }   
+                                            }
+                                            
+                                            while($row=mysqli_fetch_assoc($result))         
+                                            {
+                                            ?>
+                                            <div class="item-container">
+                                                <p class="main-title">
+                                                    <span class="title-one"> CATEGORY: </span><?php echo $row['itemCategory']; ?><br> 
+                                                    <span class="title"> DATE FOUND: </span><?php echo $row['date']; ?><br>
+                                                    <span class="title"> TIME FOUND: </span><?php echo $row['time']; ?><br>
+                                                </p>
+                                            </div>
+                                        <?php
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end found item list -->
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
-
-<script>
-     // these code are for show password
-    function myFunction() {
-      var x = document.getElementById("password");
-      
-      if (x.type === "password") {
-        x.type = "text";
-        
-      } else {
-        x.type = "password";
-        
-      }
-    }
-
-</script>
 </html>
