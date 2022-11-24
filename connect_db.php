@@ -13,13 +13,46 @@
 
 //$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbname);
 
+    //ftp.ibaanfounditem.online
+
+ini_set('display_errors', 1);
+//error_reporting(E_ALL & ~E_NOTICE);
+Error_reporting(0);
+//Make a MySQL Connection
+//server
+//echo" Connected to database ";
+$dbServername = "localhost";
+$dbUsername = "u538504999_ibaanrecord";
+$dbPassword = "Qwert@bbdSKL08";
+$dbname = "u538504999_ibaanrecord_db";
+
+$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword);
+mysqli_select_db($conn, $dbname);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 include 'config.php';
 
 if($environment == "prod"){
     
     $dbname = "u538504999_ibaanrecord_db";
     // Create connection
-    //ftp.ibaanfounditem.online
     $conn = mysqli_connect("localhost", "u538504999_ibaanrecord", "Qwert@bbdSKL08",$dbname);
 }
 else{
@@ -36,5 +69,5 @@ if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 } 
-
+*/
 ?>

@@ -34,7 +34,7 @@
                 </div>
         </nav>
         <main>
-            <section class="forms-home">
+        <section class="forms-home">
                 <div class="announcement">
                     <h3 style="text-align: center; font-weight: 600;">Announcement</h3>
                     <div class="announce-feed">
@@ -56,8 +56,8 @@
                             include 'connect_db.php';
 
                             //showing data from tb_iteminfo to the system
-                            $sql = "SELECT * FROM tb_announcement Order By timedate DESC" or die("Error");
-                            $result = mysqli_query($conn, $sql);
+                            $query = "SELECT * FROM tb_announcement Order By timedate DESC" or die("Error");
+                            $result = mysqli_query($conn, $query);
                             //if table has no data
                             if (mysqli_num_rows($result) == 0) {
                                 echo "<div class='nodata'>
@@ -74,8 +74,8 @@
                                 <p class="post-two"><span style='color:#000000; font-size: 16px; font-weight:500; margin-right: 20px;'><?php echo $row['caption']; ?></span></p>
                             </div>
                             <div class="post-result-child-two">
-                                <!-- <a style="color:#ff6f3c; margin-top:4px; font-size:12px; margin-right:10px;" href='edit_announcement.php?announceId="//php echo $row['announceId']; " & subject="//php echo $row['subject'];" & '>Edit</a> -->
-                                <a style="color:#ff6f3c; margin-top:4px; font-size:12px; margin-right:10px;" href='delete_announcement.php?id="<?php echo $row['announceId']; ?>"'>Delete</a>
+                                <a style="color:#006400; margin-top:4px; font-size:12px" href='edit_announcement.php?id="<?php echo $row['id']; ?>"'>Edit</a>
+                                <a style="color:#006400; margin-top:4px; font-size:12px" href='delete_announcement.php?id="<?php echo $row['id']; ?>"'>Delete</a>
                             </div>
                         </div>
                         <?php } ?>
