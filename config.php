@@ -1,3 +1,3 @@
 <?php
-    $environment = "test";
+    $environment = "prod";
 ?>

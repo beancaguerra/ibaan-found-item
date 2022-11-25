@@ -5,8 +5,7 @@
     //Error_reporting(0);
     session_start();
     
-    $dbname = "ibaanrecord_db";
-    $conn = mysqli_connect("localhost", "root", "", $dbname);
+    include 'connect_db.php';
     // Connection Created Successfully
     // Store All Errors
     $errors = [];

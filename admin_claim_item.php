@@ -145,7 +145,7 @@
                             </div>
 
 
-                            <div class="output-delete output-one">
+                            <div class="output-delete output-two">
                             <div class="owner-field">
                                 <div class="output-one output">
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Owner: </span><span id="xItemNo"></span></p>

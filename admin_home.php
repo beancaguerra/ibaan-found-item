@@ -77,7 +77,7 @@
                             </div>
                             <div class="post-result-child-two">
                                 <!--<a style="color:#006400; margin-top:4px; font-size:12px" href='edit_announcement.php?id="//php echo $row['id'];"'>Edit</a>-->
-                                <a style="color:#006400; margin-top:4px; font-size:12px" href='delete_announcement.php?id="<?php echo $row['announceId']; ?>"'>Delete</a>
+                                <a style="color: #ec9006; margin-top:4px; font-size:12px" href='delete_announcement.php?id="<?php echo $row['announceId']; ?>"'>Delete</a>
                             </div>
                         </div>
                         <?php } ?>
