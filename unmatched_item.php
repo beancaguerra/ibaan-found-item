@@ -86,20 +86,25 @@
                             </div>
                         </div>
                         <div class="msg-caption" style="display: flex; margin-top: 10px;">
-                            <p style="width: 60%; margin-left: 30px; color: #000000; font-weight: 500; font-size: 16px; text-align: justify;"><?php echo $row['description']; ?></p>
-                            <div style="width: 40%; margin-left: 10px;margin-right: 30px; ">
-                                <img style="margin: auto; width: 80%; border: 2px solid #000000; border-radius: 10px;" onclick="openImage()" class="output-img" src="<?php echo $row['myfile']; ?>" height="200"/>
-                                <div class="image-popup" id="myImageForm">
-                                    <div class="image-popup-form">
-                                        <button class="update-popup-close" onclick="closeImage()" title="Close">&times</button>
-                                        <img class="popup-content" src="<?php echo $row['myfile']; ?>"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="msg-time" style="display: flex; align-items: center; margin-top: 10px; opacity: .9;">
-                            <div style="width: 50%; display: flex; align-items: center;">
-                                <p style="margin-left: 180px; color: #000000; font-weight: 400; font-size: 12px;"><?php echo $row['datetime']; ?></p>
+                            <div style='width: 100%;
+                                        margin-top: -8px;
+                                        padding: 10px'>
+                                <table style="width:100%">
+                                    <tr>
+                                        <td colspan="2"><p><span style="font-weight:700;">Date & Time: </span><?php echo $row['datetime']; ?></p></td> 
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p><span style="font-weight:700;">Location: </span><?php echo $row['itemLocation']; ?></p></td>
+                                        <td colspan="2"><p><span style="font-weight:700;">Description: </span><?php echo $row['description']; ?></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p><span style="font-weight:700;">Brand: </span><?php echo $row['itemBrand']; ?></p></td>
+                                        <td colspan="2"><p><span style="font-weight:700;">Color: </span><?php echo $row['itemColor']; ?></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><p><span style="font-weight:700;">Image: </span></p><img class="output-img" src="<?php echo $row['myfile']; ?>" height="200"/></td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>

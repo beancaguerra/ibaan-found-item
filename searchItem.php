@@ -28,33 +28,26 @@
           <p>Municipality of Ibaan</p>
       </div>
   </header>
+  <!--Navigation-->
   <nav class="navigation" id="navigation">
-    <div class="hamburger-close" onclick="closeNav()">
-      <div class="burger --one"></div>
-      <div class="burger --two"></div>
-      <div class="burger --three"></div>
-    </div>
-    <h3><img src="./images/menu-logo.png" height="18" width="18">Menu</h3>
-    <div class="nav-links">
-      <a href="viewer_home.php" class="nav-link"><img src="./images/home-icon.png" width="18" height="18" style="margin-right: 3px;">Home</a>
-      <a href="viewer-found.php" class="nav-link active"><img src="./images/found-img.png" width="18" height="18" style="margin-right: 3px;">Found Item</a>
-      <a href="viewer-claimed.php" class="nav-link"><img src="./images/claimed-icon.png" width="18" height="18" style="margin-right: 3px;">Claimed Item</a>
-      <a href="viewer_messages.php" class="nav-link"><img src="./images/messages-icon.png" width="18" height="18" style="margin-right: 3px;">Messages</a>
-      <a href="viewer_profile.php" class="nav-link"><img src="./images/user-icon.png" width="18" height="18" style="margin-right: 3px;">Profile</a>
-      <a href="viewer_logout.php" class="nav-link"><img src="./images/logout-icon.png" width="18" height="18" style="margin-right: 3px;">Logout</a>
-    </div>
+      <h3><img src="./images/menu-logo.png" height="18" width="18">Menu</h3>
+      <div class="nav-links" id="myDIV">
+          <a href="admin_home.php" class="nav-link"><img src="./images/home-icon.png" width="18" height="18" style="margin-right: 3px;">Home</a>
+          <a href="admin_itemRecord.php" class="nav-link active"><img src="./images/add-icon.png" width="18" height="18" style="margin-right: 3px;">Item Records</a>
+          <a href="admin_messages.php" class="nav-link"><img src="./images/messages-icon.png" width="18" height="18" style="margin-right: 3px;">Messages</a>
+          <a href="admin_accounts.php" class="nav-link"><img src="./images/user-icon.png" width="18" height="18" style="margin-right: 3px;">Accounts</a>
+          <a href="logout.php" class="nav-link"><img src="./images/logout-icon.png" width="18" height="18" style="margin-right: 3px;">Logout</a>
+      </div>
   </nav>
-  <nav class="navigation">
-    <h3><img src="./images/menu-logo.png" height="18" width="18">Menu</h3>
-    <div class="nav-links" id="myDIV">
-      <a href="viewer_home.php" class="nav-link"><img src="./images/home-icon.png" width="18" height="18" style="margin-right: 3px;">Home</a>
-      <a href="viewer-found.php" class="nav-link active"><img src="./images/found-img.png" width="18" height="18" style="margin-right: 3px;">Found Item</a>
-      <a href="viewer-claimed.php" class="nav-link"><img src="./images/claimed-icon.png" width="18" height="18" style="margin-right: 3px;">Claimed Item</a>
-      <a href="viewer_messages.php" class="nav-link"><img src="./images/messages-icon.png" width="18" height="18" style="margin-right: 3px;">Messages</a>
-      <a href="viewer_profile.php" class="nav-link"><img src="./images/user-icon.png" width="18" height="18" style="margin-right: 3px;">Profile</a>
-      <a href="viewer_logout.php" class="nav-link"><img src="./images/logout-icon.png" width="18" height="18" style="margin-right: 3px;">Logout</a>
-    </div>
-  </nav>
+
+        <div class="message-nav-parent">
+            <div class="message-nav">
+                <a href="admin_itemRecord.php" class="msg-nav-child --msg-active"><img src="./images/add-icon.png" width="18" height="18" style="margin-right: 3px;">AddItem</a>
+                <a href="admin_updateItem.php" class="msg-nav-child"><img src="./images/update-icon.png" width="18" height="18" style="margin-right: 3px;">Update</a>
+                <a href="admin_claim_item.php" class="msg-nav-child"><img src="./images/claimed-icon.png" width="18" height="18" style="margin-right: 3px;">Claim</a>
+                <a href="admin_claimedItem.php" class="msg-nav-child"><img src="./images/claimed-icon.png" width="18" height="18" style="margin-right: 3px;">Claimed</a>
+            </div>
+        </div>
         <div class="search-bar">
             <a class="search-back" href='admin_itemRecord.php'><img src="./images/backsearch-icon.png" width="20" height="20"></a>
         </div>
@@ -62,6 +55,9 @@
             <section class="form-output" id="form-output">
                 <div class="output-container">
                 <?php
+                    ini_set('display_errors',1);
+                    //error_reporting(E_ALL & ~E_NOTICE);
+                    Error_reporting(0);
                     include 'connect_db.php';
 
                     if(isset($_POST['search']))

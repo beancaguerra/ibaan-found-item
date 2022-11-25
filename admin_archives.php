@@ -67,24 +67,33 @@
                     <div class='output-cont-table'>
                         <table style="width:100%">
                             <tr>
-                                <th style="text-align: left; background-color: #cccccc"><h3>Owner's Information </th>
+                                <th style="text-align: left; background-color: #cccccc; padding-left: 10px;"><h3>Information</th>
                                 <th style="text-align: right; background-color: #cccccc"><a style="color:#ec9006; margin: 10px;" href='delete_archives.php?id="<?php echo $row['dmid']; ?>"'>Delete</a>
                                 <!-- <a style="color:#ec9006; margin: 10px;" name="move" onClick="retrieveMsg()" href='move_to_message_from_archive.php?id="//php echo $row['dmid']; ?>"'>Retrieve</a> -->
                                 </th>
                             </tr>
                             <tr>
-                                <td colspan="2"><p><span style="font-weight:700;">Name: </span><?php echo $row['fname']; ?>&nbsp<?php echo $row['lname']; ?></p></td>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Name: </span><?php echo $row['fname']; ?>&nbsp<?php echo $row['lname']; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width:50%"><p><span style="font-weight:700;">Item No: </span><?php echo $row['dmitemnumber']; ?></p></td>
-                                <td style="width:50%"><p><span style="font-weight:700;">Email: </span><a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a></p></td>
+                                <td style="width:50%"><p><span style="font-weight:700; padding-left: 10px;">Item No: </span><?php echo $row['dmitemnumber']; ?></p></td>
+                                <td style="width:50%"><p><span style="font-weight:700; padding-left: 10px;">Email: </span><a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a></p></td>
                             </tr>
                             
                             <tr>
-                                <td colspan="2"><p><span style="font-weight:700;">Description: </span><?php echo $row['dmdescription']; ?></p></td>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Location: </span><?php echo $row['itemLocation']; ?></p></td>
                             </tr>
                             <tr>
-                                <td colspan="2"><p><span style="font-weight:700;">Image: </span></p><img class="output-img" src="<?php echo $row['dmmyfile']; ?>" height="200"/></td>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Description: </span><?php echo $row['dmdescription']; ?></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Brand: </span><?php echo $row['itemBrand']; ?></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Color: </span><?php echo $row['itemColor']; ?></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Image: </span></p><img class="output-img" src="<?php echo $row['dmmyfile']; ?>" height="200"/></td>
                             </tr>
                         </table>
                     </div>

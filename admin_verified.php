@@ -62,25 +62,33 @@
                     {
                         ?>
                     <div class='output-cont-table'>
-                        <table style="width:100%">
+                        <table style="width:100%;">
                             <tr>
-                                <th style="text-align: left; background-color: #cccccc"><h3>Owner's Information </th>
+                                <th style="text-align: left; background-color: #cccccc; padding-left: 10px;"><h3>Owner's Information </th>
                                 <th style="text-align: right; background-color: #cccccc"><a style="color:#FE6E00; margin: 10px;" href='delete_verified.php?id="<?php echo $row['archid']; ?>"'>Delete</a>
-                                    <a style="color:red; margin: 10px;" onClick="unverifiedMsg()" href='move_to_message.php?id="<?php echo $row['archid']; ?>"'>Unverified</a></th>
+                                <!-- <a style="color:red; margin: 10px;" onClick="unverifiedMsg()" href='move_to_message.php?id="<//?php echo $row['archid']; ?>"'>Unverified</a></th> -->
                             </tr>
                             <tr>
-                                <td colspan="2"><p><span style="font-weight:700;">Name: </span><?php echo $row['fname']; ?>&nbsp<?php echo $row['lname']; ?></p></td>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Name: </span><?php echo $row['fname']; ?>&nbsp<?php echo $row['lname']; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width:50%"><p><span style="font-weight:700;">Item No: </span><?php echo $row['architemnumber']; ?></p></td>
-                                <td style="width:50%"><p><span style="font-weight:700;">Email: </span><a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a></p></td>
-                            </tr>
-            
-                            <tr>
-                                <td colspan="2"><p><span style="font-weight:700;">Description: </span><?php echo $row['archdescription']; ?></p></td>
+                                <td style="width:50%"><p><span style="font-weight:700; padding-left: 10px;">Item No: </span><?php echo $row['architemnumber']; ?></p></td>
+                                <td style="width:50%"><p><span style="font-weight:700; padding-left: 10px;">Email: </span><a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a></p></td>
                             </tr>
                             <tr>
-                                <td colspan="2"><p><span style="font-weight:700;">Image: </span></p><img class="output-img" src="<?php echo $row['archmyfile']; ?>" height="200"/></td>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Location: </span><?php echo $row['archItemLocation']; ?></p></td>
+                            </tr>
+                            <tr>
+                               <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Description: </span><?php echo $row['archdescription']; ?></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Brand: </span><?php echo $row['archItemBrand']; ?></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Color: </span><?php echo $row['archItemColor']; ?></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p><span style="font-weight:700; padding-left: 10px;">Image: </span></p><img class="output-img" src="<?php echo $row['archmyfile']; ?>" height="200"/></td>
                             </tr>
                         </table>
                     </div>

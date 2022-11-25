@@ -95,7 +95,6 @@
                             <div class="output-two output">
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Description: </span><?php echo $row['clitemDescription']; ?></p>
                             </div>
-
                             <div class="output-one output">
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Owner: </span><?php echo $row['owner']; ?></p>
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Recieved at: </span><?php echo $row['tdclaimed']; ?></p>
