@@ -57,7 +57,7 @@
                     $row = mysqli_num_rows($result);
                     if ($row)
                        {
-                        echo "<p class='total-item'>Number of Found Item: $row </p>";
+                        echo "<p class='total-item'>Number of Unverified: $row </p>";
                        }
                     // close the result.
 
@@ -75,16 +75,16 @@
                     while($row=$result->fetch_assoc())
                     {
                     ?>
-                    <div id='messages-container'>
+                    <div id='messages-container' style="width: 100%">
                         <div class="msg-name" style="display: flex; align-items: center;">
-                            <div style="width: 50%; display: flex; align-items: center;">
+                            <div style="width: 60%; display: flex; align-items: center;">
                                 <p style="margin-left: 20px; color: #FE6E00; font-weight: 700; font-size: 20px;"><?php echo $row['fname'];?>&nbsp<?php echo $row['lname'];?></p>
                                 <p style="margin-left: 10px; color: #000000; font-weight: 600; font-size: 12px;">#<u><?php echo $row['accountId']; ?></u></p>
                             </div>
-                            <div style="width: 50%; display: flex; align-items: center;">
-                                <p style="margin-left: 20px; color: #000000; font-weight: 700; font-size: 14px;">Item No: <u style="font-size: 16px; color: #FE6E00"><?php echo $row['itemnumber']; ?></u></p>
-                                <a style="text-decoration: none; margin-left: 92px; color: #FE6E00; font-weight: 700;" href="mailto:<?php echo $row['email']; ?>"><u>Reply</u></a>
-                                <p style="margin-left: 50px; color: #FE6E00; font-weight: 700; font-size: 16px;"><u><a style="color:#FE6E00;" onClick="verifyMsg()" name="move" href='move_to_verified.php?id="<?php echo $row['msgId']; ?>"&acctId=<?php echo $row['accountId']; ?>&itemNo=<?php echo $row['itemnumber']; ?>&admin_id=<?php echo $_SESSION['admin_id']; ?>'>Verify></a></u></p>
+                            <div style="width: 90%; display: flex; align-items: center;">
+                                <p style="margin-left: 10px; color: #000000; font-weight: 700; font-size: 14px;">Item No: <u style="font-size: 16px; color: #FE6E00"><?php echo $row['itemnumber']; ?></u></p>
+                                <a style="text-decoration: none; margin-left: 80px; color: #FE6E00; font-weight: 700;" href='move_to_archive.php?id="<?php echo $row['msgId']; ?>'><u>Verify Not Match</u></a>
+                                <p style="margin-left: 50px; color: #FE6E00; font-weight: 700; font-size: 16px;"><u><a style="color:#FE6E00;" onClick="verifyMsg()" name="move" href='move_to_verified.php?id="<?php echo $row['msgId']; ?>"&acctId=<?php echo $row['accountId']; ?>&itemNo=<?php echo $row['itemnumber']; ?>&admin_id=<?php echo $_SESSION['admin_id']; ?>'>Verify Match</a></u></p>
                             </div>
                         </div>
                         <div class="msg-caption" style="display: flex; margin-top: 10px;">
@@ -102,7 +102,6 @@
                         <div class="msg-time" style="display: flex; align-items: center; margin-top: 10px; opacity: .9;">
                             <div style="width: 50%; display: flex; align-items: center;">
                                 <p style="margin-left: 180px; color: #000000; font-weight: 400; font-size: 12px;"><?php echo $row['datetime']; ?></p>
-                                <p style="margin-left: 50px; color: #FE6E00; font-weight: 600; font-size: 12px;"><a style="color: #FE6E00;" onClick="deleteMsg()" href='move_to_archive.php?id="<?php echo $row['msgId']; ?>"&acctId=<?php echo $row['accountId']; ?>&itemNo=<?php echo $row['itemnumber']; ?>&admin_id=<?php echo $_SESSION['admin_id']; ?>'>Delete</a></p>
                             </div>
                         </div>
                     </div>

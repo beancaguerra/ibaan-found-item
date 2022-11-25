@@ -21,7 +21,7 @@
         </div>
 
         <div class="topnav">
-            <a href="user_login_page.php" style="float:right">Back</a>
+            <a href="index.php" style="float:right">Back</a>
         </div>
         
         <div class="offer_section layout_padding-bottom">

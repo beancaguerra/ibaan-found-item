@@ -1,9 +1,13 @@
 <?php
-    include_once("connect_db.php");
-    // Connection Created Successfully
 
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL & ~E_NOTICE);
+    //Error_reporting(0);
     session_start();
-
+    
+    $dbname = "ibaanrecord_db";
+    $conn = mysqli_connect("localhost", "root", "", $dbname);
+    // Connection Created Successfully
     // Store All Errors
     $errors = [];
 
@@ -149,7 +153,7 @@
                 $updateResult = mysqli_query($conn, $updateQuery);
                 if ($updateResult) {
                     $subject = 'Email Verification Code';
-                    $message = "our verification code is $code";
+                    $message = "Your verification code is $code";
                     $sender = 'From: viabeanca.guerra@g.batstate-u.edu.ph';
 
                     if (mail($email, $subject, $message, $sender)) {

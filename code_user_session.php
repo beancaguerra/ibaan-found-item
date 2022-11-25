@@ -9,7 +9,7 @@
     $loggedin_session   =   $row['email'];
     $loggedin_id        =   $row['accountId'];
     if(!isset($loggedin_session) || $loggedin_session==NULL) {
-        header("Location: user_login_page.php");
+        header("Location: login-page-user.php");
 
         if($loggedin_session != false){
             $query = "SELECT * FROM tb_residentsacc WHERE email = '$loggedin_session'";
@@ -22,7 +22,7 @@
                 }
             }
     }else{
-        header('location: user_login_page.php');
+        header('location: login-page-user.php');
         }
     }
 ?>
@@ -48,7 +48,7 @@
 -->
 
 <!--
-<?php /*include_once("controller.php"); ?>
+//<?php /*include_once("controller.php"); ?>
 <?php
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];

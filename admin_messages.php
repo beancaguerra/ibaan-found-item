@@ -268,10 +268,10 @@
                             $.each(r, function(i, item) {
                                 //console.log(r);
                                 if(xID == r[i].recipient){
-                                    $("#msgBox").append("<div class='sent'><div class='xtestmessage_sent'>"+r[i].textmessage+"</div></div>");
+                                    $("#msgBox").append("<div class='sent' style='margin-top: 20px;'><div class=''>"+r[i].datesent+"</div><div class='xtestmessage_sent'>"+r[i].textmessage+"</div></div>");
                                 }
                                 else{
-                                    $("#msgBox").append("<div class='received'><div class='xtestmessage'>"+r[i].textmessage+"</div></div>");
+                                    $("#msgBox").append("<div class='received'style='margin-top: 20px;'><div class=''>"+r[i].datesent+"</div><div class='xtestmessage'>"+r[i].textmessage+"</div></div>");
                                 }
                             });
                         //alert(jsonData.textmessage);

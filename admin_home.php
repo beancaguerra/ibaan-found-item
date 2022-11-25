@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="divider">
-                <p>Municipality</p>
+                <p>Municipality of Ibaan</p>
             </div>
         </header>
         <nav class="navigation" id="navigation">
@@ -34,7 +34,7 @@
                 </div>
         </nav>
         <main>
-        <section class="forms-home">
+            <section class="forms-home">
                 <div class="announcement">
                     <h3 style="text-align: center; font-weight: 600;">Announcement</h3>
                     <div class="announce-feed">
@@ -53,6 +53,9 @@
                         </div>
                         <!--Php code for announcement-->
                         <?php
+                            ini_set('display_errors', 1);
+                            error_reporting(E_ALL & ~E_NOTICE);
+                            Error_reporting(0);
                             include 'connect_db.php';
 
                             //showing data from tb_iteminfo to the system
@@ -74,8 +77,8 @@
                                 <p class="post-two"><span style='color:#000000; font-size: 16px; font-weight:500; margin-right: 20px;'><?php echo $row['caption']; ?></span></p>
                             </div>
                             <div class="post-result-child-two">
-                                <a style="color:#006400; margin-top:4px; font-size:12px" href='edit_announcement.php?id="<?php echo $row['id']; ?>"'>Edit</a>
-                                <a style="color:#006400; margin-top:4px; font-size:12px" href='delete_announcement.php?id="<?php echo $row['id']; ?>"'>Delete</a>
+                                <!--<a style="color:#006400; margin-top:4px; font-size:12px" href='edit_announcement.php?id="//php echo $row['id'];"'>Edit</a>-->
+                                <a style="color:#006400; margin-top:4px; font-size:12px" href='delete_announcement.php?id="<?php echo $row['announceId']; ?>"'>Delete</a>
                             </div>
                         </div>
                         <?php } ?>
@@ -94,7 +97,6 @@
                         <h3>Ibaan Vision</h3>
                         <p>"To be a First-Class Municipality by 2030"</p>
                     </div>
-        
                 </div>
                 
             </section>

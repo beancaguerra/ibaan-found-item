@@ -73,6 +73,11 @@
                                 padding: 0 5px;">
 
                         <?php
+
+                        ini_set('display_errors', 1);
+                        error_reporting(E_ALL & ~E_NOTICE);
+                        Error_reporting(0);
+
                         include 'connect_db.php';
                         
                         $loggedin_id            =   $_GET['accountId'];
@@ -149,10 +154,9 @@
                                 </div>
                                 <div class="third-three">
                                     <input class="input big" type="text" name="email" placeholder="Email" value="<?php echo $loggedin_session; ?>" readonly required/>
-                                    <!--
-                                    <input class="input big" type="password" name="password" value="<?php echo $password; ?>" readonly required/>
-                                    <a href="change-password-profile.php"><input class="input big" type="button" value="Change Password"/></a>
-                                    -->
+                                    
+                                    <input class="input big" type="hidden" name="password" value="<?php echo $password; ?>" readonly required/>
+                                    
                                 </div>
                                 <input class="input button-submit" type="submit" name="Submit" value="Update">
                             </div>

@@ -22,7 +22,8 @@
         </div>
 
         <div class="topnav">
-            <a href="login-page-user.php" style="float:right">Sign in/Sign up</a>
+            <a href="login-page-user.php" style="float:right">User</a>
+            <a href="admin_login.php" style="float:right">Admin</a>
             
         </div>
     </div>

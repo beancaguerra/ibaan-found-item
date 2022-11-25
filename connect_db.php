@@ -6,15 +6,21 @@
 //Make a MySQL Connection
 //server
 //echo" Connected to database ";
-//$dbServername = "localhost";
-//$dbUsername = "root";
-//$dbPassword = "";
-//$dbname = "ibaanrecord_db";
+$dbServername = "localhost";
+$dbUsername = "root";
+$dbPassword = "";
+$dbname = "ibaanrecord_db";
 
-//$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword, $dbname);
+$conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword);
 
-    //ftp.ibaanfounditem.online
+mysqli_select_db($conn, $dbname);
 
+if (!$conn){
+    trigger_error(mysqli_connect_error());
+    echo 'not connected';
+}
+
+    /*
 ini_set('display_errors', 1);
 //error_reporting(E_ALL & ~E_NOTICE);
 Error_reporting(0);
@@ -29,7 +35,7 @@ $dbname = "u538504999_ibaanrecord_db";
 $conn = mysqli_connect ($dbServername, $dbUsername, $dbPassword);
 mysqli_select_db($conn, $dbname);
 
-
+*/
 
 
 

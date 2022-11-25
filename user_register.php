@@ -21,7 +21,7 @@
         </div>
 
         <div class="topnav">
-            <a href="user_login_page.php" style="float:right">Home</a>
+            <a href="index.php" style="float:right">Home</a>
         </div>
 
         <div class="reg-form" id="container">

@@ -46,6 +46,10 @@
             <section class="forms-input">
             <div class="output-container">
                 <?php
+                    ini_set('display_errors',1);
+                    //error_reporting(E_ALL & ~E_NOTICE);
+                    Error_reporting(0);
+
                     include 'connect_db.php';
 
                     $result=$conn->query("SELECT * FROM tb_deletemsg INNER JOIN tb_residentsacc ON tb_deletemsg.dmaccountId = tb_residentsacc.accountId ORDER BY dmid DESC") or die("Error");
@@ -65,7 +69,7 @@
                             <tr>
                                 <th style="text-align: left; background-color: #cccccc"><h3>Owner's Information </th>
                                 <th style="text-align: right; background-color: #cccccc"><a style="color:#ec9006; margin: 10px;" href='delete_archives.php?id="<?php echo $row['dmid']; ?>"'>Delete</a>
-                                <a style="color:#ec9006; margin: 10px;" name="move" onClick="retrieveMsg()" href='move_to_message_from_archive.php?id="<?php echo $row['dmid']; ?>"'>Retrieve</a>
+                                <!-- <a style="color:#ec9006; margin: 10px;" name="move" onClick="retrieveMsg()" href='move_to_message_from_archive.php?id="//php echo $row['dmid']; ?>"'>Retrieve</a> -->
                                 </th>
                             </tr>
                             <tr>
