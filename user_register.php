@@ -127,7 +127,7 @@
                                             </div>
 
                                             <input style="margin-top: 22px; margin-bottom:25px;" type="checkbox" onclick="myFunction()">Show Password
-                                            <!-- policies -->
+                                            <!-- policies 
                                             <div class="password-policies">
                                                 <div class="policy-length">
                                                     8 characters
@@ -141,7 +141,7 @@
                                                 <div class="policy-special">
                                                     contains special characters
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                     <!-- Submit button -->

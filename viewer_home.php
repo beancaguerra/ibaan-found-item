@@ -87,15 +87,15 @@
                 <div class="bc-vmc">
                     <div class="vmc">
                         <h3>Ibaan Mission</h3>
-                        <p>"To improve the quality of life of the citizens through sustained efforts to attain a balanced agro-industrial development; to promote a business-friendly environment; to generate more employment opportunities and to adequately provide the basic infrastructure utilities, facilities and social services necessary for a robust and liveable community."</p>
+                        <p style="text-align: justify;">"Ibaan is a highly competitive local government unit that shall be known for pioneering innovative programs that improve the quality of life of the constituents through; <br>
+                        1. Pursuit of excellence in the local government system. <br>
+                        2. Responsiveness to the pressing needs of the Municipality and embedding a strong sense of foresight in all the programs that shall be implemented.<br>
+                        3. Uplifting the pride and wellbeing of the individuals and societies deserve.<br>
+                        4. Adherence to the mandates of the national government."</p>
                     </div>
                     <div class="vmc">
                         <h3>Ibaan Vision</h3>
-                        <p>"A well diversified agro-industrial center and international gate-way, with a tourist friendly and safe environment and quality infrastructure, powered by a globally-competitive citizenry, and inspired by transparent, firm, and fair leadership."</p>
-                    </div>
-                    <div class="vmc">
-                        <h3>Value Statement</h3>
-                        <p>"We strive to pursue recognition and excellence in promoting good governance to benefit local constituents and development partners."</p>
+                        <p>"To be a First-Class Municipality by 2030"</p>
                     </div>
                 </div>
                 
