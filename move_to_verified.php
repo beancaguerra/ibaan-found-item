@@ -26,7 +26,7 @@ $textmessage = 'Dear Mr/Ms. <br> We would like to inform you that the details/im
 
     $conn->query("INSERT INTO tbl_chat(sender_id,recipient,textmessage,datesent) VALUES($xadmin_id,$recipient_id,'$textmessage',NOW()) ");
 
-$sql = "INSERT INTO tb_verifiedmsg SELECT *, '$qrPass' FROM tb_messages WHERE msgid = $id"; 
+$sql = " INSERT INTO tb_verifiedmsg SELECT *, '$qrPass',0 FROM tb_messages WHERE msgid = $id";
 if ($conn->query($sql) === TRUE) {
     include 'delete_messages.php';
     exit;
