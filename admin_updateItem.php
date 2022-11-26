@@ -72,10 +72,13 @@
                         include 'connect_db.php';
 
                         //showing data from tb_iteminfo to the system
-                        $query = "SELECT * FROM tb_itemRecord Order By itemNo DESC" or die("Error");
-                        $result = mysqli_query($conn, $query);
+                        $result=$conn->query("SELECT * FROM tb_itemRecord Order By itemNo DESC") or die("Error");
+                        //$result = mysqli_query($conn, $query);
+                        $count=$conn->query("select count(1) FROM tb_itemrecord");
+                        $rows =  $count->fetch_array(MYSQLI_NUM);
+
                         //if table has no data
-                        if (mysqli_num_rows($result) == 0) {
+                        if ($count->num_rows == 0) {
                             echo "<div class='nodata'>
                                     <img src='./images/nodata.png' width='120px' height='120px'>
                                     <p>No Item Record</p>
