@@ -119,22 +119,22 @@
                 <div class="main-container">
                     <div class="detail-container">
                         <div class='output-cont-child'>
-                            <div class="output-one output">
+                            <div class="output-two output">
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Finder: </span><span class="xdetailField" id="xFinder"></span></p>
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact No: </span><span class="xdetailField" id="xContactNo"></span></p>
                             </div>
-                            <div class="output-two output">
+                            <div class="output-one output">
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Time: </span><span class="xdetailField" id="xTime"></span></p>
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><span class="xdetailField" id="xDate"></span></p>
                             </div>
-                            <div class="output-three output">
+                            <div class="output-two output">
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><span class="xdetailField" id="xDescription"></span></p>
                             </div>
-                            <div class="output-four output">
+                            <div class="output-one output">
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Brand: </span><span class="xdetailField" id="xItemBrand"></span></p>
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Color: </span><span class="xdetailField" id="xItemColor"></span></p>    
                             </div>
-                            <div class="output-one output">
+                            <div class="output-two output">
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><span class="xdetailField" id="xItemLocation"></span></p>
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><span class="xdetailField" id="xItemNo"></span></p>
                             </div>
