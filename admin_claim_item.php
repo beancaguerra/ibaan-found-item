@@ -120,40 +120,39 @@
                     <div class="detail-container">
                         <div class='output-cont-child'>
                             <div class="output-one output">
-                            <p class="p-one"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Finder: </span><span class="xdetailField" id="xFinder"></span></p>
-                                        <p class="p-two"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Contact No: </span><span class="xdetailField" id="xContactNo"></span></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Finder: </span><span class="xdetailField" id="xFinder"></span></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact No: </span><span class="xdetailField" id="xContactNo"></span></p>
                             </div>
                             <div class="output-two output">
-                                        <p class="p-one"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Time: </span><span class="xdetailField" id="xTime"></span></p>
-                                        <p class="p-two"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Date: </span><span class="xdetailField" id="xDate"></span></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Time: </span><span class="xdetailField" id="xTime"></span></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><span class="xdetailField" id="xDate"></span></p>
                             </div>
                             <div class="output-three output">
-                                        <p class="p-one"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Item Category: </span><span class="xdetailField" id="xItemCategory"></span></p>
-                                        <p class="p-two"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Description: </span><span class="xdetailField" id="xDescription"></span></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><span class="xdetailField" id="xDescription"></span></p>
                             </div>
                             <div class="output-four output">
-                                        <p class="p-two"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Item Brand: </span><span class="xdetailField" id="xItemBrand"></span></p>
-                                        <p class="p-two"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Item Color: </span><span class="xdetailField" id="xItemColor"></span></p>    
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Brand: </span><span class="xdetailField" id="xItemBrand"></span></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Color: </span><span class="xdetailField" id="xItemColor"></span></p>    
                             </div>
                             <div class="output-one output">
-                                        <p class="p-two"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Item Location: </span><span class="xdetailField" id="xItemLocation"></span></p>
-                                        <p class="p-one"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Item No: </span><span class="xdetailField" id="xItemNo"></span></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><span class="xdetailField" id="xItemLocation"></span></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><span class="xdetailField" id="xItemNo"></span></p>
                             </div>
 
                             
                             <div class="output-two output">
-                                        <p class="p-two"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Status: </span><span class="xdetailField" id="xStatus"></span></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Status: </span><span class="xdetailField" id="xStatus"></span></p>
                             </div>
 
 
-                            <div class="output-delete output-one">
+                            <div class="output-delete output-two">
                             <div class="owner-field">
                                 <div class="output-one output">
-                                <p class="p-one"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Owner: </span><span id="xItemNo"></span></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Owner: </span><span id="xItemNo"></span></p>
                                     <input type="text" id="xOwner" placeholder="Owner..">
-                                <p class="p-one"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Time: </span><span id="xItemNo"></span></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Time: </span><span id="xItemNo"></span></p>
                                     <input type="time" id="xOwnerTime" placeholder="Time..">
-                                <p class="p-one"><span style='color:#2e8b57; font-weight:700; margin-right: 20px;'>Date: </span><span id="xItemNo"></span></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><span id="xItemNo"></span></p>
                                     <input type="date" id="xOwnerDate" placeholder="Date..">
                                 </div>
                             </div>
@@ -175,142 +174,6 @@
                         </div>
             </section>
         </main>
-      
-        <!--Back to top button-->
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop-icon.png" alt="" width="60" height="50"></button>
-        <!--JavaScript Codes-->
-        <script type="text/javascript">
-            //Get the button
-            var mybutton = document.getElementById("myBtn");
-            
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
-            
-            function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-            }
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-            }
-            //<!------Deleting Record---->
-            function deleteAcc(delid)
-            {
-                if(confirm("Do you want to delete this record?")){
-                    window.location.href='delete_claimed.php?id=' +delid+'';
-                    return true;
-                }
-            }
-
-            $(document).ready(function(e){
-                $("#txtQrCode").focus();
-                $("#passDiv").hide();
-                $("#detailSection").hide();
-            });
-
-            ///TRIGGERS EVENT WHEN SCANNED
-            $("#txtQrCode").change(function(e){
-
-                var xQRCode = $(this).val();
-
-                $.ajax(
-                {
-                    type: "POST",
-                    url: "api/api_claim_item.php",
-                    data: {'qrCode':xQRCode},
-                    dataType:'json',
-                    success:function(r){
-                        $.each(r, function(i, item) {
-                                $("#xItemNo").text(r[i].architemnumber);
-                                $("#xDescription").text(r[i].archdescription);
-                                $("#xItemBrand").text(r[i].archItemBrand);
-                                $("#xItemColor").text(r[i].archItemColor);
-                                $("#xItemLocation").text(r[i].archItemLocation);
-                                $("#xFinder").text(r[i].finder);
-                                $("#xContactNo").text(r[i].contact);
-                                $("#xDate").text(r[i].date);
-                                $("#xTime").text(r[i].time);
-                                // $("#xStatus").text(r[i].isClaimed === "1"? "CLAIMED": "NOT YET CLAIMED");
-                                if(r[i].isClaimed === "1"){
-                                    $("#xStatus").text("CLAIMED");
-                                    $("#xStatus").css("color","red");
-                                    $("#xStatus").css("font-weight","bold;");
-                                }
-                                else{
-                                    $("#xStatus").text("NOT YET CLAIMED"); 
-                                    $("#xStatus").css("color","green");
-                                    $("#xStatus").css("font-weight","bold;");
-
-                                }
-                            
-                            });
-
-                            $("#detailSection").show();
-                    },
-                    error:function(err){
-                        console.log(err);
-                    }
-                }
-            );
-            });
-
-            function closeForm() {
-                document.getElementById("btnClose").style.display = "none";
-                }
-                
-
-                function clearDetails(){
-                   $(".xdetailField").text("");
-                   $("#detailSection").hide();
-                }
-            
-            function showDetails(){
-                    
-                var qrPassword = $("#txtQRPassword").val();
-                var itemNo = $("#xItemNo").text();
-                var Owner = $("#xOwner").val();
-                var time =  $("#xOwnerTime").val();
-                var date =  $("#xOwnerDate").val();
-
-                console.log(Owner);
-                console.log(time);
-                console.log(date);
-
-                console.log(itemNo);
-                $.ajax(
-                {
-                    type: "POST",
-                    url: "api/api_checkpassword.php",
-                    data: {'itemNo':itemNo,'Owner':Owner,'time':time,'date':date},
-                    dataType:'json',
-                    success:function(r){
-                        if(r>0){
-                        alert('Item was successfully claimed!');
-                        $("#detailSection").hide();
-                        $("#txtQRPassword").val('');
-                        return;
-                        }
-                        else if(r==0){
-                            
-                        alert('Claiming process failed! Either the Item is already claimed or entered password is incorrect!');
-                        return;
-                        }
-                    },
-                    error:function(err){
-                        console.log(err);
-                    }
-                }
-                );
-            }
-        </script>
-        </main>
-    </body>
-</html>
       
         <!--Back to top button-->
         <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop.png" alt="" width="60" height="50"></button>
