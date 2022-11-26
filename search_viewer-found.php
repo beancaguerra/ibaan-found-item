@@ -62,6 +62,9 @@
             <section class="form-output" id="form-output">
                 <div class="output-container">
                 <?php
+                    ini_set('display_errors', 1);
+                    //error_reporting(E_ALL & ~E_NOTICE);
+                    Error_reporting(0);
                     include 'connect_db.php';
 
                     if(isset($_POST['search']))
