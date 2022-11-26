@@ -61,16 +61,16 @@
                         $result=$conn->query("SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor, itemDescription=$itemDescription");
                         
                         if(isset($_POST['Submit'])){
-                            $Finder         =   $_POST['finder'];
-                            $Contact        =   $_POST['contact'];
-                            $Time           =   $_POST['time'];
-                            $Date           =   $_POST['date'];
-                            $ItemNo         =   $_POST['itemNo'];
-                            $ItemCategory   =   $_POST['itemCategory'];
-                            $ItemLocation   =   $_POST['itemLocation'];
-                            $ItemBrand      =   $_POST['itemBrand'];
-                            $ItemColor      =   $_POST['itemColor'];
-                            $ItemDescription=   $_POST['itemDescription'];
+                            $finder         =   $_POST['finder'];
+                            $contact        =   $_POST['contact'];
+                            $time           =   $_POST['time'];
+                            $date           =   $_POST['date'];
+                            $itemNo         =   $_POST['itemNo'];
+                            $itemCategory   =   $_POST['itemCategory'];
+                            $itemLocation   =   $_POST['itemLocation'];
+                            $itemBrand      =   $_POST['itemBrand'];
+                            $itemColor      =   $_POST['itemColor'];
+                            $itemDescription=   $_POST['itemDescription'];
     
                             
 
@@ -106,7 +106,7 @@
                             <input class="input medium" type="text" value="<?php echo $itemLocation; ?>" placeholder="Item Location..." name="itemLocation" required>
                             <input class="input medium" type="text" value="<?php echo $itemBrand; ?>" placeholder="Item Brand..." name="itemBrand" required>
                         </div>
-                        <div class="third-three">
+                        <div class="second-three">
                             <input class="input medium" type="text" value="<?php echo $itemColor; ?>" placeholder="Item Color..." name="itemColor" required>
                             <input class="input medium" type="text" value="<?php echo $itemDescription; ?>" placeholder="Item Description..." name="itemDescription" required>
 
