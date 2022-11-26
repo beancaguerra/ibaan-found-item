@@ -28,6 +28,7 @@
                     <a href="admin_itemRecord.php" class="nav-link active"><img src="./images/add-icon.png" width="18" height="18" style="margin-right: 3px;">Item Records</a>
                     <a href="admin_messages.php" class="nav-link"><img src="./images/messages-icon.png" width="18" height="18" style="margin-right: 3px;">Messages</a>
                     <a href="admin_accounts.php" class="nav-link"><img src="./images/user-icon.png" width="18" height="18" style="margin-right: 3px;">Accounts</a>
+                    <a href="admin_help.php" class="nav-link"><img src="./images/help-icon.png" width="18" height="18" style="margin-right: 3px;">Help</a>
                     <a href="logout.php" class="nav-link"><img src="./images/logout-icon.png" width="18" height="18" style="margin-right: 3px;">Logout</a>
             </div>
         </nav>
@@ -35,7 +36,6 @@
                 <div class="message-nav">
                     <a href="admin_itemRecord.php" class="msg-nav-child"><img src="./images/add-icon.png" width="18" height="18" style="margin-right: 3px;">AddItem</a>
                     <a href="admin_updateItem.php" class="msg-nav-child --msg-active"><img src="./images/update-icon.png" width="18" height="18" style="margin-right: 3px;">Update</a>
-                    <a href="admin_claim_item.php" class="msg-nav-child"><img src="./images/claimed-icon.png" width="18" height="18" style="margin-right: 3px;">Claim</a>
                     <a href="admin_claimedItem.php" class="msg-nav-child"><img src="./images/claimed-icon.png" width="18" height="18" style="margin-right: 3px;">Claimed</a>
                 </div>
         </div>
@@ -46,7 +46,6 @@
                         ini_set('display_errors',1);
                         //error_reporting(E_ALL & ~E_NOTICE);
                         Error_reporting(0);
-
                         include 'connect_db.php';
                         
                         $id             =   $_GET['edit'];
@@ -61,7 +60,9 @@
                         $itemDescription=   $_GET['itemDescription'];
 
 
-                        $result=$conn->query("SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor, itemDescription=$itemDescription");
+                        $sql = "SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor,  itemDescription=$itemDescription";
+                        $result = mysqli_query($conn, $sql);
+                        $row = mysqli_fetch_assoc($result);
                         
                         if(isset($_POST['Submit'])){
                             $Finder         =   $_POST['finder'];
@@ -71,13 +72,14 @@
                             $ItemNo         =   $_POST['itemNo'];
                             $ItemCategory   =   $_POST['itemCategory'];
                             $ItemLocation   =   $_POST['itemLocation'];
-                            $ItemBrand      =   $_POST['itemBrand'];
-                            $ItemColor      =   $_POST['itemColor'];
+                            $ItemBrand      =   $_GET['itemBrand'];
+                            $ItemColor      =   $_GET['itemColor'];
                             $ItemDescription=   $_POST['itemDescription'];
     
                             
 
                             $sql = "UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
+
                             $result = mysqli_query($conn, $sql);
 
                             if($result){
@@ -106,12 +108,13 @@
                             <input class="input medium" type="text" value="<?php echo $itemCategory; ?>" placeholder="Item Category..." name="itemCategory" required>
                             
                         </div>
+                        <div class="second-three">
+                            <input class="input small" style="background-color: #cccccc" type="text" value='<?php echo $itemBrand; ?>' placeholder="Item Brand" name="itemBrand" required>
+                            <input class="input medium" type="text" value="<?php echo $itemColor; ?>" placeholder="Item Color..." name="itemColor" required>
+                            
+                        </div>
                         <div class="third-three">
                             <input class="input medium" type="text" value="<?php echo $itemLocation; ?>" placeholder="Item Location..." name="itemLocation" required>
-                            <input class="input medium" type="text" value="<?php echo $itemBrand; ?>" placeholder="Item Brand..." name="itemBrand" required>
-                        </div>
-                        <div class="fourth-three">
-                            <input class="input medium" type="text" value="<?php echo $itemColor; ?>" placeholder="Item Color..." name="itemColor" required>
                             <input class="input medium" type="text" value="<?php echo $itemDescription; ?>" placeholder="Item Description..." name="itemDescription" required>
 
                             <input class="input button-submit" type="submit" name="Submit" value="Update">
