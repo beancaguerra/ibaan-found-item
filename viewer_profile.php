@@ -62,6 +62,18 @@
                 <div class="profile-cont">
                     <div class="profile">
                     <?php
+                        if(isset($_SESSION['Submit'])){
+                            ?>
+                            <div class="submit-btn" id="btnClose" style="border:1px solid #bbb; border-radius: 8px; padding:5px; margin:10px 0px; background:#eee; text-align:left; width: 100%"> 
+                                <?php echo $_SESSION['Submit']; ?>
+                                <button style="display: flex; border:none; margin-left: 95%; margin-top: -5%; padding: 2px; cursor: pointer; font-size: 20px" type="button" onclick="closeForm()">&times</button>
+                            </div>
+
+                            <?php
+                            unset($_SESSION['Submit']);
+                        }
+                    ?>
+                    <?php
                         $sql=mysqli_query($conn, "SELECT * FROM tb_residentsacc where accountId='$loggedin_id'");
                         $row=mysqli_fetch_array($sql,MYSQLI_ASSOC);
                         
@@ -73,18 +85,7 @@
                         $password=$row['password'];
                     ?>
                         <table width="100%" style="border: none;">
-                            <?php
-                            if(isset($_SESSION['Submit'])){
-                                ?>
-                                <div class="submit-btn" id="btnClose" style="border:1px solid #bbb; border-radius: 8px; padding:5px; margin:10px 0px; background:#eee; text-align:left; width: 100%"> 
-                                    <?php echo $_SESSION['Submit']; ?>
-                                    <button style="display: flex; border:none; margin-left: 95%; margin-top: -5%; padding: 2px; cursor: pointer; font-size: 20px" type="button" onclick="closeForm()">&times</button>
-                                </div>
-
-                                <?php
-                                unset($_SESSION['Submit']);
-                            }
-                            ?>
+                        
                             <tr>
                                 <th colspan="2" style="border: none;"><h1 style="text-align: center; margin: 20px; color: black;">My Profile</h1></th>
                             </tr>
