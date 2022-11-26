@@ -80,7 +80,7 @@
                     ?>
                     <div id='messages-container' style="width: 100%">
                         <div class="msg-name" style="display: flex; align-items: center;">
-                            <div style="width: 40%; display: flex; align-items: center;">
+                            <div style="width: 60%; display: flex; align-items: center;">
                                 <p style="margin-left: 20px; color: #FE6E00; font-weight: 700; font-size: 20px;"><?php echo $row['fname'];?>&nbsp<?php echo $row['lname'];?></p>
                                 <p style="margin-left: 10px; color: #000000; font-weight: 600; font-size: 12px;">#<u><?php echo $row['accountId']; ?></u></p>
                             </div>
