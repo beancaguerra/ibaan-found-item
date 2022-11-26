@@ -55,7 +55,8 @@
 
                     //echo" Connected to database ";
                     //showing data from tb_messages
-                    $result=$conn->query("SELECT * FROM vwchat WHERE  sender_id='$admin_id'") or die("Error");
+                    $query = "SELECT * FROM vwchat WHERE  sender_id='$admin_id'" or die("Error");
+                    $result = mysqli_query($conn, $query);
                     //if table has no data
                     if ($result->num_rows == 0) {
                         echo "<div class='nodata'>
