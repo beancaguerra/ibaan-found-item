@@ -62,6 +62,8 @@
             <section class="forms-input">
                 <div class="output-container" id="realtime">
                 <?php
+                    header("Access-Control-Allow-Origin: *");
+
                     ini_set('display_errors',1);
                     //error_reporting(E_ALL & ~E_NOTICE);
                     Error_reporting(0);
@@ -71,7 +73,7 @@
 
                     //echo" Connected to database ";
                     //showing data from tb_messages
-                    $result=$conn->query("SELECT * FROM vwChat WHERE  recipient=$accountId") or die("Error");
+                    $result=$conn->query("SELECT * FROM vwchat WHERE  recipient=$accountId") or die("Error");
                     //if table has no data
                     if ($result->num_rows == 0) {
                         echo "<div class='nodata'>
@@ -86,7 +88,7 @@
                     <div id='chat-container'>
                         <div class="chat-list">
                             <?php
-                                $chatlist = $conn->query("SELECT DISTINCT CASE WHEN vwChat.recipient = $accountId THEN vwChat.sender_id ELSE vwChat.recipient END as user_rowstamp, admin_name fullname FROM vwChat INNER JOIN tb_admin t1 ON vwChat.sender_id = t1.admin_id where recipient = $accountId");
+                                $chatlist = $conn->query("SELECT DISTINCT CASE WHEN vwchat.recipient = $accountId THEN vwchat.sender_id ELSE vwchat.recipient END as user_rowstamp, admin_name fullname FROM vwchat INNER JOIN tb_admin t1 ON vwchat.sender_id = t1.admin_id where recipient = $accountId");
                                 if ($chatlist->num_rows == 0) {
                                     echo "<div class='nodata'>
                                             <img src='./images/nodata.png' width='120px' height='120px'>
