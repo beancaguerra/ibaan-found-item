@@ -44,6 +44,10 @@
                 <div class="output-container">
                     <?php
 
+                        ini_set('display_errors',1);
+                        //error_reporting(E_ALL & ~E_NOTICE);
+                        Error_reporting(0);
+                        
                         include 'connect_db.php';
                         
                         $id             =   $_GET['edit'];
@@ -76,7 +80,7 @@
 
                             $sql = "UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
                             $result = mysqli_query($conn, $sql);
-                            
+
                             if($result){
                                 $_SESSION['Submit'] = "Record Updated Successfully !";
                                 header('Location: admin_updateItem.php');
@@ -107,7 +111,7 @@
                             <input class="input medium" type="text" value="<?php echo $itemLocation; ?>" placeholder="Item Location..." name="itemLocation" required>
                             <input class="input medium" type="text" value="<?php echo $itemBrand; ?>" placeholder="Item Brand..." name="itemBrand" required>
                         </div>
-                        <div class="second-three">
+                        <div class="fourth-three">
                             <input class="input medium" type="text" value="<?php echo $itemColor; ?>" placeholder="Item Color..." name="itemColor" required>
                             <input class="input medium" type="text" value="<?php echo $itemDescription; ?>" placeholder="Item Description..." name="itemDescription" required>
 
