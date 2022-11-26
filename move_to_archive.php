@@ -6,7 +6,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$id = $_GET['id'];
+$id = $_GET['del'];
 $recipient_id = $_GET['acctId'];
 $itemNo = $_GET['itemNo'];
 $xadmin_id= $_GET['admin_id'];
