@@ -147,7 +147,7 @@
                                 </div>
 
                                 <div class="output-delete">
-                                    <input style="color:#000000; margin: 10px 50px; border:none; background-color: gray; font-size: 1rem; text-decoration: underline; cursor: pointer;" type="button" onClick="deleteAcc(<?php echo $row['itemNo']; ?>)" name= "Delete" value="Delete">
+                                    <input style="color:#000000; margin: 10px 50px; border:none; background-color: #cccccc; font-size: 1rem; text-decoration: underline; cursor: pointer;" type="button" onClick="deleteAcc(<?php echo $row['itemNo']; ?>)" name= "Delete" value="Delete">
                                 </div>
                             </div>
                         </div>
