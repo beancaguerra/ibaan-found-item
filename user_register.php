@@ -66,21 +66,21 @@
                                         <div class="col-md-4 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="firstname">First name</label>
-                                                <input type="text" class="form-control" id= "fname" name="fname" placeholder="Enter first name" required value="<?php echo $fullname ?>"/>
+                                                <input type="text" class="form-control" id= "fname" name="fname" placeholder="Enter first name" required/>
                                                 
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="lastname">Last name</label>
-                                                <input type="text" id="lname" class="form-control" name="lname" placeholder="Enter last name" required value="<?php echo $lastname ?>"/>
+                                                <input type="text" id="lname" class="form-control" name="lname" placeholder="Enter last name" required />
                                                 
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="contact">Contact number</label>
-                                                <input class="form-control" type="text" id= "contact" name="contact" placeholder="Enter contact number" required value="<?php echo $contactno ?>">
+                                                <input class="form-control" type="text" id= "contact" name="contact" placeholder="Enter contact number" required >
                                                 
                                             </div>
                                         </div>
@@ -90,7 +90,7 @@
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="address">House no./Street/Barangay/City/Municality</label>
-                                                <input type="text" id="address" class="form-control" name="address" placeholder="Enter address" required value="<?php echo $address ?>"/>
+                                                <input type="text" id="address" class="form-control" name="address" placeholder="Enter address" required />
                                                 
                                             </div>
                                         </div>
@@ -110,7 +110,7 @@
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="email">Email address</label>
-                                                <input class="form-control" type="email" id= "email" name="email" placeholder="Enter email" required value="<?php echo $email ?>">
+                                                <input class="form-control" type="email" id= "email" name="email" placeholder="Enter email" required>
                                                 
                                             </div>
                                         </div>

@@ -175,8 +175,10 @@
             </section>
         </main>
       
-        <!--Back to top button-->
+        <!--Back to top button
         <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop.png" alt="" width="60" height="50"></button>
+        -->
+        
         <!--JavaScript Codes-->
         <script type="text/javascript">
             //Get the button
