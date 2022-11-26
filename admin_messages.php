@@ -50,13 +50,7 @@
                 <div class="output-container" id="realtime">
                 <?php
                     header("Access-Control-Allow-Origin: *");
-
-                    ini_set('display_errors',1);
-                    //error_reporting(E_ALL & ~E_NOTICE);
-                    Error_reporting(0);
-                    
                     include 'connect_db.php';
-                    
                     $admin_id = $_SESSION['admin_id'];
 
                     //echo" Connected to database ";
@@ -90,7 +84,6 @@
                                     $xID =  $xLists['user_rowstamp'];
                                     $xName =$xLists['fullname']
                                 ?>
-                                <!-- chat list -->
                                 <div class="card-container" onclick="getMsg(<?php echo $xID; ?>,'<?php echo $xName; ?>')">
                                     <input type="hidden" value="<?php echo $xLists['user_rowstamp'];?>"/>
                                     <label id="fName"><?php echo $xLists['fullname']; ?></label>
