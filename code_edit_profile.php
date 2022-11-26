@@ -92,7 +92,6 @@
 
                         $result=$conn->query=("SELECT * FROM 'tb_residentsacc' WHERE fname=$fname, lname=$lname, accountId=$loggedin_id, contact=$contact, gender=$gender, address=$address, email=$loggedin_session, password=$password");
                         //$result = mysqli_query($conn, $sql);
-                        $row = mysqli_fetch_assoc($result);
                         
                         if(isset($_POST['Submit'])){
 
