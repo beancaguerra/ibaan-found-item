@@ -63,10 +63,8 @@
                         $itemDescription=   $_GET['itemDescription'];
 
 
-                        $sql = "SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor, itemDescription=$itemDescription");
-                        $result = mysqli_query($conn, $sql);
-                        $row = mysqli_fetch_assoc($result);
-
+                        $result=$conn->query("SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor, itemDescription=$itemDescription");
+                        
                         if(isset($_POST['Submit'])){
                             $Finder         =   $_POST['finder'];
                             $Contact        =   $_POST['contact'];
@@ -81,8 +79,7 @@
     
                             
 
-                            $sql = "UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
-                            $result = mysqli_query($conn, $sql);
+                            $result=$conn->query("UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'") or die("Data Not Updated");
 
                             if($result){
                                 $_SESSION['Submit'] = "Record Updated Successfully !";
