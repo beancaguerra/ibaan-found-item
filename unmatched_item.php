@@ -86,7 +86,7 @@
                             </div>
                             <div style="width: 90%; display: flex; align-items: center;">
                                 <p style="margin-left: 10px; color: #000000; font-weight: 700; font-size: 14px;">Item No: <u style="font-size: 16px; color: #FE6E00"><?php echo $row['itemnumber']; ?></u></p>
-                                <a style="text-decoration: none; margin-left: 80px; color: #FE6E00; font-weight: 700;" href='move_to_archive.php?del="<?php echo $row['msgId']; ?>'><u>Verify Not Match</u></a>
+                                <a style="text-decoration: none; margin-left: 80px; color: #FE6E00; font-weight: 700;" onClick="deleteMsg()" href='move_to_archive.php?id="<?php echo $row['msgId']; ?>"&acctId=<?php echo $row['accountId']; ?>&itemNo=<?php echo $row['itemnumber']; ?>&admin_id=<?php echo $_SESSION['admin_id']; ?>'><u>Verify Not Match</u></a>
                                 <p style="margin-left: 50px; color: #FE6E00; font-weight: 700; font-size: 16px;"><u><a style="color:#FE6E00;" onClick="verifyMsg()" name="move" href='move_to_verified.php?id="<?php echo $row['msgId']; ?>"&acctId=<?php echo $row['accountId']; ?>&itemNo=<?php echo $row['itemnumber']; ?>&admin_id=<?php echo $_SESSION['admin_id']; ?>'>Verify Match</a></u></p>
                             </div>
                         </div>
