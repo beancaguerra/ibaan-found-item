@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'connect_db.php';
-
 if($_SERVER["REQUEST_METHOD"] == "POST") {
  $email 	=mysqli_real_escape_string($conn,$_POST['email']);
  $password 	=mysqli_real_escape_string($conn,$_POST['password']);
@@ -17,6 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
  $count=mysqli_num_rows($result);
  if($count==1) {
   $_SESSION['login_user']=$email;
+  $_SESSION['accountId']=$row['accountId'];
   header("location: viewer_home.php");
  }
 }

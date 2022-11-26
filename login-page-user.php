@@ -62,7 +62,7 @@
 
                                                                     <div class="form-outline form-white mb-2">
                                                                         <label for="email">Email</label>
-                                                                        <input type="email" id="typeEmailX" class="form-control form-control-lg" id="email" name="email" placeholder="Enter your email..." required value="<?php echo $email ?>"/>
+                                                                        <input type="email" id="typeEmailX" class="form-control form-control-lg" id="email" name="email" placeholder="Enter your email..." required/>
                                                                         
                                                                     </div>
 
