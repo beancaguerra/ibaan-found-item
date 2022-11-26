@@ -58,7 +58,7 @@
                     $query = "SELECT * FROM vwchat WHERE  sender_id='$admin_id'" or die("Error");
                     $result = mysqli_query($conn, $query);
                     //if table has no data
-                    if ($result->num_rows == 0) {
+                    if (mysqli_num_rows($result) == 0) {
                         echo "<div class='nodata'>
                                 <img src='./images/nodata.png' width='120px' height='120px'>
                                 <p>No Message</p>
