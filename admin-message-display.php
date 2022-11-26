@@ -1,4 +1,5 @@
 <?php
+ header("Access-Control-Allow-Origin: *");
     include 'connect_db.php';
     //showing data from tb_messages
     $result=mysql_query("SELECT * FROM tb_messages INNER JOIN tb_residentsacc ON tb_messages.accountId = tb_residentsacc.accountId ORDER BY msgId DESC") or die("Error");

@@ -49,6 +49,7 @@
             <section class="forms-input">
                 <div class="output-container" id="realtime">
                 <?php
+                    header("Access-Control-Allow-Origin: *");
                     ini_set('display_errors',1);
                     //error_reporting(E_ALL & ~E_NOTICE);
                     Error_reporting(0);

@@ -1,4 +1,5 @@
 <?php
+ header("Access-Control-Allow-Origin: *");
   session_start();
     include '../connect_db.php';
     $ItemNo = $_POST['itemNo'];

@@ -1,6 +1,8 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+
     session_start();
-   include 'connect_db.php';
+    include 'connect_db.php';
     //echo" Connected to database ";
     $AccountId      = $_POST['accountId'];
     $ItemNumber     = $_POST['itemnumber'];

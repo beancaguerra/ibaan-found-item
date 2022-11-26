@@ -1,5 +1,6 @@
 <?php
-  session_start();
+header("Access-Control-Allow-Origin: *");
+    session_start();
     include '../connect_db.php';
     $recipient_id = $_POST['recipient_id'];
     $admin_id=$_SESSION['admin_id'];
