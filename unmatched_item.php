@@ -56,7 +56,7 @@
                     include 'connect_db.php';
                     //echo" Connected to database ";
                     //showing data from tb_messages
-                    $result=$conn->query("SELECT * FROM vwUnMatched INNER JOIN tb_residentsacc ON vwUnMatched.accountId = tb_residentsacc.accountId ORDER BY msgId DESC") or die("Error");
+                    $result=$conn->query("SELECT * FROM vwunmatched INNER JOIN tb_residentsacc ON vwunmatched.accountId = tb_residentsacc.accountId ORDER BY msgId DESC") or die("Error");
 
                     // it return number of rows in the table.
                     $row = mysqli_num_rows($result);
