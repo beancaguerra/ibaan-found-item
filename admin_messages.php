@@ -55,7 +55,7 @@
 
                     //echo" Connected to database ";
                     //showing data from tb_messages
-                    $result=$conn->query("SELECT * FROM vwChat WHERE  sender_id='$admin_id'") or die("Error");
+                    $result=$conn->query("SELECT * FROM vwchat WHERE  sender_id='$admin_id'") or die("Error");
                     //if table has no data
                     if ($result->num_rows == 0) {
                         echo "<div class='nodata'>
@@ -70,7 +70,7 @@
                     <div id='chat-container'>
                         <div class="chat-list">
                             <?php
-                                $chatlist = $conn->query("SELECT DISTINCT CASE WHEN vwChat.sender_id = $admin_id THEN vwChat.recipient ELSE vwChat.sender_id END as user_rowstamp, CONCAT(t1.fname,' ', t1.lname) fullname FROM vwChat INNER JOIN tb_residentsacc t1 ON vwChat.recipient = t1.accountID where recipient = $admin_id or sender_id=$admin_id");
+                                $chatlist = $conn->query("SELECT DISTINCT CASE WHEN vwchat.sender_id = $admin_id THEN vwChat.recipient ELSE vwChat.sender_id END as user_rowstamp, CONCAT(t1.fname,' ', t1.lname) fullname FROM vwChat INNER JOIN tb_residentsacc t1 ON vwChat.recipient = t1.accountID where recipient = $admin_id or sender_id=$admin_id");
                                 if ($chatlist->num_rows == 0) {
                                     echo "<div class='nodata'>
                                             <img src='./images/nodata.png' width='120px' height='120px'>
