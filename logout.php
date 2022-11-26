@@ -2,6 +2,6 @@
 	session_start();
 	session_destroy();
 		unset($_SESSION['adminLogin']);
-		header("Location: index.php");
+		header("Location: admin_login.php");
 		exit();
 ?>
