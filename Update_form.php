@@ -43,8 +43,6 @@
             <section class="forms-input">
                 <div class="output-container">
                     <?php
-                        header("Access-Control-Allow-Origin: *");
-
                         ini_set('display_errors',1);
                         //error_reporting(E_ALL & ~E_NOTICE);
                         Error_reporting(0);
@@ -63,7 +61,7 @@
                         $itemDescription=   $_GET['itemDescription'];
 
 
-                        $result=$conn->query("SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor, itemDescription=$itemDescription");
+                        $sql= "SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor, itemDescription=$itemDescription";
                         
                         if(isset($_POST['Submit'])){
                             $Finder         =   $_POST['finder'];
