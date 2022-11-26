@@ -116,8 +116,8 @@
                             $t_password                 = trim($password);
 
 
-                            $sql= "UPDATE tb_residentsacc SET fname='$t_fname', lname='$t_lname', contact='$t_contact', address='$t_address', gender='$t_gender', email='$t_loggedin_session', password='$t_password' WHERE accountId='$t_loggedin_id'" or die("Data Not Updated");
-                            $result=mysqli_query($conn, $sql);
+                            $result=$conn->query("UPDATE tb_residentsacc SET fname='$t_fname', lname='$t_lname', contact='$t_contact', address='$t_address', gender='$t_gender', email='$t_loggedin_session', password='$t_password' WHERE accountId='$t_loggedin_id'") or die("Data Not Updated");
+                     
 
                             if($result){
                                 $_SESSION['Submit'] = "Profile Updated Successfully!";
