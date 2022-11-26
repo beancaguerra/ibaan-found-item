@@ -68,6 +68,7 @@
             <section class="form-output" id="form-output">
                 <div class="output-container">
                     <?php
+                     header("Access-Control-Allow-Origin: *");
                         include 'connect_db.php';
 
                         //showing data from tb_iteminfo to the system

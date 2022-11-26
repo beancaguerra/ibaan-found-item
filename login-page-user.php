@@ -40,7 +40,7 @@
                                                         <div class="mb-md-4 mt-md-4 pb-4">
                                                             <h2 class="fw-bold mb-4 text-center">Log in</h2>
                                                             <hr class="mb-2 ">
-                                                            <form action="login-page-user.php" method="POST">
+                                                            <form action="user_login.php" method="POST">
 
                                                                     <?php
                                                                     if($errors > 0){

@@ -3,7 +3,7 @@ $id = $_GET['id'];
 
 include 'connect_db.php';
 
-$conn = mysqli_connect("localhost", "root", "", $dbname);
+// $conn = mysqli_connect("localhost", "root", "", $dbname);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());

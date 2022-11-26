@@ -46,6 +46,7 @@
             <section class="forms-input">
             <div class="output-container">
                 <?php
+                     header("Access-Control-Allow-Origin: *");
                     include 'connect_db.php';
                     //echo" Connected to database ";
 
