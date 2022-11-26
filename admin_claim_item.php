@@ -140,7 +140,7 @@
                             </div>
 
                             
-                            <div class="output-two output">
+                            <div class="output-one output">
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Status: </span><span class="xdetailField" id="xStatus"></span></p>
                             </div>
 
