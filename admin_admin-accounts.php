@@ -74,6 +74,14 @@
             <section class="form-output" id="form-output">
                 <div class="output-container">
                     <?php
+                    header("Access-Control-Allow-Origin: *");
+
+                    session_start();
+                    
+                    ini_set('display_errors',1);
+                    //error_reporting(E_ALL & ~E_NOTICE);
+                    Error_reporting(0);
+                    
                     include 'connect_db.php';
 
                     //showing data from tb_accounts to the system

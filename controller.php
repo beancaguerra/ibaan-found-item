@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: *");
 
     ini_set('display_errors', 1);
     error_reporting(E_ALL & ~E_NOTICE);
@@ -37,7 +37,7 @@ header("Access-Control-Allow-Origin: *");
         // set Status
         $status = "Not Verified";
 
-        // echo 'first name = ' .$fname . "<br> last name = " .$lname . "<br> email = " .$email . "<br> password = " .$password . "<br> gender = " .$gender . "<br>";
+        echo 'first name = ' .$fname . "<br> last name = " .$lname . "<br> email = " .$email . "<br> password = " .$password . "<br> gender = " .$gender . "<br>";
 
         // check email validation and save information
         $sql = "SELECT * FROM tb_residentsacc WHERE email = '$email'";

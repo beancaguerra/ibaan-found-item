@@ -2,6 +2,7 @@
  header("Access-Control-Allow-Origin: *");
  
 session_start();
+
 include 'connect_db.php';
 // Check connection
 if($_SERVER["REQUEST_METHOD"] == "POST") {

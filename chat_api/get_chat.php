@@ -1,7 +1,14 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: *");
+
     session_start();
+    
+    ini_set('display_errors',1);
+    //error_reporting(E_ALL & ~E_NOTICE);
+    Error_reporting(0);
+
     include '../connect_db.php';
+
     $recipient_id = $_POST['recipient_id'];
     $admin_id=$_SESSION['admin_id'];
     $xmsg= $conn->query("SELECT * FROM (Select t1.*,CONCAT(t2.fname,' ',t2.lname) recipient_name from vwChat t1 INNER JOIN tb_residentsacc t2 ON t2.accountID=$recipient_id WHERE t1.recipient =$recipient_id and sender_id = $admin_id UNION ALL Select t1.*,CONCAT(t2.fname,' ',t2.lname) fullname from vwchatusers t1 INNER JOIN tb_residentsacc t2 ON t2.accountID=$recipient_id WHERE t1.recipient =$admin_id and t1.sender_id = $recipient_id) as tbl1 Order BY datesent ");

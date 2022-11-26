@@ -69,22 +69,23 @@
                 <div class="output-container">
                     <?php
                         header("Access-Control-Allow-Origin: *");
+
+                        ini_set('display_errors',1);
+                        //error_reporting(E_ALL & ~E_NOTICE);
+                        Error_reporting(0);
+
                         include 'connect_db.php';
 
                         //showing data from tb_iteminfo to the system
-                        $result=$conn->query("SELECT * FROM tb_itemRecord Order By itemNo DESC") or die("Error");
-                        //$result = mysqli_query($conn, $query);
-                        $count=$conn->query("select count(1) FROM tb_itemrecord");
-                        $rows =  $count->fetch_array(MYSQLI_NUM);
-
+                        $result=$conn->query("SELECT * FROM tb_itemrecord Order By itemNo DESC");
                         //if table has no data
-                        if ($count->num_rows == 0) {
+                        if ($result->num_rows == 0) {
                             echo "<div class='nodata'>
                                     <img src='./images/nodata.png' width='120px' height='120px'>
-                                    <p>No Item Record</p>
+                                    <p>No Data</p>
                                   </div>";
                         }
-                        while($row=mysqli_fetch_assoc($result))         
+                        while($row=$result->fetch_assoc())         
                         {
                         ?>
                             <div class='output-cont-child'>

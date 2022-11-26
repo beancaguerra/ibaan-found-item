@@ -62,7 +62,10 @@
             <section class="forms-input">
                 <div class="output-container" id="realtime">
                 <?php
-                    
+                    ini_set('display_errors',1);
+                    //error_reporting(E_ALL & ~E_NOTICE);
+                    Error_reporting(0);
+
                     include 'connect_db.php';
                     $accountId = $_SESSION['accountId'];
 

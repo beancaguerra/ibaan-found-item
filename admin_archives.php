@@ -46,10 +46,11 @@
             <section class="forms-input">
             <div class="output-container">
                 <?php
+
                     ini_set('display_errors',1);
                     //error_reporting(E_ALL & ~E_NOTICE);
                     Error_reporting(0);
-
+                    
                     include 'connect_db.php';
 
                     $result=$conn->query("SELECT * FROM tb_deletemsg INNER JOIN tb_residentsacc ON tb_deletemsg.dmaccountId = tb_residentsacc.accountId ORDER BY dmid DESC") or die("Error");

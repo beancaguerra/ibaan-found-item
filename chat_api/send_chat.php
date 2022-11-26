@@ -1,7 +1,14 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: *");
+
     session_start();
+    
+    ini_set('display_errors',1);
+    //error_reporting(E_ALL & ~E_NOTICE);
+    Error_reporting(0);
+
     include '../connect_db.php';
+
     $recipient_id = $_POST['recipient_id'];
     $textmessage = $_POST['textmessage'];
     $textmessage = str_replace("'","\'",$textmessage);

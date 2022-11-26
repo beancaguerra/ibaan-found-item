@@ -1,6 +1,12 @@
 <?php
- header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Origin: *");
+
+    ini_set('display_errors',1);
+    //error_reporting(E_ALL & ~E_NOTICE);
+    Error_reporting(0);
+
     include 'connect_db.php';
+    
     //showing data from tb_messages
     $result=mysql_query("SELECT * FROM tb_messages INNER JOIN tb_residentsacc ON tb_messages.accountId = tb_residentsacc.accountId ORDER BY msgId DESC") or die("Error");
     //if table has no data
