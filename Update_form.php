@@ -43,10 +43,11 @@
             <section class="forms-input">
                 <div class="output-container">
                     <?php
+
                         ini_set('display_errors',1);
                         //error_reporting(E_ALL & ~E_NOTICE);
                         Error_reporting(0);
-
+                        
                         include 'connect_db.php';
                         
                         $id             =   $_GET['edit'];
@@ -77,7 +78,8 @@
     
                             
 
-                            $result=$conn->query("UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'") or die("Data Not Updated");
+                            $sql = "UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
+                            $result = mysqli_query($conn, $sql);
 
                             if($result){
                                 $_SESSION['Submit'] = "Record Updated Successfully !";
