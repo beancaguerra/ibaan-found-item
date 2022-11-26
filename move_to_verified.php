@@ -21,7 +21,7 @@ for ($i = 0; $i < 8; $i++) {
 $qrPass = implode($pass); //turn the array into a string
 
 
-$textmessage = 'Dear Mr/Ms. <br> We would like to inform you that the details/image you sent to us has matched with the item that we had. You may now claim it here at the Item Lost and Found. Just present the attached QR Code and the password provided! <br> Thank you! <br> Item No: '.$itemNo.' <br> <img class="xqr" src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl='.md5($itemNo).'">';
+$textmessage = 'Dear Mr/Ms. <br> We would like to inform you that the details/image you sent to us has matched with the item that we had. You may now claim it here at the Item Lost and Found. Just present the attached QR Code and your Valid Id! <br> Thank you! <br> Item No: '.$itemNo.' <br> <img class="xqr" src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl='.md5($itemNo).'">';
 
 
     $conn->query("INSERT INTO tbl_chat(sender_id,recipient,textmessage,datesent) VALUES($xadmin_id,$recipient_id,'$textmessage',NOW()) ");
