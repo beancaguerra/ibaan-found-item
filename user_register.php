@@ -40,6 +40,8 @@
                                 <hr class="mb-2">
 
                                 <?php
+                                header("Access-Control-Allow-Origin: *");
+                                
                                 if($errors > 0){
                                     foreach($errors AS $displayErrors){
                                     ?>
