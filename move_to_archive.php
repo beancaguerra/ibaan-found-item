@@ -3,10 +3,14 @@ header("Access-Control-Allow-Origin: *");
 
 include 'connect_db.php';
 
-if(!isset($_SESSION['admin_id'])){
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+/*if(!isset($_SESSION['admin_id'])){
     echo "Go back";
     header("Location: admin_login.php");
-}
+}*/
 
 $id = $_GET['id'];
 $recipient_id = $_GET['acctId'];
