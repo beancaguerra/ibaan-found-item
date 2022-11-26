@@ -74,9 +74,8 @@
     
                             
 
-                            $conn->query("UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'") or die("Data Not Updated");
-                            $result=$conn->query("SELECT * FROM tb_itemRecord Order By itemno DESC") or die("Error");
-
+                            $result=$conn->query("UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'") or die("Data Not Updated");
+                            
                             if($result){
                                 $_SESSION['Submit'] = "Record Updated Successfully !";
                                 header('Location: admin_updateItem.php');
