@@ -48,6 +48,10 @@
                                     <div class="first-three">
                                         <input class="input big" type="date" placeholder="Start Date" name="date1" value="<?php echo isset($_POST['date1']) ? $_POST['date1'] : '' ?>" />
                                         <input class="input small" type="date" placeholder="End Date" name="date2" value="<?php echo isset($_POST['date2']) ? $_POST['date2'] : '' ?>"/>
+                                        <select name="claim">
+                                            <option value="0">CLAIMED</option>
+                                            <option value="1">NOT CLAIMED</option>
+                                        </select>
                                     </div>
                                     <div class="first-three">
                                         <button class="submit" name="search"><span class="glyphicon glyphicon-search">Search</span></button> 
@@ -75,7 +79,12 @@
                                             if(ISSET($_POST['search'])){
                                                 $date1 = date("Y-m-d", strtotime($_POST['date1']));
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
-                                                $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                $claim = $_POST['claim'];
+                                                
+                                                    $query="SELECT * FROM `tb_itemrecord` WHERE isClaimed = '$claim' AND date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                
+                                                //$query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                
                                                 $result = mysqli_query($conn, $query);
                                                 
                                                 if ($result)
@@ -100,32 +109,16 @@
 
                                                 while($row=mysqli_fetch_assoc($result))
                                                 {
-                                                    if($row['isClaimed'] == 1)
-                                                    {
-                                                    echo '<tr>
-                                                            <td style="text-align: center;"><?php echo $row['itemNo']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemColor']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['date']?></td>
-                                                        </tr>';
-                                                    }
-                                                    elseif ($row['isClaimed'] == 0)
-                                                    {
-                                                        echo '<tr>
-                                                        <td style="text-align: center;"><?php echo $row['itemNo']?></td>
-                                                        <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
-                                                        <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
-                                                        <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
-                                                        <td style="text-align: center;"><?php echo $row['itemColor']?></td>
-                                                        <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
-                                                        <td style="text-align: center;"><?php echo $row['date']?></td>
-                                                    </tr>';
-                                                    }
                                                 ?>
-                                                
+                                                <tr>
+                                                    <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['date']?></td>
+                                                </tr>
                                         <?php
                                         }
                                     }

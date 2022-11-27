@@ -9,7 +9,6 @@ if($environment == "prod"){
     $conn = mysqli_connect("localhost", "u538504999_ibaanrecord", "Ibaan@Record!22",$dbname);
 }
 else{
-
     $dbServername = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
