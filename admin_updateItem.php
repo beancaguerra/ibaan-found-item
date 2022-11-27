@@ -114,7 +114,7 @@
                                 </div>
                                 
                                 <div class="output-delete">
-                                    <a style="color:#000000; margin: 10px 50px;" href='Update_form.php?edit=<?php echo $row['itemNo']; ?> & finder=<?php echo $row['finder']; ?> & contact=<?php echo $row['contact']; ?> & time=<?php echo $row['time']; ?> & date=<?php echo $row['date']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & itemLocation=<?php echo $row['itemLocation']; ?> & itemBrand=<?php echo $row['itemBrand']; ?> & itemColor=<?php echo $row['itemColor']; ?> & itemDescription=<?php echo $row['itemDescription']; ?>'>Edit</a>
+                                    <a style="color:#000000; margin: 10px 50px;" href='Update_form.php?edit=<?php echo $row['itemNo']; ?> & finder=<?php echo $row['finder']; ?> & contact=<?php echo $row['contact']; ?> & time=<?php echo $row['time']; ?> & date=<?php echo $row['date']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & itemLocation=<?php echo $row['itemLocation']; ?> & itemBrand=<?php echo $row['itemBrand']; ?> & itemColor=<?php echo $row['itemColor']; ?> & itemDescription=<?php echo $row['itemDescription']; ?> & isClaimed=<?php echo $row['isClaimed']; ?>'>Edit</a>
                                 </div>
                             </div>
                          <?php
