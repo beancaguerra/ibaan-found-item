@@ -85,7 +85,7 @@
                                                         
                                                     if ($row)
                                                     {
-                                                        echo "<p class='total-item'>Number of Item: $row </p>";
+                                                        echo "<p class='total-item'>Found Item: $row </p>";
                                                     }
                                                     // close the result.
 
@@ -98,41 +98,27 @@
                                                     }else{
                                                         if (.isClaimed==1){
                                                             while($row=mysqli_fetch_assoc($result))
-                                                            {
-                                                            ?>
-                                                            <tr>
-                                                                <td style="text-align: center;"><?php echo $row['itemNo']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemColor']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['date']?></td>
-                                                            </tr>
-                                                        }else{
-                                                            while($row=mysqli_fetch_assoc($result))
-                                                            {
-                                                            ?>
-                                                            <tr>
-                                                                <td style="text-align: center;"><?php echo $row['itemNo']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemColor']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
-                                                                <td style="text-align: center;"><?php echo $row['date']?></td>
-                                                            </tr>
-                                                        }
+                                                        {
+                                                        ?>
+                                                        <tr>
+                                                            <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['date']?></td>
+                                                        </tr>
                                                         <?php
+                                                        }
+                                                        
+                                                        }else{}
                                                     }   
-                                                  
-                                                }  ?>
-                                                <?php
-                                            
+                                                }
+
+                                                
                                         <?php
                                         }
-                                        ?>}
-                                    }
                                         ?>
                                         </tbody>
                                     </table>
