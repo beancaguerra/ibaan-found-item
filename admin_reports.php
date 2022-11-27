@@ -95,11 +95,12 @@
                                                             <img src='./images/nodata.png' width='120px' height='120px'>
                                                             <p>No Data</p>
                                                         </div>";
-                                                    }else{
-                                                        if (.isClaimed==1){
-                                                            while($row=mysqli_fetch_assoc($result))
-                                                        {
-                                                        ?>
+                                                    }   
+                                                }
+
+                                                while($row=mysqli_fetch_assoc($result))
+                                                {
+                                                    if(.isClaimed==1){
                                                         <tr>
                                                             <td style="text-align: center;"><?php echo $row['itemNo']?></td>
                                                             <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
@@ -109,16 +110,23 @@
                                                             <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
                                                             <td style="text-align: center;"><?php echo $row['date']?></td>
                                                         </tr>
-                                                        <?php
-                                                        }
-                                                        
-                                                        }else{}
-                                                    }   
-                                                }
-
+                                                    }else{
+                                                        <tr>
+                                                            <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['date']?></td>
+                                                        </tr>
+                                                    }
+                                                ?>
+                                                
                                                 
                                         <?php
                                         }
+                                    }
                                         ?>
                                         </tbody>
                                     </table>
