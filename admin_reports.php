@@ -83,7 +83,7 @@
                                                     // it return number of rows in the table.
                                                     $row = mysqli_num_rows($result);
                                                         
-                                                    if ($row['isClaimed==1'])
+                                                    if ($row['.isClaimed==1'])
                                                     {
                                                         echo "<p class='total-item'>Found Item: $row </p>";
                                                     }
