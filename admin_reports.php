@@ -65,11 +65,21 @@
                                                 $date1 = date("Y-m-d", strtotime($_POST['date1']));
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
                                                 $query=mysqli_query($conn, "SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
-                                                $row=mysqli_num_rows($query);
-                                        
+                                                //$row=mysqli_num_rows($query);
+                                                
+                                                $rows =  $count->fetch_array(MYSQLI_NUM);
+
+                                                $total = $rows[0];
+                                                
                                                 if($row>0){
                                                     while($fetch=mysqli_fetch_array($query)){
                                                 ?>
+
+                                                    <tr>
+                                                        <?php
+                                                            echo "<p class='total-item'>Total Claimed Item: $total </p>";
+                                                        ?>
+                                                    </tr>
                                                     <tr>
                                                         <td style="text-align: center;"><?php echo $fetch['itemNo']?></td>
                                                         <td style="text-align: center;"><?php echo $fetch['itemCategory']?></td>
