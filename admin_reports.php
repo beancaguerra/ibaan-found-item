@@ -75,21 +75,32 @@
                                             if(ISSET($_POST['search'])){
                                                 $date1 = date("Y-m-d", strtotime($_POST['date1']));
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
-                                                $query=mysqli_query($conn, "SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
-                                                $rows=mysqli_num_rows($query);
+                                                $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                $result = mysqli_query($conn, $query);
                                                 
-                                                $total = $row[0];
-                                                    echo "<p class='total-item'>Number of Found Item: $total </p>";
-                                                    
-                                                if($count->num_rows == 0){
-                                                    echo'
-                                                    <tr>
-                                                        <td colspan = "4"><center>No Record</center></td>
-                                                    </tr>';
-                                                    
+                                                if ($result)
+                                                {
+                                                    // it return number of rows in the table.
+                                                    $row = mysqli_num_rows($result);
+                                                        
+                                                    if ($row)
+                                                    {
+                                                        echo "<p class='total-item'>Found Item: $row </p>";
+                                                    }
+                                                    // close the result.
+
+                                                    //if table has no data
+                                                    if (mysqli_num_rows($result) == 0) {
+                                                    echo "<div class='nodata'>
+                                                            <img src='./images/nodata.png' width='120px' height='120px'>
+                                                            <p>No Data</p>
+                                                        </div>";
+                                                    }   
                                                 }
-                                                    while($fetch=mysqli_fetch_array($query)){
-                                        ?>
+
+                                                while($row=mysqli_fetch_assoc($result))
+                                                {
+                                                ?>
                                             <tr>
                                                 <td style="text-align: center;"><?php echo $fetch['itemNo']?></td>
                                                 <td style="text-align: center;"><?php echo $fetch['itemCategory']?></td>
