@@ -61,7 +61,7 @@
                                                             }
                                                         }
                                                         ?>
-                                                        <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" required value="<?php echo $email ?>"><br>
+                                                        <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" required><br>
                                                         <button class="sign-btn" type="submit" name="forgot_password">  Check </button> 
                                                     </form>
                                                 </div>
