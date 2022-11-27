@@ -75,7 +75,7 @@
                                             if(ISSET($_POST['search'])){
                                                 $date1 = date("Y-m-d", strtotime($_POST['date1']));
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
-                                                $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) && ('isClaimed == 1') BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
                                                 $result = mysqli_query($conn, $query);
                                                 
                                                 if ($result)
@@ -85,7 +85,7 @@
                                                         
                                                     if ($row)
                                                     {
-                                                        echo "<p class='total-item'>Found Item: $row </p>";
+                                                        echo "<p class='total-item'>Number of Item: $row </p>";
                                                     }
                                                     // close the result.
 
@@ -95,23 +95,44 @@
                                                             <img src='./images/nodata.png' width='120px' height='120px'>
                                                             <p>No Data</p>
                                                         </div>";
+                                                    }else{
+                                                        if (.isClaimed==1){
+                                                            while($row=mysqli_fetch_assoc($result))
+                                                            {
+                                                            ?>
+                                                            <tr>
+                                                                <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['date']?></td>
+                                                            </tr>
+                                                        }else{
+                                                            while($row=mysqli_fetch_assoc($result))
+                                                            {
+                                                            ?>
+                                                            <tr>
+                                                                <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                                <td style="text-align: center;"><?php echo $row['date']?></td>
+                                                            </tr>
+                                                        }
+                                                        <?php
                                                     }   
-                                                }
-
-                                                while($row=mysqli_fetch_assoc($result))
-                                                {
-                                                ?>
-                                                <tr>
-                                                    <td style="text-align: center;"><?php echo $row['itemNo']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemColor']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['date']?></td>
-                                                </tr>
+                                                  
+                                                }  ?>
+                                                <?php
+                                            
                                         <?php
                                         }
+                                        ?>
+                                        
                                     }
                                         ?>
                                         </tbody>
