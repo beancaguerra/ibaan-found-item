@@ -41,7 +41,8 @@
             </div>
         </div>
         <main>
-            <section class="forms-input">
+            <!--
+                <section class="forms-input">
                     <form class='form' action="code_claimed.php" method="POST" enctype="multipart/form-data">
                         <div class="first-three">
                             <input class="input big" type="text" placeholder="Owner..." name="owner" required>
@@ -53,6 +54,7 @@
                         </div>
                     </form>
             </section>
+            -->
             <section class="form-output" id="form-output">
                 <div class="output-container">
                 <?php
