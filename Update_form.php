@@ -59,9 +59,10 @@
                         $itemBrand      =   $_GET['itemBrand'];
                         $itemColor      =   $_GET['itemColor'];
                         $itemDescription=   $_GET['itemDescription'];
+                        $isClaimed      =   $_GET['isClaimed'];
 
 
-                        $sql= "SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor, itemDescription=$itemDescription";
+                        $sql= "SELECT * FROM 'tb_itemRecord' WHERE itemNo=$id, finder=$finder, contact=$contact, time=$time, date=$date, itemCategory=$itemCategory, itemLocation=$itemLocation, itemBrand=$itemBrand, itemColor=$itemColor, itemDescription=$itemDescription, isClaimed=$isClaimed";
                         
                         if(isset($_POST['Submit'])){
                             $Finder         =   $_POST['finder'];
@@ -74,10 +75,10 @@
                             $ItemBrand      =   $_POST['itemBrand'];
                             $ItemColor      =   $_POST['itemColor'];
                             $ItemDescription=   $_POST['itemDescription'];
-    
+                            $IsClaimed      =   $_POST['isClaimed'];
                             
 
-                            $sql = "UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
+                            $sql = "UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription', isClaimed='$IsClaimed' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
                             $result = mysqli_query($conn, $sql);
 
                             if($result){
@@ -113,6 +114,8 @@
                         <div class="fourth-three">
                             <input class="input medium" type="text" value="<?php echo $itemColor; ?>" placeholder="Item Color..." name="itemColor" required>
                             <input class="input medium" type="text" value="<?php echo $itemDescription; ?>" placeholder="Item Description..." name="itemDescription" required>
+
+                            <input class="input medium" type="hidden" value="<?php echo $isClaimed; ?>" placeholder="Item Description..." name="itemClaimed" required>
                         </div>
                         <div class="fourth-three">
                             <input class="input button-submit" type="submit" name="Submit" value="Update">

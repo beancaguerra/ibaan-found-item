@@ -110,7 +110,7 @@
                                 <div class="output-one output">
                                     <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><?php echo $row['itemDescription']; ?></p>
                                     <p class="p-one" readonly><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>
-                                    
+                                    <p class="p-one" readonly><span style='color:#ec9006; font-weight:700; margin-right: 20px;'></span><input type="hidden" value="<?php echo $row['isClaimed']; ?>"></p>
                                 </div>
                                 
                                 <div class="output-delete">
