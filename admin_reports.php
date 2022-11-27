@@ -58,6 +58,18 @@
                                 <div class='output-cont-table'>	
                                     <table style="width:100%">
                                         <thead class="alert-info">
+                                        
+                                            <tr>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006">Item No.</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:13%;"">Item Category</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;"">Item Location</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Brand</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Color</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;">Item Description</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:18%;">Date</th>
+                                            </tr>
+                                                        
+                                        </thead>
                                         <?php 
                                             include 'connect_db.php';
 
@@ -70,16 +82,14 @@
                                                 //$rows =  $count->fetch_array(MYSQLI_NUM);
 
                                                 $total = $rows[0];
-                                                
+                                                <tr>
+                                                    <?php
+                                                        echo "<p class='total-item'>Total Claimed Item: $total </p>";
+                                                    ?>
+                                                </tr>
                                                 if($row>0){
                                                     while($fetch=mysqli_fetch_array($query)){
                                                 ?>
-
-                                                    <tr>
-                                                        <?php
-                                                            echo "<p class='total-item'>Total Claimed Item: $total </p>";
-                                                        ?>
-                                                    </tr>
                                                     <tr>
                                                         <td style="text-align: center;"><?php echo $fetch['itemNo']?></td>
                                                         <td style="text-align: center;"><?php echo $fetch['itemCategory']?></td>
@@ -101,8 +111,6 @@
                                             
                                                 
                                         ?>
-                                        </thead>
-                                        
                                     </table>
                                 </div>	
                             </div>
