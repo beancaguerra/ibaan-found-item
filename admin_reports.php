@@ -58,25 +58,45 @@
                                 <div class='output-cont-table'>	
                                     <table style="width:100%">
                                         <thead class="alert-info">
-                                            <tr style="text-align: left; background-color: #cccccc; color: #ec9006; font-weight: 700;">
-                                                <?php
-                                                    $total = $rows[0];
-                                                    echo "<p class='total-item'>Item Record: $total </p>";
-                                                ?>
-                                            </tr>
-                                            <tr>
-                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006">Item No.</th>
-                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:13%;"">Item Category</th>
-                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;"">Item Location</th>
-                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Brand</th>
-                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Color</th>
-                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;">Item Description</th>
-                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:18%;">Date</th>
-                                            </tr>
+                                        <?php 
+                                            include 'connect_db.php';
+
+                                            if(isset($_GET['date1']) && isset($_GET['date2']))
+                                            {
+                                                $from_date = $_GET['date1'];
+                                                $to_date = $_GET['date2'];
+
+                                                $query = "SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                $query_run = mysqli_query($con, $query);
+                                                $rows =  $count->fetch_array(MYSQLI_NUM);
+
+                                                $total = $rows[0];
+                                                echo "<p class='total-item'>Number of Found Item: $total </p>";
+                                                if(mysqli_num_rows($query_run) > 0)
+                                                {
+                                                    foreach($query_run as $row)
+                                                    {
+                                                        ?>
+                                                        <tr>
+                                                            <th style="text-align: center; background-color: #cccccc; color: #ec9006">Item No.</th>
+                                                            <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:13%;"">Item Category</th>
+                                                            <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;"">Item Location</th>
+                                                            <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Brand</th>
+                                                            <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Color</th>
+                                                            <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;">Item Description</th>
+                                                            <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:18%;">Date</th>
+                                                        </tr>
+                                                        <?php
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    echo "No Record Found";
+                                                }
+                                            }
+                                        ?>
                                         </thead>
-                                        <tbody >
-                                            <?php include'range.php'?>
-                                        </tbody>
+                                        
                                     </table>
                                 </div>	
                             </div>
