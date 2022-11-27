@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     </head>
     <//?php include 'code_session.php'; ?>
+
     <body>
         <header>
             <div class="header" id="header">
@@ -37,110 +38,61 @@
         </nav>
 
         <main>
-            <section class="profile-form">
-                <div class="profile-cont">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-12">
-                                <div class="card mt-5">
-                                    <div class="card-header">
-                                        <h4>Reports of Items</h4>
+        <section class="form-output" id="form-output">
+                <div class="output-container">
+                        <div class="col-md-3"></div>
+                            <div class="col-md-6 well">
+                                <h3 class="text-primary">Item Report</h3>
+                                <hr style="border-top:1px dotted #000;"/>
+                                <form class="form-inline" method="POST" action="" style="padding: 5% 8% 2% 10%">
+                                    <div class="first-three">
+                                        <input class="input big" type="date" placeholder="Start Date" name="date1" value="<?php echo isset($_POST['date1']) ? $_POST['date1'] : '' ?>" />
+                                        <input class="input small" type="date" placeholder="End Date" name="date2" value="<?php echo isset($_POST['date2']) ? $_POST['date2'] : '' ?>"/>
                                     </div>
-                                    <div class="card-body">
-                                    
-                                        <form action="" method="GET">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label>From Date</label>
-                                                        <input type="date" name="from_date" value="<?php if(isset($_GET['from_date'])){ echo $_GET['from_date']; } ?>" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label>To Date</label>
-                                                        <input type="date" name="to_date" value="<?php if(isset($_GET['to_date'])){ echo $_GET['to_date']; } ?>" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
-                                                        <label>Click to Filter</label> <br>
-                                                        <button type="submit" class="btn btn-primary">Filter</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                    <div class="first-three">
+                                        <button class="submit" name="search"><span class="glyphicon glyphicon-search">Search</span></button> 
+                                        <button class="submit"> <a href="admin_reports.php" style="text-decoration: none; background-color: none; color: black;"><span class = "glyphicon glyphicon-refresh">Refresh<span></a></button>
                                     </div>
-                                </div>
-
-                                <div class="card mt-4">
-                                    <div class="card-body">
-                                        <table class="table table-borderd">
-                                            <thead>
-                                                <tr>
-                                                    <th>Item No</th>
-                                                    <th>Item Category</th>
-                                                    <th>Item Location</th>
-                                                    <th>Item Brand</th>
-                                                    <th>Item Color</th>
-                                                    <th>Item Description</th>
-                                                    <th>Item Date</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            
-                                            <?php 
-                                                
-                                                include 'connect_db.php';
-                                                
-                                                ini_set('display_errors',1);
-                                                //error_reporting(E_ALL & ~E_NOTICE);
-                                                Error_reporting(0);
-
-                                                if(isset($_GET['from_date']) && isset($_GET['to_date']))
-                                                {
-                                                    $from_date = $_GET['from_date'];
-                                                    $to_date = $_GET['to_date'];
-
-                                                    $query="SELECT * FROM tb_itemrecord WHERE date BETWEEN '$from_date' AND '$to_date' ";
-                                                    $query_run = mysqli_query($con, $query);
-                                                    
-                                                    if(mysqli_num_rows($query_run) > 0)
-                                                    {
-                                                        foreach($query_run as $row)
-                                                        {
-                                                            ?>
-                                                            <tr>
-                                                                <td><?= $row['itemNo']; ?></td>
-                                                                <td><?= $row['itemCategory']; ?></td>
-                                                                <td><?= $row['itemLocation']; ?></td>
-                                                                <td><?= $row['itemBrand']; ?></td>
-                                                                <td><?= $row['itemColor']; ?></td>
-                                                                <td><?= $row['itemDescription']; ?></td>
-                                                                <td><?= $row['date']; ?></td>
-                                                            </tr>
-                                                            <?php
-                                                        }
-                                                    }
-                                                    else
-                                                    {
-                                                        echo "No Record Found";
-                                                    }
-                                                }
-                                            ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
+                                </form>
+                                <br /><br />
+                                <div class='output-cont-table'>	
+                                    <table style="width:100%">
+                                        <thead class="alert-info">
+                                            <tr style="text-align: left; background-color: #cccccc; color: #ec9006; font-weight: 700;">
+                                                CLAIMED: 
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006">Item No.</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:13%;"">Item Category</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;"">Item Location</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Brand</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Color</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;">Item Description</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:18%;">Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                            <?php include'range.php'?>
+                                        </tbody>
+                                    </table>
+                                </div>	
                             </div>
-                        </div>
                     </div>
                 </div>
             </section>
         </main>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    </body>
+    <style>
+        .submit{
+            font: .8rem 'Poppins', arial, sans-serif;
+            margin: 10px 12px;
+            border-radius: 5px;
+            border: 2px solid var(--color-gray);
+            padding: 5px 5px;
+            position: sticky;
+        }
+        .submit:hover{
+            background-color:#ec9006;
+        }
+    </style>
 </html>
