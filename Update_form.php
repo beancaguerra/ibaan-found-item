@@ -115,7 +115,7 @@
                             <input class="input medium" type="text" value="<?php echo $itemColor; ?>" placeholder="Item Color..." name="itemColor" required>
                             <input class="input medium" type="text" value="<?php echo $itemDescription; ?>" placeholder="Item Description..." name="itemDescription" required>
 
-                            <input class="input medium" type="hidden" value="<?php echo $isClaimed; ?>" placeholder="Item Description..." name="itemClaimed" required>
+                            <input class="input medium" type="hidden" value="<?php echo $isClaimed; ?>" placeholder="Item Description..." name="isClaimed" required>
                         </div>
                         <div class="fourth-three">
                             <input class="input button-submit" type="submit" name="Submit" value="Update">
