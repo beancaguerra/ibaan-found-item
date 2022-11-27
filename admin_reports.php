@@ -75,7 +75,7 @@
                                             if(ISSET($_POST['search'])){
                                                 $date1 = date("Y-m-d", strtotime($_POST['date1']));
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
-                                                $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2' where isClaimed==1" or die(mysqli_error());
                                                 $result = mysqli_query($conn, $query);
                                                 
                                                 if ($result)
@@ -83,7 +83,7 @@
                                                     // it return number of rows in the table.
                                                     $row = mysqli_num_rows($result);
                                                         
-                                                    if ($row['.isClaimed==1'])
+                                                    if ($row)
                                                     {
                                                         echo "<p class='total-item'>Found Item: $row </p>";
                                                     }
