@@ -75,7 +75,7 @@
                                             if(ISSET($_POST['search'])){
                                                 $date1 = date("Y-m-d", strtotime($_POST['date1']));
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
-                                                $query=mysqli_query($conn, "SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
+                                                $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
                                                 $result = mysqli_query($conn, $query);
                                                 
                                                 if ($result)
@@ -102,13 +102,13 @@
                                                 {
                                                 ?>
                                                 <tr>
-                                                    <td style="text-align: center;"><?php echo $fetch['itemNo']?></td>
-                                                    <td style="text-align: center;"><?php echo $fetch['itemCategory']?></td>
-                                                    <td style="text-align: center;"><?php echo $fetch['itemLocation']?></td>
-                                                    <td style="text-align: center;"><?php echo $fetch['itemBrand']?></td>
-                                                    <td style="text-align: center;"><?php echo $fetch['itemColor']?></td>
-                                                    <td style="text-align: center;"><?php echo $fetch['itemDescription']?></td>
-                                                    <td style="text-align: center;"><?php echo $fetch['date']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['date']?></td>
                                                 </tr>
                                         <?php
                                         }
