@@ -67,10 +67,10 @@
                                                 $query=mysqli_query($conn, "SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
                                                 $row=mysqli_num_rows($query);
                                                 
-                                                $total = $rows[0];
+                                                $total = $row[0];
                                                 echo "<p class='total-item'>Number of Found Item: $total </p>";
-                                                
-                                                if($row>0){
+
+                                                if(.isClaimed == 1){
                                                     while($fetch=mysqli_fetch_array($query)){
                                         ?>
                                             <tr>
