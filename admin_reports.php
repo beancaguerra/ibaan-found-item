@@ -58,6 +58,17 @@
                                 <div class='output-cont-table'>	
                                     <table style="width:100%">
                                         <thead class="alert-info">
+                                            <tr>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006">Item No.</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:13%;"">Item Category</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;"">Item Location</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Brand</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:15%;"">Item Color</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:20%;">Item Description</th>
+                                                <th style="text-align: center; background-color: #cccccc; color: #ec9006; width:18%;">Date</th>
+                                            </tr>
+                                        <thead>
+                                        <tbody>
                                         <?php 
                                             include 'connect_db.php';
 
@@ -67,10 +78,10 @@
                                                 $query=mysqli_query($conn, "SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
                                                 $row=mysqli_num_rows($query);
                                                 
-                                                $total = $row[0];
-                                                echo "<p class='total-item'>Number of Found Item: $total </p>";
+                                                if($row>0){
+                                                    $total = $rows[0];
+                                                    echo "<p class='total-item'>Number of Found Item: $total </p>";
 
-                                                if(.isClaimed == 1){
                                                     while($fetch=mysqli_fetch_array($query)){
                                         ?>
                                             <tr>
@@ -93,7 +104,7 @@
                                             }
                                         ?>
 
-                                        </thead>
+                                        </tbody>
                                     </table>
                                 </div>	
                             </div>
