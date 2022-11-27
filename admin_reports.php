@@ -60,7 +60,6 @@
                                         <thead class="alert-info">
                                             <tr style="text-align: left; background-color: #cccccc; color: #ec9006; font-weight: 700;">
                                                 <?php
-                                                    include 'range.php';
                                                     $total = $rows[0];
                                                     echo "<p class='total-item'>Item Record: $total </p>";
                                                 ?>
