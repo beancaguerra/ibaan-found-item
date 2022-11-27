@@ -84,11 +84,13 @@
                                                     <th>Item Brand</th>
                                                     <th>Item Color</th>
                                                     <th>Item Description</th>
+                                                    <th>Item Date</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                             
                                             <?php 
+                                                
                                                 include 'connect_db.php';
                                                 
                                                 ini_set('display_errors',1);
@@ -115,6 +117,7 @@
                                                                 <td><?= $row['itemBrand']; ?></td>
                                                                 <td><?= $row['itemColor']; ?></td>
                                                                 <td><?= $row['itemDescription']; ?></td>
+                                                                <td><?= $row['date']; ?></td>
                                                             </tr>
                                                             <?php
                                                         }
