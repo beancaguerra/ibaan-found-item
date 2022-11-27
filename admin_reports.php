@@ -112,6 +112,7 @@
                                             </tr>
                                         <?php
                                         }
+                                    }
                                         ?>
                                         </tbody>
                                     </table>
