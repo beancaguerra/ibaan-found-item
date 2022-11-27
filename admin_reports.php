@@ -79,7 +79,7 @@
                                                 $row=mysqli_num_rows($query);
                                                 
                                                 if($row>0){
-                                                    $total = $rows[0];
+                                                    $total = $row[0];
                                                     echo "<p class='total-item'>Number of Found Item: $total </p>";
 
                                                     while($fetch=mysqli_fetch_array($query)){
