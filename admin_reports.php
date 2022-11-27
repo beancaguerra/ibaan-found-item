@@ -65,9 +65,9 @@
                                                 $date1 = date("Y-m-d", strtotime($_POST['date1']));
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
                                                 $query=mysqli_query($conn, "SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
-                                                //$row=mysqli_num_rows($query);
+                                                $row=mysqli_num_rows($query);
                                                 
-                                                $rows =  $count->fetch_array(MYSQLI_NUM);
+                                                //$rows =  $count->fetch_array(MYSQLI_NUM);
 
                                                 $total = $rows[0];
                                                 
