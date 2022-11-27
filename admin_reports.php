@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="responsive.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="./images/logo.png" type="image/x-icon">
-        <script src="js/jquery-3.3.1.js"></script>
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     </head>
     <//?php include 'code_session.php'; ?>
@@ -101,8 +100,8 @@
                                     $from_date = $_GET['from_date'];
                                     $to_date = $_GET['to_date'];
 
-                                    $result=$conn->query("SELECT * FROM tb_itemrecord WHERE date BETWEEN '$from_date' AND '$to_date' ");
-                                    $count=$conn->query("select count(1) FROM tb_itemrecord");
+                                    $query="SELECT * FROM tb_itemrecord WHERE date BETWEEN '$from_date' AND '$to_date' ";
+                                    $query_run = mysqli_query($con, $query);
                                     
                                     if(mysqli_num_rows($query_run) > 0)
                                     {
@@ -116,7 +115,6 @@
                                                 <td><?= $row['itemBrand']; ?></td>
                                                 <td><?= $row['itemColor']; ?></td>
                                                 <td><?= $row['itemDescription']; ?></td>
-                                                <td><?= $row['date']; ?></td>
                                             </tr>
                                             <?php
                                         }
