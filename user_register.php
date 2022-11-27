@@ -41,7 +41,9 @@
 
                                 <?php
                                 header("Access-Control-Allow-Origin: *");
-                                
+                                ini_set('display_errors', 1);
+                                error_reporting(E_ALL & ~E_NOTICE);
+                                //Error_reporting(0);
                                 if($errors > 0){
                                     foreach($errors AS $displayErrors){
                                     ?>
@@ -66,21 +68,21 @@
                                         <div class="col-md-4 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="firstname">First name</label>
-                                                <input type="text" class="form-control" id= "fname" name="fname" placeholder="Enter first name" required/>
+                                                <input type="text" class="form-control" id= "fname" name="fname" placeholder="Enter first name" required value="<?php echo $fullname ?>"/>
                                                 
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="lastname">Last name</label>
-                                                <input type="text" id="lname" class="form-control" name="lname" placeholder="Enter last name" required />
+                                                <input type="text" id="lname" class="form-control" name="lname" placeholder="Enter last name" required value="<?php echo $lastname ?>"/>
                                                 
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="contact">Contact number</label>
-                                                <input class="form-control" type="text" id= "contact" name="contact" placeholder="Enter contact number" required >
+                                                <input class="form-control" type="text" id= "contact" name="contact" placeholder="Enter contact number" required value="<?php echo $contactno ?>"/>
                                                 
                                             </div>
                                         </div>
@@ -90,7 +92,7 @@
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="address">House no./Street/Barangay/City/Municality</label>
-                                                <input type="text" id="address" class="form-control" name="address" placeholder="Enter address" required />
+                                                <input type="text" id="address" class="form-control" name="address" placeholder="Enter address" required value="<?php echo $address ?>"/>
                                                 
                                             </div>
                                         </div>
@@ -110,7 +112,7 @@
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="email">Email address</label>
-                                                <input class="form-control" type="email" id= "email" name="email" placeholder="Enter email" required>
+                                                <input class="form-control" type="email" id= "email" name="email" placeholder="Enter email" required value="<?php echo $email ?>"/>
                                                 
                                             </div>
                                         </div>

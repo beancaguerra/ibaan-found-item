@@ -43,6 +43,10 @@
                                                             <form action="login-page-user.php" method="POST">
 
                                                                     <?php
+                                                                    ini_set('display_errors', 1);
+                                                                    error_reporting(E_ALL & ~E_NOTICE);
+                                                                    //Error_reporting(0);
+                                                                    
                                                                     if($errors > 0){
                                                                         foreach($errors AS $displayErrors){
                                                                         ?>
@@ -62,7 +66,7 @@
 
                                                                     <div class="form-outline form-white mb-2">
                                                                         <label for="email">Email</label>
-                                                                        <input type="email" id="typeEmailX" class="form-control form-control-lg" id="email" name="email" placeholder="Enter your email..." required/>
+                                                                        <input type="email" id="typeEmailX" class="form-control form-control-lg" id="email" name="email" placeholder="Enter your email..." required value="<?php echo $email ?>"/>
                                                                         
                                                                     </div>
 
