@@ -83,7 +83,7 @@
                                                     // it return number of rows in the table.
                                                     $row = mysqli_num_rows($result);
                                                         
-                                                    if ($row)
+                                                    if ($row['isClaimed']==1)
                                                     {
                                                         echo "<p class='total-item'>Found Item: $row </p>";
                                                     }
@@ -100,30 +100,16 @@
 
                                                 while($row=mysqli_fetch_assoc($result))
                                                 {
-                                                    if(.isClaimed==1){
-                                                        <tr>
-                                                            <td style="text-align: center;"><?php echo $row['itemNo']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemColor']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['date']?></td>
-                                                        </tr>
-                                                    }else{
-                                                        <tr>
-                                                            <td style="text-align: center;"><?php echo $row['itemNo']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemColor']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
-                                                            <td style="text-align: center;"><?php echo $row['date']?></td>
-                                                        </tr>
-                                                    }
                                                 ?>
-                                                
-                                                
+                                                <tr>
+                                                    <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                    <td style="text-align: center;"><?php echo $row['date']?></td>
+                                                </tr>
                                         <?php
                                         }
                                     }
