@@ -45,6 +45,10 @@
                                                     <hr class="mb-2">
                                                     <form action="forgot.php" method="POST" autocomplete="off">
                                                         <?php
+                                                        ini_set('display_errors', 1);
+                                                        error_reporting(E_ALL & ~E_NOTICE);
+                                                        //Error_reporting(0);
+                                                       
                                                         if ($errors > 0) {
                                                             foreach ($errors as $displayErrors) {
                                                         ?>
