@@ -78,12 +78,12 @@
                                                 $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
                                                 $result = mysqli_query($conn, $query);
                                                 
-                                                if ($result['isClaimed==1'])
+                                                if ($result)
                                                 {
                                                     // it return number of rows in the table.
                                                     $row = mysqli_num_rows($result);
                                                         
-                                                    if ($row)
+                                                    if ($row['isClaimed']==1)
                                                     {
                                                         echo "<p class='total-item'>Found Item: $row </p>";
                                                     }
