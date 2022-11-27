@@ -59,7 +59,11 @@
                                     <table style="width:100%">
                                         <thead class="alert-info">
                                             <tr style="text-align: left; background-color: #cccccc; color: #ec9006; font-weight: 700;">
-                                                CLAIMED: 
+                                                <?php
+                                                    include 'range.php';
+                                                    $total = $rows[0];
+                                                    echo "<p class='total-item'>Item Record: $total </p>";
+                                                ?>
                                             </tr>
                                             <tr>
                                                 <th style="text-align: center; background-color: #cccccc; color: #ec9006">Item No.</th>
