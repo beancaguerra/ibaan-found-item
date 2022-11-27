@@ -48,7 +48,7 @@
                                                         ini_set('display_errors', 1);
                                                         error_reporting(E_ALL & ~E_NOTICE);
                                                         //Error_reporting(0);
-                                                       
+                                                  
                                                         if ($errors > 0) {
                                                             foreach ($errors as $displayErrors) {
                                                         ?>
@@ -65,7 +65,7 @@
                                                             }
                                                         }
                                                         ?>
-                                                        <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" required><br>
+                                                        <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" required value="<?php echo $email ?>"><br>
                                                         <button class="sign-btn" type="submit" name="forgot_password">  Check </button> 
                                                     </form>
                                                 </div>
