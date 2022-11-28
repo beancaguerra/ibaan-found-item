@@ -10,8 +10,7 @@ if (!$conn) {
 $sql="DELETE from tb_deletemsg where dmid=$id";
      if($conn->query($sql)===TRUE)
     {
-     echo "Record deleted successfully";
-     header('Location: admin_verified.php');
+     header('Location: admin_archives.php');
     }
      else
     {
