@@ -48,7 +48,8 @@
                                     <div class="first-three">
                                         <input class="input big" type="date" placeholder="Start Date" name="date1" value="<?php echo isset($_POST['date1']) ? $_POST['date1'] : '' ?>" />
                                         <input class="input small" type="date" placeholder="End Date" name="date2" value="<?php echo isset($_POST['date2']) ? $_POST['date2'] : '' ?>"/>
-                                        <select name="claim" class="input small" value="--select--">
+                                        <select name="claim" class="input small">
+                                            <option value="default">--select--</option>
                                             <option value="1 AND 0">All</option>
                                             <option value="1">CLAIMED</option>
                                             <option value="0">NOT CLAIMED</option>
