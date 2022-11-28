@@ -6,14 +6,16 @@ include 'connect_db.php';
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
 // sql to delete a record
-$sql = "DELETE FROM tb_deletedmsg WHERE dmid = $id"; 
-if (mysqli_query($conn, $sql)) {
-    mysqli_close($conn);
-    header('Location: admin_archives.php');
-    exit;
-} else {
-    echo "Error deleting record";
-}
+$sql="DELETE from tb_deletemsg where dmid=$id";
+     if($conn->query($sql)===TRUE)
+    {
+     echo "Record deleted successfully";
+     header('Location: admin_verified.php');
+    }
+     else
+    {
+     echo "error deleting record:".$conn->error;
+    }
+     $conn->close();
 ?>
