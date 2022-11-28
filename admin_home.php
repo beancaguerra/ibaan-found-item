@@ -79,7 +79,7 @@
                             </div>
                             <div class="post-result-child-two">
                                 <!--<a style="color:#006400; margin-top:4px; font-size:12px" href='edit_announcement.php?id="//php echo $row['id'];"'>Edit</a>-->
-                                <a style="color: #ec9006; margin-top:4px; font-size:12px" href='delete_announcement.php?id="<?php echo $row['announceId']; ?>"'>Delete</a>
+                                <a style="color: #ec9006; margin-top:4px; font-size:12px" onClick='delAnnounce' href='delete_announcement.php?id="<?php echo $row['announceId']; ?>"'>Delete</a>
                             </div>
                         </div>
                         <?php } ?>
@@ -130,6 +130,15 @@
                 dots[slideIndex-1].className += " active";
                 setTimeout(showSlides, 5000); // Change image every 2 seconds
             }
+
+            function delAnnounce(){
+            if(confirm("Delete this post?")){
+                window.location.href='admin_home.php'
+                setInterval(function(){
+                    alert("Delete Successfully!");}, 3000)
+                return true;
+            } 
+        }
         </script>
     </body>
 </html>
