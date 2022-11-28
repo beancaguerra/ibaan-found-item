@@ -95,7 +95,12 @@
                                                         
                                                     if ($row)
                                                     {
-                                                        echo "<p class='total-item'>Found Item $claim: $row </p>";
+                                                        echo "<p class='total-item'>Found Item </p>";
+                                                        if ($claim==0){
+                                                            echo 'NOT YET CLAIMED: ' .$row;
+                                                        }else{
+                                                            echo 'CLAIMED: ' .$row;
+                                                        }
                                                     }
                                                     // close the result.
 
