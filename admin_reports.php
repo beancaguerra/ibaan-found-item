@@ -49,7 +49,7 @@
                                         <input class="input big" type="date" placeholder="Start Date" name="date1" value="<?php echo isset($_POST['date1']) ? $_POST['date1'] : '' ?>" />
                                         <input class="input small" type="date" placeholder="End Date" name="date2" value="<?php echo isset($_POST['date2']) ? $_POST['date2'] : '' ?>"/>
                                         <select name="claim" class="input small" value="--select--">
-                                            <option value="1|0">All</option>
+                                            <option value="">All</option>
                                             <option value="1">CLAIMED</option>
                                             <option value="0">NOT CLAIMED</option>
                                         </select>
@@ -82,53 +82,99 @@
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
                                                 $claim = $_POST['claim'];
                                                 
+                                                if($claim==1||$claim==0){
                                                     $query="SELECT * FROM `tb_itemrecord` WHERE isClaimed = '$claim' AND date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
                                                 
-                                                //$query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
-                                                
-                                                $result = mysqli_query($conn, $query);
-                                                
-                                                if ($result)
-                                                {
-                                                    // it return number of rows in the table.
-                                                    $row = mysqli_num_rows($result);
+                                                        //$query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
                                                         
-                                                    if ($row)
-                                                    {
-                                                        echo "<p class='total-item'>Found Item ";
-                                                        if ($claim==0){
-                                                            echo 'NOT YET CLAIMED: ' .$row;
-                                                        }else{
-                                                            echo 'CLAIMED: ' .$row;
-                                                            echo '</p>';
+                                                        $result = mysqli_query($conn, $query);
+                                                        
+                                                        if ($result)
+                                                        {
+                                                            // it return number of rows in the table.
+                                                            $row = mysqli_num_rows($result);
+                                                                
+                                                            if ($row)
+                                                            {
+                                                                echo "<p class='total-item'>Found Item ";
+                                                                if ($claim==0){
+                                                                    echo 'NOT YET CLAIMED: ' .$row;
+                                                                }else{
+                                                                    echo 'CLAIMED: ' .$row;
+                                                                    echo '</p>';
+                                                                }
+                                                            }
+                                                            // close the result.
+
+                                                            //if table has no data
+                                                            if (mysqli_num_rows($result) == 0) {
+                                                            echo "<div class='nodata'>
+                                                                    <img src='./images/nodata.png' width='120px' height='120px'>
+                                                                    <p>No Data</p>
+                                                                </div>";
+                                                            }   
                                                         }
-                                                    }
-                                                    // close the result.
 
-                                                    //if table has no data
-                                                    if (mysqli_num_rows($result) == 0) {
-                                                    echo "<div class='nodata'>
-                                                            <img src='./images/nodata.png' width='120px' height='120px'>
-                                                            <p>No Data</p>
-                                                        </div>";
-                                                    }   
-                                                }
-
-                                                while($row=mysqli_fetch_assoc($result))
-                                                {
-                                                ?>
-                                                <tr>
-                                                    <td style="text-align: center;"><?php echo $row['itemNo']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemColor']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
-                                                    <td style="text-align: center;"><?php echo $row['date']?></td>
-                                                </tr>
-                                        <?php
+                                                        while($row=mysqli_fetch_assoc($result))
+                                                        {
+                                                        ?>
+                                                        <tr>
+                                                            <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['date']?></td>
+                                                        </tr>
+                                                <?php
+                                                        }
+                                                    
                                         }
-                                    }
+                                    }else{
+                                        $query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                
+                                                        //$query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                        
+                                                        $result = mysqli_query($conn, $query);
+                                                        
+                                                        if ($result)
+                                                        {
+                                                            // it return number of rows in the table.
+                                                            $row = mysqli_num_rows($result);
+                                                                
+                                                            if ($row)
+                                                            {
+                                                                echo "<p class='total-item'>Found Item: $row </p>";
+                                                                }
+                                                            }
+                                                            // close the result.
+
+                                                            //if table has no data
+                                                            if (mysqli_num_rows($result) == 0) {
+                                                            echo "<div class='nodata'>
+                                                                    <img src='./images/nodata.png' width='120px' height='120px'>
+                                                                    <p>No Data</p>
+                                                                </div>";
+                                                            }   
+                                                        }
+
+                                                        while($row=mysqli_fetch_assoc($result))
+                                                        {
+                                                        ?>
+                                                        <tr>
+                                                            <td style="text-align: center;"><?php echo $row['itemNo']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemCategory']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemLocation']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemBrand']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemColor']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['itemDescription']?></td>
+                                                            <td style="text-align: center;"><?php echo $row['date']?></td>
+                                                        </tr>
+                                                <?php
+                                                        }
+                                                    
+                                        
                                         ?>
                                         </tbody>
                                     </table>
