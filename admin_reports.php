@@ -13,7 +13,7 @@
         <link rel="icon" href="./images/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     </head>
-    <//?php include 'code_session.php'; ?>
+    <?php include 'code_session.php'; ?>
 
     <body>
         <header>
