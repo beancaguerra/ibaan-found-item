@@ -52,6 +52,7 @@
         <main>
             <section class="forms-input">
                 <!--form inputs-->
+                <!--
                 <form class='form' action="code_account.php" method="POST" enctype="multipart/form-data">
                         <div class="first-three">
                             <input class="input big" type="hidden" id= "accountId" name="accountId" disabled required>
@@ -74,6 +75,7 @@
                             <input class="input button-submit" type="submit" name="Submit" value="Submit">
                         </div>
                 </form>
+                -->
                 <div class="submit-bar">
                     <?php
                     if(isset($_SESSION['Submit'])){
