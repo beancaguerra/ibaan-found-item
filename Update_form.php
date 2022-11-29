@@ -79,7 +79,7 @@
                             $IsClaimed      =   $_POST['isClaimed'];
                             
 
-                            $sql = "UPDATE tb_itemRecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription', isClaimed='$IsClaimed' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
+                            $sql = "UPDATE tb_itemrecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription', isClaimed='$IsClaimed' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
                             $result = mysqli_query($conn, $sql);
 
                             if($result){

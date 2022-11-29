@@ -83,7 +83,7 @@
                                                 $date2 = date("Y-m-d", strtotime($_POST['date2']));
                                                 $claim = $_POST['claim'];
                                                 
-                                                    $query="SELECT * FROM `tb_itemrecord` WHERE isClaimed = '$claim' AND date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
+                                                $query="SELECT * FROM `tb_itemrecord` WHERE isClaimed = '$claim' AND date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
                                                 
                                                 //$query="SELECT * FROM `tb_itemrecord` WHERE date(`date`) BETWEEN '$date1' AND '$date2'" or die(mysqli_error());
                                                 
