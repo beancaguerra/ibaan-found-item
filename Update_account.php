@@ -71,6 +71,7 @@
                     $email      =   $_POST['email'];
                     $password   =   $_POST['password'];
 
+                    /*
                     $t_fname        = trim($fname);
                     $t_lname        = trim($lname);
                     $t_accountId    = trim($accountId);
@@ -79,9 +80,9 @@
                     $t_gender       = trim($gender);
                     $t_email        = trim($email);
                     $t_password     = trim($password);
+                    */
 
-
-                    $sql= "UPDATE tb_residentsacc SET fname='$t_fname', lname='$t_lname', contact='$t_contact', address='$t_address', gender='$t_gender', email='$t_email', password='$t_password' WHERE accountId='$t_accountId'" or die("Data Not Updated");
+                    $sql= "UPDATE tb_residentsacc SET fname='$fname', lname='$lname', contact='$contact', address='$address', gender='$gender', email='$email', password='$password' WHERE accountId='$accountId'" or die("Data Not Updated");
                     $result=mysqli_query($conn, $sql);
 
                     if($result){
