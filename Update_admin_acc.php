@@ -46,10 +46,8 @@
                 $fullname=$_GET['admin_name'];
                 $email=$_GET['admin_email'];
                 $password=$_GET['admin_password'];
-                
+
                 $sql="SELECT * FROM 'tb_admin' WHERE admin_name=$fullname, admin_email=$email, admin_password=$password, admin_id=$id";
-                $result=mysqli_query($conn,$sql);
-                $row=mysqli_fetch_assoc($result);
 
                 if(isset($_POST['Submit'])){
                     $id=$_POST['admin_id'];
