@@ -50,12 +50,12 @@
                 <div class="output-container">
                     <?php
                     header("Access-Control-Allow-Origin: *");
-                    
+
                     include 'connect_db.php';
 
                     if(isset($_POST['search']))
                     {
-
+                        $accountId  =   $_POST['accountId'];
                         $fname      =   $_POST['fname'];
                         $lname      =   $_POST['lname'];
                         $contact    =   $_POST['contact'];
@@ -65,7 +65,7 @@
                         $password   =   $_POST['password'];
                         
                         //showing data from tb_accounts to the system
-                        $query = "SELECT * FROM tb_residentsacc WHERE contact = $contact" or die("Error");
+                        $query = "SELECT * FROM tb_residentsacc WHERE accountId = $accountId" or die("Error");
                         $result = mysqli_query($conn, $query);
                         if (mysqli_num_rows($result) == 0) {
                             echo "<div class='nodata'>
