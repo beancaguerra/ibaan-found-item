@@ -47,7 +47,7 @@
             <section class="forms-input">
             <?php
                 include 'connect_db.php';
-
+                
                 $fname      =   $_GET['fname'];
                 $lname      =   $_GET['lname'];
                 $accountId  =   $_GET['accountId'];
@@ -113,7 +113,7 @@
                         </div>
                         <div class="third-three">
                             <input class="input big" type="text" placeholder="Email..." name="email" value='<?php echo $email;?>' required>
-                            <input class="input small" type="text" placeholder="Password..." name="password" value='<?php echo $password;?>' required>
+                            <input class="input small" type="text" placeholder="Password..." name="password" value='<?php echo $password;?>' readonly>
 
                             <input class="input button-submit" type="submit" name="Submit" value="Update">
                         </div>
