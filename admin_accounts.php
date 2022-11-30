@@ -107,7 +107,7 @@
                     include 'connect_db.php';
 
                     //showing data from tb_accounts to the system
-                    $query = "SELECT * FROM tb_residentsacc WHERE accountId='$accountId'" or die("Error");
+                    $query = "SELECT * FROM tb_residentsacc" or die("Error");
                     $result = mysqli_query($conn, $query);
                     
                     if (mysqli_num_rows($result) == 0) {
