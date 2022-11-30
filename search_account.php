@@ -99,7 +99,7 @@
                                     <td style="width:50%"><p><span style="font-weight:700;">Email: </span><?php echo $row['email']; ?></p></td>
                                 </tr>
                                 <tr>
-                                    <td style="width:50%"><p><span style="font-weight:700;">Password: </span><input type='hidden' value='<?php echo $row['password']; ?>'></p></td>
+                                    <td style="width:50%"><p><span style="font-weight:700;">Password: </span><?php echo $row['password']; ?> </p></td>
                                 </tr>
                             </table>
                         </div>
