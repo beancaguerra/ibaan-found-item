@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php  header("Access-Control-Allow-Origin: *"); ?>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -32,7 +31,6 @@
                 <a href="admin_home.php" class="nav-link"><img src="./images/home-icon.png" width="18" height="18" style="margin-right: 3px;">Home</a>
                 <a href="admin_itemRecord.php" class="nav-link"><img src="./images/add-icon.png" width="18" height="18" style="margin-right: 3px;">Item Records</a>
                 <a href="admin_messages.php" class="nav-link"><img src="./images/messages-icon.png" width="18" height="18" style="margin-right: 3px;">Messages</a>
-                <a href="admin_reports.php" class="nav-link"><img src="./images/user-icon.png" width="18" height="18" style="margin-right: 3px;">Reports</a>
                 <a href="admin_accounts.php" class="nav-link active"><img src="./images/user-icon.png" width="18" height="18" style="margin-right: 3px;">Accounts</a>
                 <a href="logout.php" class="nav-link"><img src="./images/logout-icon.png" width="18" height="18" style="margin-right: 3px;">Logout</a>
             </div>
@@ -45,14 +43,13 @@
         </div>
         <div class="search-bar">
         <form class="search-box" action="search_account.php" method=POST>
-                <input class="search" type="text" name="accountId" size='20' placeholder="Search id...." required>
+                <input class="search" type="text" name="contact" size='20' placeholder="Search name...." required>
                 <button class="search-btn" title="Search" type="submit" name= "search"><img src="./images/search-icon.png" width="15" height="15"></button>
             </form>
         </div>
         <main>
             <section class="forms-input">
                 <!--form inputs-->
-                <!--
                 <form class='form' action="code_account.php" method="POST" enctype="multipart/form-data">
                         <div class="first-three">
                             <input class="input big" type="hidden" id= "accountId" name="accountId" disabled required>
@@ -75,7 +72,6 @@
                             <input class="input button-submit" type="submit" name="Submit" value="Submit">
                         </div>
                 </form>
-                -->
                 <div class="submit-bar">
                     <?php
                     if(isset($_SESSION['Submit'])){
@@ -96,17 +92,10 @@
             <section class="form-output" id="form-output">
                 <div class="output-container">
                     <?php
-
-                    session_start();
-                    
-                    ini_set('display_errors',1);
-                    //error_reporting(E_ALL & ~E_NOTICE);
-                    Error_reporting(0);
-                    
                     include 'connect_db.php';
 
                     //showing data from tb_accounts to the system
-                    $query = "SELECT * FROM tb_residentsacc WHERE accountId='$accountId'" or die("Error");
+                    $query = "SELECT * FROM tb_residentsacc" or die("Error");
                     $result = mysqli_query($conn, $query);
                     if (mysqli_num_rows($result) == 0) {
                         echo "<div class='nodata'>
@@ -139,7 +128,7 @@
                                 <td style="width:50%"><p><span style="font-weight:700;">Email: </span><?php echo $row['email']; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width:50%"><p><span style="font-weight:700;">Password: </span><input type= 'hidden' value='<?php echo $row['password']; ?>'></p></td>
+                                <td style="width:50%"><p><span style="font-weight:700;">Password: </span><?php echo $row['password']; ?></p></td>
                             </tr>
                         </table>
                     </div>
