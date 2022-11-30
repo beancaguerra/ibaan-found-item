@@ -34,7 +34,7 @@
                                 <div class="vh-100 gradient-custom">
                                     <div class="container py-8 h-100">
                                         <div class="row d-flex justify-content-center align-items-center h-100">
-                                            <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="col-12 col-md-12 col-lg-10 col-xl-12">
                                                 <div class="card bg-light text-black">
                                                     <div class="card-body p-8">
                                                         <div class="mb-md-4 mt-md-4 pb-4">
