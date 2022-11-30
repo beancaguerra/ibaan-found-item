@@ -74,4 +74,15 @@
                                                     </form>
     </div>
 </body>
+    <style>
+        @media screen and (max-width: 900px){
+            .container .box{
+                width: 334px;
+                margin-left: -93px;
+            }
+            #alert {
+                font-size: 12px;
+            }
+        }
+    </style>
 </html>

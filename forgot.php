@@ -76,5 +76,14 @@
             </div>
         </div>
     </div>
+
+    <style>
+        @media screen and (max-width: 900px){
+        .container .box{
+            width: 334px;
+            margin-left: -93px;
+        }
+    }
+    </style>
 </body>
 </html>
