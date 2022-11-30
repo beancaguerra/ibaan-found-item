@@ -71,6 +71,8 @@
                             $Time           =   $_POST['time'];
                             $ItemCategory   =   $_POST['itemCategory'];
                             $ItemLoc        =   $_POST['itemLocation'];
+                            $ItemBrand      =   $_POST['itemBrand'];
+                            $ItemColor      =   $_POST['itemColor'];
                             $Description    =   $_POST['itemDescription'];
 
                             $query = "SELECT * FROM tb_itemrecord WHERE itemCategory='$ItemCategory' ORDER BY itemNo DESC" or die("Error");
@@ -100,26 +102,34 @@
                                 while($row=mysqli_fetch_assoc($result))
                                 {
                                 ?>
-                                    <div class='output-cont-child'>
+                                <div class='output-cont-child'>
                                     <div class="output-one output">
                                         <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Finder: </span><?php echo $row['finder']; ?></p>
-                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact No: </span><?php echo $row['contact']; ?></p>
+                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact: </span><?php echo $row['contact']; ?></p>
                                     </div>
                                     <div class="output-two output">
+                                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><?php echo $row['date']; ?></p>
                                         <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Time: </span><?php echo $row['time']; ?></p>
-                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><?php echo $row['date']; ?></p>
+                                        
                                     </div>
                                     <div class="output-three output">
-                                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
-                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><?php echo $row['itemDescription']; ?></p>
+                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
+                                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><?php echo $row['itemLocation']; ?></p>
+                                        
                                     </div>
-                                    <div class="output-four output">
-                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><?php echo $row['itemLocation']; ?></p>
-                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>    
+                                    <div class="output-two output">
+                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Brand: </span><?php echo $row['itemBrand']; ?></p>
+                                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Color: </span><?php echo $row['itemColor']; ?></p>
+                                        
+                                    </div>
+                                    <div class="output-one output">
+                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><?php echo $row['itemDescription']; ?></p>
+                                        <p class="p-one" readonly><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>
+                                        
                                     </div>
 
                                     <div class="output-delete">
-                                        <input style="color:#000000; margin: 10px 50px; border:none; background-color: #cccccc; font-size: 1rem; text-decoration: underline; cursor: pointer;" type="button" onClick="deleteAcc(<?php echo $row['itemNo']; ?>)" name= "Delete" value="Delete">
+                                        <input style="color:#000000; margin: 10px 50px; border:none; background-color: #ddd; font-size: 1rem; text-decoration: underline; cursor: pointer;" type="button" onClick="deleteAcc(<?php echo $row['itemNo']; ?>)" name= "Delete" value="Delete">
                                     </div>
                                 </div>
                                 <?php

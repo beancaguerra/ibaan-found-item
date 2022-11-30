@@ -130,7 +130,7 @@
 
                             </div>
                             <div class="detail-container">
-                            <div class="output-one output">
+                                <div class="output-one output">
                                     <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Finder: </span><?php echo $row['finder']; ?></p>
                                     <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact: </span><?php echo $row['contact']; ?></p>
                                 </div>
