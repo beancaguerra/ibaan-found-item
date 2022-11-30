@@ -67,6 +67,7 @@
                         //showing data from tb_accounts to the system
                         $query = "SELECT * FROM tb_residentsacc WHERE accountId = $accountId" or die("Error");
                         $result = mysqli_query($conn, $query);
+
                         if (mysqli_num_rows($result) == 0) {
                             echo "<div class='nodata'>
                                     <img src='./images/nodata.png' width='120px' height='120px'>
@@ -98,7 +99,7 @@
                                     <td style="width:50%"><p><span style="font-weight:700;">Email: </span><?php echo $row['email']; ?></p></td>
                                 </tr>
                                 <tr>
-                                    <td style="width:50%"><p><span style="font-weight:700;">Password: </span><?php echo $row['password']; ?></p></td>
+                                    <td style="width:50%"><p><span style="font-weight:700;">Password: </span><input type='hidden' value='<?php echo $row['password']; ?>'></p></td>
                                 </tr>
                             </table>
                         </div>
