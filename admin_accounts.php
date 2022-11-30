@@ -45,7 +45,7 @@
         </div>
         <div class="search-bar">
         <form class="search-box" action="search_account.php" method=POST>
-                <input class="search" type="text" name="contact" size='20' placeholder="Search name...." required>
+                <input class="search" type="text" name="accountId" size='20' placeholder="Search id...." required>
                 <button class="search-btn" title="Search" type="submit" name= "search"><img src="./images/search-icon.png" width="15" height="15"></button>
             </form>
         </div>
