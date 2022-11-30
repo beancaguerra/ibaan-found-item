@@ -101,14 +101,22 @@
 
 <style>
     @media screen and (min-width: 481px) and (max-width: 640px){
+        .container {
+            padding: 0;
+            width: 100%;
+        }
+        .form-outline{
+            width: 80%;
+        }
         .container .box{
-            width: 434px;
+            width: 334px;
             margin-left: -93px;
+            
         }
     }
     @media screen and (max-width: 900px){
         .container .box{
-            width: 434px;
+            width: 334px;
             margin-left: -93px;
         }
     }
