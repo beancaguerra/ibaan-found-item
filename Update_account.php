@@ -58,8 +58,6 @@
                 $password   =   $_GET['password'];
                 
                 $sql="SELECT * FROM 'tb_residentsacc' WHERE accountId=$accountId, fname=$fname, lname=$lname, contact=$contact, address=$address, gender=$gender, email=$email, password=$password";
-                $result=mysqli_query($conn,$sql);
-                $row=mysqli_fetch_assoc($result);
 
                 if(isset($_POST['Submit'])){
                     $fname      =   $_POST['fname'];
