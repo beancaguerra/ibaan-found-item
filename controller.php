@@ -2,9 +2,9 @@
     header("Access-Control-Allow-Origin: *");
 
     ini_set('display_errors', 1);
-    //error_reporting(E_ALL & ~E_NOTICE);
-    Error_reporting(0);
-    
+    error_reporting(E_ALL & ~E_NOTICE);
+    //Error_reporting(0);
+
     session_start();
     
     include 'connect_db.php';
@@ -208,7 +208,7 @@ if(isset($_POST['changePassword'])){
             $email = $_SESSION['email'];
             $updatePassword = "UPDATE tb_residentsacc SET password = '$password' WHERE email = '$email'";
             $updatePass = mysqli_query($conn, $updatePassword) or die("Query Failed");
-            session_unset($email);
+            //session_unset($email);
             session_destroy();
             header('location: login-page-user.php');
         }
