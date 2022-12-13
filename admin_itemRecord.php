@@ -54,7 +54,7 @@
         </div>
 
         <main>
-        <div class="forms-input">
+            <div class="forms-input">
                 <!--form inputs-->
                 <form class='form' action="code_addItem.php" method="POST" enctype="multipart/form-data">
                     <div class="first-three">
