@@ -107,7 +107,9 @@
                 <!--form inputs-->
                 <form class='form' action="<?php echo($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
                         <div class="first-three">
-                            <input type="text" class="form-control" name="admin_id" id="admin_id" style=" font-size: 16px; color: blue; font-weight: bold; "  value="<?php echo $number; ?>" readonly >
+                            <input type="text" class="form-control" name="admin_id" id="admin_id" style=" font-size: 16px; color: blue; font-weight: bold; "  value="<?php echo $number; ?>" readonly >        
+                        </div>
+                            <div class="first-three">
                             <input class="input big" type="text" placeholder="Fullname..." name="admin_name" required>
                             <input class="input big" type="email" placeholder="Email..." name="admin_email" required>
                             <input class="input small" type="password" onkeyup="validatePassword(this.value)" placeholder="Password" id="admin_password" name="admin_password" required>
