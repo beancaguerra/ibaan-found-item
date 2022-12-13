@@ -58,20 +58,39 @@
                 <!--form inputs-->
                 <form class='form' action="code_addItem.php" method="POST" enctype="multipart/form-data">
                     <div class="first-three">
-                        <input class="input small" id="finder" type="text" placeholder="Finder" name="finder" required>
-                        <input class="input small" id="contact" type="contact" placeholder="Contact..." name="contact" required>
+                        <input class="input small" id="finder" type="text" placeholder="Name of finder" name="finder" required>
+                        <input class="input small" id="contact" type="contact" placeholder="Contact number" name="contact" required>
                         <input class="input small" id="itemNo" style="background-color: #cccccc" type="text" placeholder="Item no..." name="itemNo" disabled required>
                     </div>
                     <div class="second-three">
-                        <input class="input small" id="time" type="time" placeholder="Time..." name="time" required>
-                       <input class="input small" id="date" type="date" placeholder="Date..." name="date" required>
-                       <input class="input small" id="itemCategory" type="text" placeholder="Item Category..." name="itemCategory" required>
+                        <select class="input small" id="itemCategory" name="itemCategory" required>
+                            <option value="category">Select Item Category</option>
+                            <option value="electronic gadget">Electronic gadget</option>
+                            <option value="bag">Bag</option>
+                            <option value="validID">Valid ID</option>
+                            <option value="documents">Documents</option>
+                            <option value="cash">Cash</option>
+                            <option value="credit/debit cards">Credit/Debit Cards</option>
+                            <option value="validID">Valid ID</option>
+                        </select>
+                        <input class="input medium" id="itemLocation" type="text" placeholder="Location where found" name="itemLocation" required>
                     </div>
                    <div class="third-three">
-                        <input class="input medium" id="itemLocation" type="text" placeholder="Item Location..." name="itemLocation" required>
-                        <input class="input small" id="itemBrand" type="text" placeholder="Item Brand..." name="itemBrand" required>
-                        <input class="input small" id="itemColor" type="text" placeholder="Item Color..." name="itemColor" required>
-                        <input class="input medium" id="itemDescription" type="text" placeholder="Item Description..." name="itemDescription" required>
+                        <input class="input small" id="itemBrand" type="text" placeholder="Item Found..." name="itemBrand" required>
+                        <select class="input small" name="itemColor" id="itemColor">
+                            <option>Select Color</option>
+                            <option value="not applicable">not applicable</option>
+                            <option style="background-color: #FFFFFF" value="White">White</option>
+                            <option style="background-color: #808080" value="Gray">Gray</option>
+                            <option style="background-color: #000000" value="Black">Black</option>
+                            <option style="background-color: #FF0000" value="Red">Red</option>
+                            <option style="background-color: #008000" value="Green">Green</option>
+                            <option style="background-color: #0000FF" value="Blue">Blue</option>
+                            <option type="text"></option>
+                        </select>
+                    </div>
+                    <div class="second-three">
+                        <textarea class="input medium" id="itemDescription" type="text" placeholder="Item Description..." name="itemDescription" required></textarea>
                     </div>
                     <div class="fourth-three">
                         <input class="input button-submit" id="submit" type="submit" name="Submit" value="Submit">
