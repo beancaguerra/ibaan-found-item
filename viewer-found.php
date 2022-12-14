@@ -77,8 +77,8 @@
 
             $item=$_GET['itemNo'];
             $itemNo=["SELECT itemNo FROM tb_itemrecord where itemNo=$item"];
-            $result=mysqli_query($conn,$itemNo);
-            $row = mysqli_fetch_row($result);
+            $Itemresult=mysqli_query($conn,$itemNo);
+            $row = mysqli_fetch_row($Itemresult);
 
             $query = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
             $result = mysqli_query($conn, $sql);
