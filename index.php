@@ -117,8 +117,7 @@
                                             <div class="item-container">
                                                 <p class="main-title">
                                                     <span class="title-one"> CATEGORY: </span><?php echo $row['itemCategory']; ?><br> 
-                                                    <span class="title"> DATE FOUND: </span><?php echo $row['date']; ?><br>
-                                                    <span class="title"> TIME FOUND: </span><?php echo $row['time']; ?><br>
+                                                    <span class="title"> DATE FOUND: </span><?php echo $row['timedate']; ?><br>
                                                 </p>
                                             </div>
                                         <?php
