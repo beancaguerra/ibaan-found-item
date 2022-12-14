@@ -66,8 +66,75 @@
     <main>
       <section class="form-output" id="form-output">
         <div class="output-container" id="realtime">
-          <div style="background-color: green;">
-          </div>  
+          <div>
+            <?php
+
+            include 'connect_db.php';
+
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL & ~E_NOTICE);
+            Error_reporting(0);
+
+            $item=$_GET['itemNo'];
+            $itemNo=["SELECT itemNo FROM tb_itemrecord where itemNo=$item"];
+            $result=mysqli_query($conn,$itemNo);
+            $row = mysqli_fetch_row($result);
+
+            $sql = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
+            $query = mysqli_query($conn, $sql);
+
+            if ($query)
+            {
+                // it return number of rows in the table.
+                $row = mysqli_num_rows($result);
+                      
+                if ($row)
+                  {
+                    echo "<p class='total-item'>Number of Found Item: $row </p>";
+                  }
+                // close the result.
+
+                //if table has no data
+                if (mysqli_num_rows($query) == 0) {
+                echo "<div class='nodata'>
+                        <img src='./images/nodata.png' width='120px' height='120px'>
+                        <p>No Data</p>
+                      </div>";
+                }   
+            }
+
+            while($row=mysqli_fetch_assoc($query))
+            {
+
+                  $no=$row['itemNo'];
+                  $itemCategory=$row['itemCategory'];
+                  $timedate=$row['timedate']; 
+            ?>
+
+                <div class='output-cont-child'>
+                    <div class="output-one output">
+                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $no; ?></p>
+                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $itemCategory; ?></p>
+                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $timedate; ?></p>
+                    </div>
+                    <div class="output-two output">
+                      <a style="  font-size: 1rem;
+                                        padding: 0 10px;
+                                        margin-left: 617px;
+                                        cursor: pointer; 
+                                        width: 13%;
+                                        margin-top: 1%;
+                                        margin-bottom: 1%;"
+                                        id="submit" onclick="openForm()" type="submit">Send Proof</a>
+                    </div>
+                </div>
+                
+            <?php
+
+            }
+            ?>
+            </div>  
+            </div>
         </div>
       </section>
     </main>
@@ -75,7 +142,7 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop.png" alt="" width="60" height="50"></button>
     
     <!--These codes are for message form-->
-    <button class="open-button" onclick="openForm()" title="Send Proof"><img src="./images/infocontact-icon.png" alt="" width="60" height="50"></button>
+    <!--<button class="open-button" onclick="openForm()" title="Send Proof"><img src="./images/infocontact-icon.png" alt="" width="60" height="50"></button>-->
     <div class="form-popup" id="myForm">
         <form action="code_message.php" class="form-container" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="message-header">
@@ -93,7 +160,7 @@
                 </div>
                 <div>
                     <label for="email">Item Location</label>
-                    <input type="text" id="itemLocation" placeholder="Location where the item was lost" name="itemLocation" required>
+                    <input type="text" id="itemLocation" placeholder="Location where the item was lost" value="<?php echo $_GET['itemno']; ?>" name="itemLocation" readonly required>
                 </div>
                 <div>
                     <label for="email">Item Brand</label>
