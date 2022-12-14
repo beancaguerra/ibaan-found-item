@@ -126,8 +126,6 @@
                             </div>
                             <div class="output-one output">
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><span class="xdetailField" id="xTimeDate"></span></p>
-                            </div>
-                            <div class="output-two output">
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><span class="xdetailField" id="xDescription"></span></p>
                             </div>
                             <div class="output-one output">
