@@ -103,7 +103,7 @@
                 }   
             }
 
-            while($row=mysqli_fetch_assoc($query))
+            while($row=mysqli_fetch_assoc($result))
             {
 
                   $no=$row['itemNo'];
