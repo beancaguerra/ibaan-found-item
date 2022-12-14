@@ -53,8 +53,6 @@
                         $id             =   $_GET['edit'];
                         $finder         =   $_GET['finder'];
                         $contact        =   $_GET['contact'];
-                        $time           =   $_GET['time'];
-                        $date           =   $_GET['date'];
                         $itemCategory   =   $_GET['itemCategory'];
                         $itemLocation   =   $_GET['itemLocation'];
                         $itemBrand      =   $_GET['itemBrand'];
@@ -68,8 +66,6 @@
                         if(isset($_POST['Submit'])){
                             $Finder         =   $_POST['finder'];
                             $Contact        =   $_POST['contact'];
-                            $Time           =   $_POST['time'];
-                            $Date           =   $_POST['date'];
                             $ItemNo         =   $_POST['itemNo'];
                             $ItemCategory   =   $_POST['itemCategory'];
                             $ItemLocation   =   $_POST['itemLocation'];
@@ -78,8 +74,11 @@
                             $ItemDescription=   $_POST['itemDescription'];
                             $IsClaimed      =   $_POST['isClaimed'];
                             
+                            date_default_timezone_set("Asia/Kuala_Lumpur");
+                            $today = date("Y-m-d H:i:s");
+                            $today1 = date("Y-m-d");
 
-                            $sql = "UPDATE tb_itemrecord SET finder='$Finder', contact='$Contact', time='$Time', date='$Date', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription', isClaimed='$IsClaimed' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
+                            $sql = "UPDATE tb_itemrecord SET finder='$Finder', contact='$Contact', timedate='$today', date='$today1', itemCategory='$ItemCategory', itemLocation='$ItemLocation', itemBrand='$ItemBrand', itemColor='$ItemColor', itemDescription='$ItemDescription', isClaimed='$IsClaimed' WHERE itemNo='$ItemNo'" or die("Data Not Updated");
                             $result = mysqli_query($conn, $sql);
 
                             if($result){
@@ -97,23 +96,34 @@
                     <!--form inputs-->
                     <form class='form' action="Update_form.php" method="POST" enctype="multipart/form-data">
                         <div class="first-three">
-                            <input class="input big" type="text" value='<?php echo $finder; ?>' placeholder="Finder..." name="finder" required>
-                            <input class="input small" type="time" value='<?php echo $time ; ?>' placeholder="Time..." name="time">
-                            <input class="input small" type="date" value='<?php echo $date ; ?>' placeholder="Date..." name="date" >
-                            
+                            <input class="input big" type="text" value='<?php echo $finder; ?>' placeholder="Name of finder" name="finder" required>
+                            <input class="input small" style="background-color: #cccccc" type="text" value='<?php echo $id; ?>' placeholder="Item no..." name="itemNo" readonly required>
+                            <input class="input small" type="text" value='<?php echo $contact ; ?>' placeholder="Contact number..." name="contact">
                         </div>
                         <div class="second-three">
-                            <input class="input small" style="background-color: #cccccc" type="text" value='<?php echo $id; ?>' placeholder="Item no..." name="itemNo" readonly required>
-                            <input class="input small" type="text" value='<?php echo $contact ; ?>' placeholder="Time..." name="contact">
-                            <input class="input medium" type="text" value="<?php echo $itemCategory; ?>" placeholder="Item Category..." name="itemCategory" required>
-                            
-                        </div>
-                        <div class="third-three">
+                            <select class="input small" id="itemCategory" name="itemCategory" required>
+                                <option value="<?php echo $itemCategory?>"><?php echo $itemCategory?></option>
+                                <option value="electronic gadget">Electronic gadget</option>
+                                <option value="bag">Bag</option>
+                                <option value="documents">Documents</option>
+                                <option value="cash">Cash</option>
+                                <option value="credit/debit cards">Credit/Debit Cards</option>
+                                <option value="validID">Valid ID</option>
+                            </select>
                             <input class="input medium" type="text" value="<?php echo $itemLocation; ?>" placeholder="Item Location..." name="itemLocation" required>
                             <input class="input medium" type="text" value="<?php echo $itemBrand; ?>" placeholder="Item Brand..." name="itemBrand" required>
                         </div>
-                        <div class="fourth-three">
-                            <input class="input medium" type="text" value="<?php echo $itemColor; ?>" placeholder="Item Color..." name="itemColor" required>
+                        <div class="third-three">
+                            <select class="input small" name="itemColor">
+                                <option value="<?php echo $itemColor?>"><?php echo $itemColor?></option>
+                                <option value="not applicable">not applicable</option>
+                                <option style="background-color: #FFFFFF" value="White">White</option>
+                                <option style="background-color: #808080" value="Gray">Gray</option>
+                                <option style="background-color: #000000" value="Black">Black</option>
+                                <option style="background-color: #FF0000" value="Red">Red</option>
+                                <option style="background-color: #008000" value="Green">Green</option>
+                                <option style="background-color: #0000FF" value="Blue">Blue</option>
+                            </select>
                             <input class="input medium" type="text" value="<?php echo $itemDescription; ?>" placeholder="Item Description..." name="itemDescription" required>
 
                             <input class="input medium" type="hidden" value="<?php echo $isClaimed; ?>" placeholder="Item Description..." name="isClaimed" required>

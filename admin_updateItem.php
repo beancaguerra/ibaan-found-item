@@ -94,28 +94,24 @@
                                     <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact: </span><?php echo $row['contact']; ?></p>
                                 </div>
                                 <div class="output-two output">
-                                    <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><?php echo $row['date']; ?></p>
-                                    <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Time: </span><?php echo $row['time']; ?></p>
-                                    
+                                    <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
+                                    <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
                                 </div>
                                 <div class="output-three output">
-                                    <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
                                     <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><?php echo $row['itemLocation']; ?></p>
-                                    
+                                    <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Brand: </span><?php echo $row['itemBrand']; ?></p>
                                 </div>
                                 <div class="output-two output">
-                                    <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Brand: </span><?php echo $row['itemBrand']; ?></p>
                                     <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Color: </span><?php echo $row['itemColor']; ?></p>
-                                    
+                                    <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><?php echo $row['itemDescription']; ?></p>
                                 </div>
                                 <div class="output-one output">
-                                    <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><?php echo $row['itemDescription']; ?></p>
                                     <p class="p-one" readonly><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>
-                                </div>
+                                    <p class="p-one" readonly><span style='color:#ec9006; font-weight:700; margin-right: 20px;'></span><input type="hidden" value="<?php echo $row['isClaimed']; ?>"></p>
+                            </div>
                                 
                                 <div class="output-delete">
-                                <p class="p-one" readonly><span style='color:#ec9006; font-weight:700; margin-right: 20px;'></span><input type="hidden" value="<?php echo $row['isClaimed']; ?>"></p>
-                                    <a style="color:#000000; margin: 10px 50px;" href='Update_form.php?edit=<?php echo $row['itemNo']; ?> & finder=<?php echo $row['finder']; ?> & contact=<?php echo $row['contact']; ?> & time=<?php echo $row['time']; ?> & date=<?php echo $row['date']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & itemLocation=<?php echo $row['itemLocation']; ?> & itemBrand=<?php echo $row['itemBrand']; ?> & itemColor=<?php echo $row['itemColor']; ?> & itemDescription=<?php echo $row['itemDescription']; ?> & isClaimed=<?php echo $row['isClaimed']; ?>'>Edit</a>
+                                    <a style="color:#000000; margin: 10px 50px;" href='Update_form.php?edit=<?php echo $row['itemNo']; ?> & finder=<?php echo $row['finder']; ?> & contact=<?php echo $row['contact']; ?> & datetime=<?php echo $row['datetime']; ?> & date=<?php echo $row['date']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & itemLocation=<?php echo $row['itemLocation']; ?> & itemBrand=<?php echo $row['itemBrand']; ?> & itemColor=<?php echo $row['itemColor']; ?> & itemDescription=<?php echo $row['itemDescription']; ?> & isClaimed=<?php echo $row['isClaimed']; ?>'>Edit</a>
                                 </div>
                             </div>
                          <?php

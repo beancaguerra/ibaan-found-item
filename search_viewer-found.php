@@ -73,10 +73,10 @@
                             $Finder         =   $_POST['finder'];
                             $Contact        =   $_POST['contact'];
                             $ItemNo         =   $_POST['itemNo'];
-                            $Date           =   $_POST['date'];
-                            $Time           =   $_POST['time'];
                             $ItemCategory   =   $_POST['itemCategory'];
                             $ItemLoc        =   $_POST['itemLocation'];
+                            $ItemBrand      =   $_POST['itemBrand'];
+                            $ItemColor      =   $_POST['itemColor'];
                             $Description    =   $_POST['itemDescription'];
 
                             $query = "SELECT * FROM tb_itemrecord WHERE itemCategory='$ItemCategory' ORDER BY itemNo DESC" or die("Error");
@@ -110,10 +110,7 @@
                                         <div class="output-one output">
                                             <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>
                                             <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
-                                        </div>
-                                        <div class="output-two output">
-                                            <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Time: </span><?php echo $row['time']; ?></p>
-                                            <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><?php echo $row['date']; ?></p>
+                                            <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
                                         </div>
                                     </div>
                                 <?php
@@ -128,19 +125,31 @@
         <!--These codes are for message form-->
         <button class="open-button" onclick="openForm()" title="Send Proof"><img src="./images/infocontact-icon.png" alt="" width="60" height="50"></button>
         <div class="form-popup" id="myForm">
-            <form action="code_message.php" class="form-container" method="POST" enctype="multipart/form-data">
+            <form action="code_message.php" class="form-container" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="message-header">
                     <h3>Owner's Information(Proof of ownership)</h3>
-                    <button type="button" class="btn-cancel" onclick="closeForm()">X</button>
+                    <button type="button" class="btn-cancel" onclick="closeForm()">&times</button>
                 </div>
                 <div class="msg-input">
                     <div>
-                        <label for="name">Sr Code</label>
-                        <input type="text" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="srcode" required>
+                        <label for="name">Account Id</label>
+                        <input type="text" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
                     </div>
                     <div>
                         <label for="email">Item No.</label>
                         <input type="text" placeholder="Enter Item No." name="itemnumber" required>
+                    </div>
+                    <div>
+                        <label for="email">Item Location</label>
+                        <input type="text" id="itemLocation" placeholder="Location where the item was lost" name="itemLocation" required>
+                    </div>
+                    <div>
+                        <label for="email">Item Brand</label>
+                        <input type="text" id="itemBrand" placeholder="Enter Brand Name" name="itembrand" required>
+                    </div>
+                    <div>
+                        <label for="email">Item Color</label>
+                        <input type="text" id="itemColor" placeholder="Enter Color" name="itemcolor" required>
                     </div>
                 </div>
                 <div class="msg-img">
@@ -148,8 +157,8 @@
                     <input type="file" id="myfile" name="myfile" accept="image/*" style="color: #ffffff;">
                 </div>
                 <div class="msg-submit">
-                    <textarea name="description" style="font: .8rem 'Poppins', Helvetica, sans-serif;" id="description" cols="53" rows="3" placeholder="Write description..." maxlength="250"></textarea>
-                    <button type="submit" class="btn" title="Send"><img src="./images/send-icon.png" alt="" width="30" height="30"></button>
+                    <textarea name="description" style="font: .8rem 'Poppins', Helvetica, sans-serif;" id="description" cols="53" rows="3" placeholder="Write Item's detailed description..."></textarea>
+                    <button type="submit" onClick="sendSuccess()" class="btn" title="Send"><img src="./images/send-icon.png" alt="" width="30" height="30"></button>
                 </div>
             </form>
         </div>

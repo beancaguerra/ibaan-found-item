@@ -69,8 +69,6 @@
                             $Finder         =   $_POST['finder'];
                             $Contact        =   $_POST['contact'];
                             $ItemNo         =   $_POST['itemNo'];
-                            $Date           =   $_POST['date'];
-                            $Time           =   $_POST['time'];
                             $ItemCategory   =   $_POST['itemCategory'];
                             $ItemLoc        =   $_POST['itemLocation'];
                             $Description    =   $_POST['itemDescription'];
@@ -108,16 +106,16 @@
                                         <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact No: </span><?php echo $row['contact']; ?></p>
                                     </div>
                                     <div class="output-two output">
-                                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Time: </span><?php echo $row['time']; ?></p>
-                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><?php echo $row['date']; ?></p>
+                                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
+                                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
                                     </div>
                                     <div class="output-three output">
-                                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
                                         <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><?php echo $row['itemDescription']; ?></p>
+                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><?php echo $row['itemLocation']; ?></p>
                                     </div>
                                     <div class="output-four output">
-                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><?php echo $row['itemLocation']; ?></p>
-                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>    
+                                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>
+                                            
                                     </div>
 
                                     <div class="output-delete">
