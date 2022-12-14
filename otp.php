@@ -13,65 +13,82 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">    
     </script>
     <link rel="stylesheet" href="page.css">
+<!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="assets/css/page.css" rel="stylesheet">
+
 </head>
 <body>
-    <!-- Start header -->
-    <div class="container" id="container" style="width: 100%;">
-        <div class="header" id="header">
-            <img src="./images/ibaan.png" width="100%" height= "55%";/>
-        </div>
+  
+  <header id="header" class="header d-flex align-items-center">
 
-        <div class="topnav">
-            <p>User</p>
-        </div>
-    <!-- End Header -->
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.php" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Lost Item Finder<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="index.php">Guidelines</a></li>
+          <li><a href="index.php">Found Item</a></li>
+          <li><a href="index.php">Announcement</a></li>
+          <li><a href="index.php">Sign in</a></li>
+          <li><a href="index.php">Sign up</a></li>
+        </ul>
+      </nav><!-- .navbar -->
 
-        <div class="offer_section layout_padding-bottom">
-        <div class="offer_container">
-            <div class="container" style="padding: 30px 20% 30px 20%;">
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+  <div class="offer_section">
+        <div class="offer_container" style="padding: 0px;">
+            <div style="padding: 20px 20% 30px 20%; width: 100%; height: 88vh;">
                 <!-- log in form -->
                 <div class="col-md justify-content-center">
-                    <div class="box">
-                        <div class="detail-box vh-40" style = "margin: 10px 20px;">
-                            <div class="vh-100 gradient-custom">
-                                <div class="container py-12 h-100">
+                    <div class="">
+                        <div class="detail-box">
+                            <div class="vh-100">
+                                <div class="py-12 h-100">
                                     <div class="row d-flex justify-content-center align-items-center h-100">
                                         <div class="col-10 col-md-10 col-lg-10 col-xl-10">
-                                            <div class="card bg-light text-black">
+                                            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592);">
                                                 <div class="card-body p-4">
                                                     <div class="mb-md-4 mt-md-4 pb-4">
-                                                        <h2>Sign Up</h2>
-                                                        <hr class="mb-2">
-                                                        <form action="otp.php" method="POST" autocomplete="off">
-                                                            <?php
-                                                            if(isset($_SESSION['message'])){
-                                                                ?>
-                                                                <div id="alert" style="height: auto;
-                                                                                width: 100%;
-                                                                                background: #ec9006;
-                                                                                padding: 0 15px;
-                                                                                font-size: 19px;
-                                                                                line-height: 40px;
-                                                                                margin: 10px 0;
-                                                                                color: #000;
-                                                                                border-radius: 4px;"><?php echo $_SESSION['message']; ?></div>
-                                                                <?php
-                                                            }
+                                                    <h2>OTP Verification Code</h2>
+                                                    <hr class="mb-2">
+                                                    <div id="line"></div>
+                                                    <form action="otp.php" method="POST" autocomplete="off">
+                                                        <?php
+                                                        if(isset($_SESSION['message'])){
                                                             ?>
-
+                                                            <div id="alert" style="height: auto;
+                                                                            width: 100%;
+                                                                            background: #ec9006;
+                                                                            padding: 0 15px;
+                                                                            font-size: 19px;
+                                                                            line-height: 40px;
+                                                                            margin: 10px 0;
+                                                                            color: #000;
+                                                                            border-radius: 4px;"><?php echo $_SESSION['message']; ?></div>
                                                             <?php
-                                                            if($errors > 0){
-                                                                foreach($errors AS $displayErrors){
-                                                                ?>
-                                                                <div id="alert"><?php echo $displayErrors; ?></div>
-                                                                <?php
-                                                                }
+                                                        }
+                                                        ?>
+
+                                                        <?php
+                                                        if($errors > 0){
+                                                            foreach($errors AS $displayErrors){
+                                                            ?>
+                                                            <div id="alert"><?php echo $displayErrors; ?></div>
+                                                            <?php
                                                             }
-                                                            ?>      
-                                                            <input class="form-control form-control-lg" type="number" name="otp" placeholder="Verification Code" required><br>
-                                                            <button class="sign-btn" type="submit" name="verify"> Verify </button>
-                                                        </form>
-                                                    </div>
+                                                        }
+                                                        ?>      
+                                                        <input class="form-control form-control-lg" type="number" name="otp" placeholder="Verification Code" required><br>
+                                                        <button class="sign-btn" type="submit" name="verify"> Verify </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -84,16 +101,34 @@
             </div>
         </div>
     </div>
-    <style>
-        @media screen and (max-width: 900px){
-            .container .box{
-                width: 334px;
-                margin-left: -93px;
-            }
-            #alert {
-                font-size: 12px;
-            }
-        }
-    </style>
+</div>
 </body>
+<style>
+    @media screen and (max-width: 900px){
+        .container .box{
+            width: 334px;
+            margin-left: -93px;
+        }
+        #alert {
+            font-size: 12px;
+        }
+    }
+</style>
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </html>
