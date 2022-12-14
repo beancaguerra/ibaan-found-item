@@ -125,8 +125,7 @@
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact No: </span><span class="xdetailField" id="xContactNo"></span></p>
                             </div>
                             <div class="output-one output">
-                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Time: </span><span class="xdetailField" id="xTime"></span></p>
-                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date: </span><span class="xdetailField" id="xDate"></span></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><span class="xdetailField" id="xTimeDate"></span></p>
                             </div>
                             <div class="output-two output">
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Description: </span><span class="xdetailField" id="xDescription"></span></p>
@@ -235,8 +234,7 @@
                                 $("#xItemLocation").text(r[i].archItemLocation);
                                 $("#xFinder").text(r[i].finder);
                                 $("#xContactNo").text(r[i].contact);
-                                $("#xDate").text(r[i].date);
-                                $("#xTime").text(r[i].time);
+                                $("#xTimeDate").text(r[i].timedate);
                                 // $("#xStatus").text(r[i].isClaimed === "1"? "CLAIMED": "NOT YET CLAIMED");
                                 if(r[i].isClaimed === "1"){
                                     $("#xStatus").text("CLAIMED");
