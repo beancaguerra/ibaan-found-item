@@ -225,8 +225,8 @@
                 document.getElementById("realtime").innerHTML = xhttp.responseText;
             }
             };
-        xhttp.open("GET", "viewer-found-display.php", true);
-        xhttp.send();
+        //xhttp.open("GET", "viewer-found-display.php", true);
+        //xhttp.send();
         }
         setInterval(function(){
             loadXMLDoc();
