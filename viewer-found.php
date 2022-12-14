@@ -102,6 +102,16 @@
                       <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
                       <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
                   </div>
+                  <div class="output-two output">
+                    <a style="  font-size: 1rem;
+                                      padding: 0 10px;
+                                      margin-left: 617px;
+                                      cursor: pointer; 
+                                      width: 13%;
+                                      margin-top: 1%;
+                                      margin-bottom: 1%;"
+                                      href="viewer-found.php?itemno=<?php echo $no; ?>" id="submit" onclick="openForm()" type="submit">Send Proof</a>
+                  </div>
               </div>
               
           <?php
