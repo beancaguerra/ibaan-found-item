@@ -80,10 +80,10 @@
             $result=mysqli_query($conn,$itemNo);
             $row = mysqli_fetch_row($result);
 
-            $sql = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
-            $query = mysqli_query($conn, $sql);
+            $query = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
+            $result = mysqli_query($conn, $sql);
 
-            if ($query)
+            if ($result)
             {
                 // it return number of rows in the table.
                 $row = mysqli_num_rows($result);
@@ -95,7 +95,7 @@
                 // close the result.
 
                 //if table has no data
-                if (mysqli_num_rows($query) == 0) {
+                if (mysqli_num_rows($result) == 0) {
                 echo "<div class='nodata'>
                         <img src='./images/nodata.png' width='120px' height='120px'>
                         <p>No Data</p>
@@ -134,7 +134,7 @@
             }
             ?>
             </div>  
-            </div>
+          </div>
         </div>
       </section>
     </main>
