@@ -17,8 +17,6 @@ include('libs/phpqrcode/qrlib.php');
     $Finder         =   $_POST['finder'];
     $Contact        =   $_POST['contact'];
     $ItemNo1         =   $_POST['itemNo'];
-    $Time           =  $_POST['time'];
-    $Date           =   $_POST['date'];
     $ItemCategory   =   $_POST['itemCategory'];
     $ItemLoc        =  str_replace("'","''",$_POST['itemLocation']);
     $Description    =   str_replace("'","''",$_POST['itemDescription']);
@@ -31,9 +29,12 @@ include('libs/phpqrcode/qrlib.php');
     // $itemColor    =  $_POST['itemColor'];
   
 
-
+    date_default_timezone_set("Asia/Kuala_Lumpur");
+    $today = date("Y-m-d H:i:s");
+    $today1 = date("Y-m-d");
+    
     //insert data to tb_itemRecord table
-    $sql = "INSERT INTO tb_itemrecord(finder, contact, itemNo, time, date, itemCategory, itemLocation, itemDescription,itemColor,itemBrand) VALUES('$Finder','$Contact','$ItemNo','$Time','$Date', '$ItemCategory','$ItemLoc','$Description','$itemColor','$itemBrand')";
+    $sql = "INSERT INTO tb_itemrecord(finder, contact, itemNo, timedate, date, itemCategory, itemLocation, itemDescription,itemColor,itemBrand) VALUES('$Finder','$Contact','$ItemNo','$today','$today1', '$ItemCategory','$ItemLoc','$Description','$itemColor','$itemBrand')";
 
     if ($conn->query($sql) === TRUE) { 
         echo "<script>alter('$sql')</script>";
