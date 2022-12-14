@@ -255,13 +255,21 @@
             <p>Residents should register first on this website before you login. Just click sign up button to register.</p>
           </div>
           <div class="col-lg-6">
-            <h3>Found Item</h3>
-            <img src="./images/first-page.png" class="img-fluid rounded-4 mb-4" alt="">
-            <p>Residents should register first on this website before you login. Just click sign up button to register.</p>
+            <h3>Registration Form</h3>
+            <img src="./images/register.png" class="img-fluid rounded-4 mb-4" alt="">
           </div>
+          <div class="col-lg-6">
+            <h3>Found Item</h3>
+            <img src="./images/F-A.png" class="img-fluid rounded-4 mb-4" alt="">
+            <p> Residents may view the found item and announcement in the website even they are not in register.</p>
+          </div>
+          <div class="col-lg-6">
+            <h3>Send Proof of Ownership</h3>
+            <img src="./images/proof.png" class="img-fluid rounded-4 mb-4" alt="">
+            <p>1. Once the residents see that the possible item they found is already surrendered in the Kultura de Ibaan Office, they should login/register to send of ownership.</p>
+            <p>2. Resident should click the 'send proof' button to fill out the form. They may input of where location may possible lost, what brand or kind of item, what is the color of the item if applicable, residents may upload image, and input the description of their item.</p>
           </div>
         </div>
-
       </div>
     </section><!-- End Guideliness Section -->
 

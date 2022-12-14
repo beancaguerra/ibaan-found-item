@@ -1,5 +1,5 @@
 <?php
-
+/*
 include 'config.php';
 
 if($environment == "prod"){
@@ -8,7 +8,7 @@ if($environment == "prod"){
     // Create connection
     $conn = mysqli_connect("localhost", "u538504999_ibaanrecord", "Ibaan@Record!22",$dbname);
 }
-else{ 
+else{ */
     $dbServername = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
@@ -22,7 +22,7 @@ else{
         trigger_error(mysqli_connect_error());
         echo 'not connected';
     }
-}
+//}
 
 
 // Check connection

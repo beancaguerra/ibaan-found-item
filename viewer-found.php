@@ -95,6 +95,9 @@
 
           while($row=mysqli_fetch_assoc($result))
           {
+            $no=$row['itemNo'];
+            $itemCategory=$row['itemCategory'];
+            $timedate=$row['timedate']; 
           ?>
               <div class='output-cont-child'>
                   <div class="output-one output">
@@ -103,14 +106,15 @@
                       <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
                   </div>
                   <div class="output-two output">
-                    <a style="  font-size: 1rem;
-                                      padding: 0 10px;
-                                      margin-left: 617px;
-                                      cursor: pointer; 
-                                      width: 13%;
-                                      margin-top: 1%;
-                                      margin-bottom: 1%;"
-                                      href="viewer-found.php?itemno=<?php echo $no; ?>" id="submit" onclick="openForm()" type="submit">Send Proof</a>
+                    <input style="  font-size: 1rem;
+                                    padding: 0 10px;
+                                    margin-left: 617px;
+                                    cursor: pointer; 
+                                    width: 13%;
+                                    margin-top: 1%;
+                                    margin-bottom: 1%;" 
+
+                                  id="submit" onclick="openForm()" type="submit" value="Send Proof">
                   </div>
               </div>
               
@@ -128,22 +132,23 @@
     <!--<button class="open-button" onclick="openForm()" title="Send Proof"><img src="./images/infocontact-icon.png" alt="" width="60" height="50"></button>-->
     <div class="form-popup" id="myForm">
         <form action="code_message.php" class="form-container" method="POST" enctype="multipart/form-data" autocomplete="off">
+
             <div class="message-header">
-                <h3>Owner's Information(Proof of ownership)</h3>
+                <h3>Proof of Ownership Form</h3>
                 <button type="button" class="btn-cancel" onclick="closeForm()">&times</button>
             </div>
             <div class="msg-input">
                 <div>
-                    <label for="name">Account Id</label>
-                    <input type="text" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
+                    <!-- <label for="name">Account Id</label> -->
+                    <input type="hidden" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
                 </div>
                 <div>
                     <label for="email">Item No.</label>
-                    <input type="text" placeholder="Enter Item No." name="itemnumber" required>
+                    <input type="text" placeholder="Enter Item No." value="<?php echo $_GET['itemno']; ?>" name="itemnumber" required>
                 </div>
                 <div>
                     <label for="email">Item Location</label>
-                    <input type="text" id="itemLocation" placeholder="Location where the item was lost" value="<?php echo $_GET['itemno']; ?>" name="itemLocation" readonly required>
+                    <input type="text" id="itemLocation" placeholder="Location where the item was lost" name="itemLocation" readonly required>
                 </div>
                 <div>
                     <label for="email">Item Brand</label>
@@ -187,6 +192,7 @@
         // thses codes are for message form
         function openForm() {
             document.getElementById("myForm").style.display = "block";
+            
             }
         function closeForm() {
             document.getElementById("myForm").style.display = "none";
