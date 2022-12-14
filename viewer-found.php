@@ -66,75 +66,48 @@
     <main>
       <section class="form-output" id="form-output">
         <div class="output-container" id="realtime">
-          <div>
-            <?php
+          <?php
 
-            include 'connect_db.php';
+          include 'connect_db.php';
 
-            ini_set('display_errors', 1);
-            error_reporting(E_ALL & ~E_NOTICE);
-            Error_reporting(0);
+          $query = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
+          $result = mysqli_query($conn, $query);
 
-            $item=$_GET['itemNo'];
-            $itemNo=["SELECT itemNo FROM tb_itemrecord where itemNo=$item"];
-            $Itemresult=mysqli_query($conn,$itemNo);
-            $row = mysqli_fetch_row($Itemresult);
+          if ($result)
+          {
+              // it return number of rows in the table.
+              $row = mysqli_num_rows($result);
+                    
+              if ($row)
+                {
+                  echo "<p class='total-item'>Number of Found Item: $row </p>";
+                }
+              // close the result.
 
-            $query = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
-            $result = mysqli_query($conn, $sql);
+              //if table has no data
+              if (mysqli_num_rows($result) == 0) {
+              echo "<div class='nodata'>
+                      <img src='./images/nodata.png' width='120px' height='120px'>
+                      <p>No Data</p>
+                    </div>";
+              }   
+          }
 
-            if ($result)
-            {
-                // it return number of rows in the table.
-                $row = mysqli_num_rows($result);
-                      
-                if ($row)
-                  {
-                    echo "<p class='total-item'>Number of Found Item: $row </p>";
-                  }
-                // close the result.
+          while($row=mysqli_fetch_assoc($result))
+          {
+          ?>
+              <div class='output-cont-child'>
+                  <div class="output-one output">
+                      <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>
+                      <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
+                      <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
+                  </div>
+              </div>
+              
+          <?php
 
-                //if table has no data
-                if (mysqli_num_rows($result) == 0) {
-                echo "<div class='nodata'>
-                        <img src='./images/nodata.png' width='120px' height='120px'>
-                        <p>No Data</p>
-                      </div>";
-                }   
-            }
-
-            while($row=mysqli_fetch_assoc($result))
-            {
-
-                  $no=$row['itemNo'];
-                  $itemCategory=$row['itemCategory'];
-                  $timedate=$row['timedate']; 
-            ?>
-
-                <div class='output-cont-child'>
-                    <div class="output-one output">
-                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $no; ?></p>
-                        <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $itemCategory; ?></p>
-                        <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $timedate; ?></p>
-                    </div>
-                    <div class="output-two output">
-                      <a style="  font-size: 1rem;
-                                        padding: 0 10px;
-                                        margin-left: 617px;
-                                        cursor: pointer; 
-                                        width: 13%;
-                                        margin-top: 1%;
-                                        margin-bottom: 1%;"
-                                        id="submit" onclick="openForm()" type="submit">Send Proof</a>
-                    </div>
-                </div>
-                
-            <?php
-
-            }
-            ?>
-            </div>  
-          </div>
+          }
+          ?>
         </div>
       </section>
     </main>
