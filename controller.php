@@ -49,7 +49,7 @@
 
         // count erros
         if (count($errors) === 0) {
-            $insertQuery = "INSERT INTO tb_residentsacc(fname, lname, address, contact, gender, email, password, code, status) VALUES('$fullname','$lastname', '$address', '$contactno', '$gender','$email', '$password', '$code', '$status')";
+            $insertQuery = "INSERT INTO tb_residentsacc(accountId, fname, lname, address, contact, gender, email, password, code, status) VALUES('0000', '$fullname','$lastname', '$address', '$contactno', '$gender','$email', '$password', '$code', '$status')";
             $insertInfo = mysqli_query($conn, $insertQuery);
 
             // Send Varification Code In Gmail
