@@ -148,7 +148,7 @@ while($row=mysqli_fetch_assoc($result))
                 </div>
                 <div>
                     <label for="email">Item No.</label>
-                    <input type="text" placeholder="Enter Item No." value="<?php echo $idNo; ?>" name="itemnumber" readonly required>
+                    <input type="text" placeholder="Enter Item No." id="itemnumber" value="<?php echo $idNo; ?>" name="itemnumber" readonly required>
                 </div>
                 <div>
                     <label for="email">Item Location</label>
