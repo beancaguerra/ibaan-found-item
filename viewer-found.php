@@ -95,9 +95,6 @@
 
           while($row=mysqli_fetch_assoc($result))
           {
-            $no=$row['itemNo'];
-            $itemCategory=$row['itemCategory'];
-            $timedate=$row['timedate']; 
           ?>
               <div class='output-cont-child'>
                   <div class="output-one output">
@@ -106,7 +103,7 @@
                       <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
                   </div>
                   <div class="output-two output">
-                    <input style="  font-size: 1rem;
+                    <a style="  font-size: 1rem;
                                     padding: 0 10px;
                                     margin-left: 617px;
                                     cursor: pointer; 
@@ -114,7 +111,7 @@
                                     margin-top: 1%;
                                     margin-bottom: 1%;" 
 
-                                  id="submit" onclick="openForm()" type="submit" value="Send Proof">
+                                  href= "viewer-found-display.php?itemno=<?php echo $row['itemNo']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & timedate=<?php echo $row['timedate']; ?>">Send Proof</a>
                   </div>
               </div>
               
@@ -128,47 +125,6 @@
     <!--back to top botton-->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop.png" alt="" width="60" height="50"></button>
     
-    <!--These codes are for message form-->
-    <!--<button class="open-button" onclick="openForm()" title="Send Proof"><img src="./images/infocontact-icon.png" alt="" width="60" height="50"></button>-->
-    <div class="form-popup" id="myForm">
-        <form action="code_message.php" class="form-container" method="POST" enctype="multipart/form-data" autocomplete="off">
-
-            <div class="message-header">
-                <h3>Proof of Ownership Form</h3>
-                <button type="button" class="btn-cancel" onclick="closeForm()">&times</button>
-            </div>
-            <div class="msg-input">
-                <div>
-                    <!-- <label for="name">Account Id</label> -->
-                    <input type="hidden" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
-                </div>
-                <div>
-                    <label for="email">Item No.</label>
-                    <input type="text" placeholder="Enter Item No." value="<?php echo $_GET['itemno']; ?>" name="itemnumber" required>
-                </div>
-                <div>
-                    <label for="email">Item Location</label>
-                    <input type="text" id="itemLocation" placeholder="Location where the item was lost" name="itemLocation" readonly required>
-                </div>
-                <div>
-                    <label for="email">Item Brand</label>
-                    <input type="text" id="itemBrand" placeholder="Enter Brand Name" name="itembrand" required>
-                </div>
-                <div>
-                    <label for="email">Item Color</label>
-                    <input type="text" id="itemColor" placeholder="Enter Color" name="itemcolor" required>
-                </div>
-            </div>
-            <div class="msg-img">
-                <label for="myfile">Select Image</label>
-                <input type="file" id="myfile" name="myfile" accept="image/*" style="color: #ffffff;">
-            </div>
-            <div class="msg-submit">
-                <textarea name="description" style="font: .8rem 'Poppins', Helvetica, sans-serif;" id="description" cols="53" rows="3" placeholder="Write Item's detailed description..."></textarea>
-                <button type="submit" onClick="sendSuccess()" class="btn" title="Send"><img src="./images/send-icon.png" alt="" width="30" height="30"></button>
-            </div>
-        </form>
-    </div>
     <!--JavaScript Codes-->
     <script>
         //Get the button
@@ -189,14 +145,7 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
         }
-        // thses codes are for message form
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-            
-            }
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-            }
+        
         //small devices navigation
         function myNav() {
             document.getElementById("navigation").style.display = "block";

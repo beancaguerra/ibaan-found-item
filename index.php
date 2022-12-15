@@ -242,35 +242,41 @@
   <main id="main">
     <!-- ======= Guidelines Section ======= -->
     <section id="guidelines" class="about">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
         <div class="section-header">
           <h2>Guidelines</h2>
         </div>
+        <div class="guide-images">
+            <div class="slideshow-container">
 
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <h3>Log in Form</h3>
-            <img src="./images/first-page.png" class="img-fluid rounded-4 mb-4" alt="">
-            <p>Residents should register first on this website before you login. Just click sign up button to register.</p>
-          </div>
-          <div class="col-lg-6">
-            <h3>Registration Form</h3>
-            <img src="./images/register.png" class="img-fluid rounded-4 mb-4" alt="">
-          </div>
-          <div class="col-lg-6">
-            <h3>Found Item</h3>
-            <img src="./images/F-A.png" class="img-fluid rounded-4 mb-4" alt="">
-            <p> Residents may view the found item and announcement in the website even they are not in register.</p>
-          </div>
-          <div class="col-lg-6">
-            <h3>Send Proof of Ownership</h3>
-            <img src="./images/proof.png" class="img-fluid rounded-4 mb-4" alt="">
-            <p>1. Once the residents see that the possible item they found is already surrendered in the Kultura de Ibaan Office, they should login/register to send of ownership.</p>
-            <p>2. Resident should click the 'send proof' button to fill out the form. They may input of where location may possible lost, what brand or kind of item, what is the color of the item if applicable, residents may upload image, and input the description of their item.</p>
-          </div>
+                <div class="mySlides fade">
+                    <div style="margin-bottom:12px;">
+                        <img src="./images/F-A.png" style="width:100%; height: 80%;">
+                        <div class="text" style="color: #0A0909;">List of Found Item in Index Page</div>
+                    </div>
+                    
+                </div>
+                <div class="mySlides fade">
+                    <img src="./images/proof.png" style="width:100%; height: 80%;">
+                    <div class="text" style="color: #0A0909;">Send Proof of Ownership</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="./images/msg.png" style="width:100%; height: 80%;">
+                    <div class="text" style="color: #0A0909;">Residents receive message if the proof of ownership is matched or not matched.</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
         </div>
-      </div>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span>
+        </div>
     </section><!-- End Guideliness Section -->
 
     <!-- Sign up Section -->
@@ -480,6 +486,110 @@
         }
         /* end of css for anouncement */
 
+        .guide-images{
+            width: 100%;
+            height: 480px;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            border: 1px solid var(--color-grayish);
+            box-shadow:  1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+        }
+        /* Slideshow container */
+        .slideshow-container {
+            padding-top: 20px;
+            width: 900px;
+            position: relative;
+            margin: auto;
+            margin-top: 5px;
+            z-index: 1;
+            }
+
+        /* Caption text */
+        .text {
+            border-radius: 0 0 13px 13px;
+            font-weight: 900;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 448px;
+            width: 100%;
+            text-align: center;
+            }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: orange;
+        }
+
+        /* Caption text */
+        .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1000s;
+        }
+
+        @keyframes fade {
+        from {opacity: 4}
+        to {opacity: 4}
+        }
+
   </style>
 
 </body>
@@ -498,5 +608,30 @@
       }
     }
 
+    //for slideshow part
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    
 </script>
 </html>
