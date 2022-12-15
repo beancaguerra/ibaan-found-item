@@ -71,6 +71,7 @@ while($row=mysqli_fetch_assoc($result))
           <p>Municipality of Ibaan</p>
       </div>
   </header>
+  <?php include 'code_user_session.php'; ?>
   <nav class="navigation" id="navigation">
     <div class="hamburger-close" onclick="closeNav()">
       <div class="burger --one"></div>
