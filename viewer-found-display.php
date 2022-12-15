@@ -145,7 +145,7 @@ while($row=mysqli_fetch_assoc($result))
             <div class="msg-input">
                 <div>
                     <!-- <label for="name">Account Id</label> -->
-                    <input type="hidden" value="<?php echo $loggedin_id; ?>" name="accountId" required>
+                    <input type="text" value="<?php echo $loggedin_id; ?>" name="accountId" required>
                 </div>
                 <div>
                     <label for="email">Item No.</label>
