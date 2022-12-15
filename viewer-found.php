@@ -104,14 +104,15 @@
                   </div>
                   <div class="output-two output">
                     <a style="  font-size: 1rem;
-                                    padding: 0 10px;
-                                    margin-left: 617px;
-                                    cursor: pointer; 
-                                    width: 13%;
-                                    margin-top: 1%;
-                                    margin-bottom: 1%;" 
+                                padding: 0 10px;
+                                margin-left: 617px;
+                                cursor: pointer; 
+                                width: 13%;
+                                margin-top: 1%;
+                                margin-bottom: 1%;" 
+                              
 
-                                  href= "viewer-found-display.php?itemno=<?php echo $row['itemNo']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & timedate=<?php echo $row['timedate']; ?>"><input type="button" value="Send Proof"</a>
+                                  href= "viewer-found-display.php?itemno=<?php echo $row['itemNo']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & timedate=<?php echo $row['timedate']; ?>">Send Proof</a>
                   </div>
               </div>
               
