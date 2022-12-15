@@ -72,6 +72,7 @@ while($row=mysqli_fetch_assoc($result))
       </div>
   </header>
   <?php include 'code_user_session.php'; ?>
+
   <nav class="navigation" id="navigation">
     <div class="hamburger-close" onclick="closeNav()">
       <div class="burger --one"></div>
@@ -145,7 +146,7 @@ while($row=mysqli_fetch_assoc($result))
             <div class="msg-input">
                 <div>
                     <!-- <label for="name">Account Id</label> -->
-                    <input type="text" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
+                    <input type="hidden" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
                 </div>
                 <div>
                     <label for="email">Item No.</label>
@@ -161,7 +162,21 @@ while($row=mysqli_fetch_assoc($result))
                 </div>
                 <div>
                     <label for="email">Item Color</label>
-                    <input type="text" id="itemColor" placeholder="Enter Color" name="itemcolor" required>
+                    <select name="itemcolor" id="itemColor">
+                        <option>Select Color</option>
+                        <option value="not applicable">not applicable</option>
+                        <option style="background-color: #FFFFFF" value="White">White</option>
+                        <option style="background-color: #808080" value="Gray">Gray</option>
+                        <option style="background-color: #000000" value="Black">Black</option>
+                        <option style="background-color: #FF0000" value="Red">Red</option>
+                        <option style="background-color: #008000" value="Green">Green</option>
+                        <option style="background-color: #0000FF" value="Blue">Blue</option>
+                        <option style="background-color: #F5F11E" value="Yellow">Yellow</option>
+                        <option style="background-color: #D0D0CB" value="Gray">Gray</option>
+                        <option style="background-color: #964B00" value="Brown">Brown</option>
+                        <option style="background-color: #FE6E00" value="Orange">Orange</option>
+                        <option style="background-color: #7427C1" value="Violet">Violet</option>
+                    </select>
                 </div>
             </div>
             <div class="msg-img">

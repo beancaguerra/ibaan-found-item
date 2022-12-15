@@ -86,7 +86,11 @@
                             <option style="background-color: #FF0000" value="Red">Red</option>
                             <option style="background-color: #008000" value="Green">Green</option>
                             <option style="background-color: #0000FF" value="Blue">Blue</option>
-                            <option type="text"></option>
+                            <option style="background-color: #F5F11E" value="Yellow">Yellow</option>
+                            <option style="background-color: #D0D0CB" value="Gray">Gray</option>
+                            <option style="background-color: #964B00" value="Brown">Brown</option>
+                            <option style="background-color: #FE6E00" value="Orange">Orange</option>
+                            <option style="background-color: #7427C1" value="Violet">Violet</option>
                         </select>
                     </div>
                     <div class="second-three">
