@@ -114,7 +114,6 @@ while($row=mysqli_fetch_assoc($result))
           $idNo = $_GET['itemno'];
           $itemCategory=$_GET['itemCategory'];
           $timedate=$_GET['timedate'];
-          //$t_id = trim($loggedin_id);
 
           $query = "SELECT * FROM tb_itemrecord WHERE itemNo=$idNo, itemCategory=$itemCategory, timedate=$timedate";
           $result = mysqli_query($conn, $query);
@@ -145,11 +144,11 @@ while($row=mysqli_fetch_assoc($result))
             <div class="msg-input">
                 <div>
                     <!-- <label for="name">Account Id</label> -->
-                    <input type="text" value="<?php echo $loggedin_id; ?>" name="accountId" required>
+                    <input type="text" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
                 </div>
                 <div>
                     <label for="email">Item No.</label>
-                    <input type="text" placeholder="Enter Item No." id="itemnumber" value="<?php echo $idNo; ?>" name="itemnumber" required>
+                    <input type="text" placeholder="Enter Item No." id="itemnumber" value="<?php echo $idNo; ?>" name="itemnumber" readonly required>
                 </div>
                 <div>
                     <label for="email">Item Location</label>
