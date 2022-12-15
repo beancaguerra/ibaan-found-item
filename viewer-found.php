@@ -111,7 +111,7 @@
                                     margin-top: 1%;
                                     margin-bottom: 1%;" 
 
-                                  href= "viewer-found-display.php?itemno=<?php echo $row['itemNo']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & timedate=<?php echo $row['timedate']; ?>">Send Proof</a>
+                                  href= "viewer-found-display.php?itemno=<?php echo $row['itemNo']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & timedate=<?php echo $row['timedate']; ?>"><input type="button" value="Send Proof"</a>
                   </div>
               </div>
               
