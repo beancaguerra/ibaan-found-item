@@ -9,7 +9,7 @@
     $loggedin_session   =   $row['email'];
     $loggedin_id        =   $row['accountId'];
     if(!isset($loggedin_session) || $loggedin_session==NULL) {
-        header("Location: login-page-user.php");
+        header("Location: index.php");
 
         if($loggedin_session != false){
             $query = "SELECT * FROM tb_residentsacc WHERE email = '$loggedin_session'";

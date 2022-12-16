@@ -30,9 +30,9 @@ while($row=mysqli_fetch_assoc($result))
 ?>
     <div class='output-cont-child'>
         <div class="output-one output">
-            <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['itemNo']; ?></p>
-            <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
-            <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
+            <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><//?php echo $row['itemNo']; ?></p>
+            <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><//?php echo $row['itemCategory']; ?></p>
+            <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><//?php echo $row['timedate']; ?></p>
         </div>
     </div>
     
@@ -111,7 +111,7 @@ while($row=mysqli_fetch_assoc($result))
           include 'connect_db.php';
           ini_set('display_errors', 1);
           error_reporting(E_ALL & ~E_NOTICE);
-          //Error_reporting(0);
+          Error_reporting(0);
 
           $idNo = $_GET['itemno'];
           $itemCategory=$_GET['itemCategory'];
@@ -129,6 +129,57 @@ while($row=mysqli_fetch_assoc($result))
                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $timedate; ?></p>
             </div>
             <div class="output-two output">
+                <form action="code_message.php" class="msg-container" method="POST" enctype="multipart/form-data" autocomplete="off">
+                    <div class="message-header">
+                        <h3>Proof of Ownership Form</h3>
+                    </div>
+
+                    <div class="msg-input">
+                        <div>
+                            <!-- <label for="name">Account Id</label> -->
+                            <input type="hidden" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
+                        </div>
+                        <div class="p-one">
+                            <label for="email">Item No.</label>
+                            <input style="width: 10%;" type="text" placeholder="Enter Item No." id="itemnumber" value="<?php echo $idNo; ?>" name="itemnumber" readonly required>
+                        </div>
+                        <div>
+                            <label for="email">Item Location</label>
+                            <input type="text" id="itemLocation" placeholder="Location where the item was lost" name="itemLocation" required>
+                        </div>
+                        <div class="p-two">
+                            <label for="email">Item Brand</label>
+                            <input type="text" id="itemBrand" placeholder="Enter Brand Name" name="itembrand" required>
+                        </div>
+                        <div>
+                            <label for="email">Item Color</label>
+                            <select name="itemcolor" id="itemColor">
+                                <option>Select Color</option>
+                                <option value="not applicable">not applicable</option>
+                                <option style="background-color: #FFFFFF" value="White">White</option>
+                                <option style="background-color: #808080" value="Gray">Gray</option>
+                                <option style="background-color: #000000" value="Black">Black</option>
+                                <option style="background-color: #FF0000" value="Red">Red</option>
+                                <option style="background-color: #008000" value="Green">Green</option>
+                                <option style="background-color: #0000FF" value="Blue">Blue</option>
+                                <option style="background-color: #F5F11E" value="Yellow">Yellow</option>
+                                <option style="background-color: #D0D0CB" value="Gray">Gray</option>
+                                <option style="background-color: #964B00" value="Brown">Brown</option>
+                                <option style="background-color: #FE6E00" value="Orange">Orange</option>
+                                <option style="background-color: #7427C1" value="Violet">Violet</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="msg-img">
+                        <label for="myfile">Select Image</label>
+                        <input type="file" id="myfile" name="myfile" accept="image/*" style="color: #ffffff;">
+                    </div>
+                    <div class="msg-submit">
+                        <textarea name="description" style="font: .8rem 'Poppins', Helvetica, sans-serif;" id="description" cols="53" rows="3" placeholder="Write Item's detailed description..."></textarea>
+                        <button type="submit" onClick="sendSuccess()" class="btn" title="Send"><img src="./images/send-icon.png" alt="" width="30" height="30"></button>
+                    </div>
+                </form>
+            </div>
         </div>
       </section>
     </main>
@@ -137,58 +188,56 @@ while($row=mysqli_fetch_assoc($result))
     
     <!--These codes are for message form-->
     <!--<button class="open-button" onclick="openForm()" title="Send Proof"><img src="./images/infocontact-icon.png" alt="" width="60" height="50"></button>-->
-    <div class="" style="margin-left: 730px;">
-        <form action="code_message.php" class="form-container" method="POST" enctype="multipart/form-data" autocomplete="off">
+    
 
-            <div class="message-header">
-                <h3>Proof of Ownership Form</h3>
-            </div>
-            <div class="msg-input">
-                <div>
-                    <!-- <label for="name">Account Id</label> -->
-                    <input type="hidden" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
-                </div>
-                <div>
-                    <label for="email">Item No.</label>
-                    <input type="text" placeholder="Enter Item No." id="itemnumber" value="<?php echo $idNo; ?>" name="itemnumber" readonly required>
-                </div>
-                <div>
-                    <label for="email">Item Location</label>
-                    <input type="text" id="itemLocation" placeholder="Location where the item was lost" name="itemLocation" required>
-                </div>
-                <div>
-                    <label for="email">Item Brand</label>
-                    <input type="text" id="itemBrand" placeholder="Enter Brand Name" name="itembrand" required>
-                </div>
-                <div>
-                    <label for="email">Item Color</label>
-                    <select name="itemcolor" id="itemColor">
-                        <option>Select Color</option>
-                        <option value="not applicable">not applicable</option>
-                        <option style="background-color: #FFFFFF" value="White">White</option>
-                        <option style="background-color: #808080" value="Gray">Gray</option>
-                        <option style="background-color: #000000" value="Black">Black</option>
-                        <option style="background-color: #FF0000" value="Red">Red</option>
-                        <option style="background-color: #008000" value="Green">Green</option>
-                        <option style="background-color: #0000FF" value="Blue">Blue</option>
-                        <option style="background-color: #F5F11E" value="Yellow">Yellow</option>
-                        <option style="background-color: #D0D0CB" value="Gray">Gray</option>
-                        <option style="background-color: #964B00" value="Brown">Brown</option>
-                        <option style="background-color: #FE6E00" value="Orange">Orange</option>
-                        <option style="background-color: #7427C1" value="Violet">Violet</option>
-                    </select>
-                </div>
-            </div>
-            <div class="msg-img">
-                <label for="myfile">Select Image</label>
-                <input type="file" id="myfile" name="myfile" accept="image/*" style="color: #ffffff;">
-            </div>
-            <div class="msg-submit">
-                <textarea name="description" style="font: .8rem 'Poppins', Helvetica, sans-serif;" id="description" cols="53" rows="3" placeholder="Write Item's detailed description..."></textarea>
-                <button type="submit" onClick="sendSuccess()" class="btn" title="Send"><img src="./images/send-icon.png" alt="" width="30" height="30"></button>
-            </div>
-        </form>
-    </div>
+    <!-- responsive -->
+    <style>
+        .msg-container{
+            width: 100%;
+            padding: 10px;
+            background-color: #ec9006;
+            border-radius: 10px;
+        }
+        /* For mobile phones: */
+        [class*="col"] {
+        width: 100%;
+        }
+
+        .popup{
+            position: relative;
+            margin-top: -490px;
+            margin-left: -98px;
+            overflow-x: hidden;
+            
+        }
+
+        @media only screen and (min-width: 700px) and (max-width: 1000px){
+            .popup{
+            top: 420px;
+            left: -488px;
+            }
+        }
+        @media screen and (min-width: 1000px){
+            .popup{
+            top: 420px;
+            left: -290px;
+            }
+        }
+        @media screen and (min-width: 438px) and (max-width: 581px){
+            .popup{
+            top: 320px;
+            left: -573px;
+            }
+        }
+        @media screen and (min-width: 581px) and (max-width: 689px){
+            .popup{
+            top: 320px;
+            left: -579px;
+            }
+        }
+
+        
+    </style>
     <!--JavaScript Codes-->
     <script>
         //Get the button
@@ -209,14 +258,7 @@ while($row=mysqli_fetch_assoc($result))
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
         }
-        // thses codes are for message form
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-            
-            }
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-            }
+       
         //small devices navigation
         function myNav() {
             document.getElementById("navigation").style.display = "block";

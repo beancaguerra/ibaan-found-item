@@ -62,6 +62,10 @@
     .message-nav {
         flex-direction: row;
     }
+    .form-popup {
+        bottom: 80px;
+        right: 30px;
+    }
     /*main tag*/
     .form-output{
         margin: 13% 0 0 7%;

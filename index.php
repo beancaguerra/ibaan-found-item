@@ -74,7 +74,7 @@
                 style="margin-right: 15%;
                         margin-top: 0px;
                         border-radius: 5px;">
-            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 10px; height: 75%; padding-top: 15px;">
+            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 10px; height: 100%; padding-top: 15px;">
                 <div class="card-body p-12">
                     <div class="mb-md-12 mt-md-12 pb-12">
                         <h4 style="text-align: center;">Please log in to your account!</h4>
@@ -247,12 +247,12 @@
         <div class="section-header">
           <h2>Guidelines</h2>
         </div>
-        <div class="guide-images">
+        <div class="guide-images" style="width: 100%;">
             <div class="slideshow-container">
 
                 <div class="mySlides fade">
                     <div style="margin-bottom:12px;">
-                        <img src="./images/F-A.png" style="width:100%; height: 80%;">
+                        <img src="./images/F-A.png" style="width:100%; height: 80%;" style="position:fixed;">
                         <div class="text" style="color: #0A0909;">List of Found Item in Index Page</div>
                     </div>
                     
@@ -285,12 +285,14 @@
         <div class="order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" 
                 style="margin-right: 15%;
                         margin-top: 0px;
-                        border-radius: 5px;">
+                        border-radius: 5px;
+                        width:100%;
+                        ">
             <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 50px; height: 100%; padding-top: 15px;">
                 <div class="card-body p-8">
                     <div class="mb-md-8 mt-md-8 pb-8">
                         <h4 style="text-align: center;">Register</h4>
-                        <div class="d-flex justify-content-center justify-content-lg-start">
+                        <div class="d-flex justify-content-center justify-content-lg-start" style="padding-right:30px;">
                             <form action="index.php" method="POST">
 
                                 <?php
@@ -589,7 +591,16 @@
         from {opacity: 4}
         to {opacity: 4}
         }
-
+        @media screen and (min-width: 585px) and (max-width: 640px) {
+            .fade{
+                max-width: 460px;
+                padding-left: 30px;
+            }
+            .fade .text{
+                width: 50%;
+                top:322px;
+            }
+        }
   </style>
 
 </body>
