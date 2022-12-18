@@ -43,73 +43,11 @@
             </div>
         </div>
 
-        <?php
-            $query = "SELECT admin_id FROM tb_admin ORDER BY admin_id DESC";
-            $result = mysqli_query($conn,$query);
-            $row = mysqli_fetch_array($result);
-            $lastid = $row['admin_id'];
-            if(empty($lastid))
-            {
-                $number = "A-0000001";
-            }
-            else
-            {
-                $idd = str_replace("A-", "", $lastid);
-                $id = str_pad($idd + 1, 7, 0, STR_PAD_LEFT);
-                $number = 'A-'.$id;
-            }
-        ?>
-
-        <?php
-            if($_SERVER["REQUEST_METHOD"]== "POST")
-            {
-                $admin_id   =   $_POST['admin_id'];
-                $fullname   =   $_POST['admin_name'];
-                $email      =   $_POST['admin_email'];
-                $password   =   $_POST['admin_password'];
-            
-                if(!$conn)
-                {
-                    die("connection failed " . mysqli_connect_error());
-                }
-                else
-                {
-                    $sql = "INSERT INTO tb_admin(admin_id, admin_name, admin_email, admin_password)VALUES('".$admin_id."','".$fullname."','".$email."', '".$password."') ";
-                    if(mysqli_query($conn,$sql))
-                    {
-                        $query = "SELECT admin_id FROM tb_admin ORDER BY admin_id DESC";
-                        $result = mysqli_query($conn,$query);
-                        $row = mysqli_fetch_array($result);
-                        $lastid = $row['admin_id'];
-            
-                        if(empty($lastid))
-                        {
-                            $number = "A-0000001";
-                        }
-                        else
-                        {
-                            $idd = str_replace("A-", "", $lastid);
-                            $id = str_pad($idd + 1, 7, 0, STR_PAD_LEFT);
-                            $number = 'A-'.$id;
-                        }
-            
-                    }
-                    else
-                    {
-                        echo "Record Faileddd";
-                    }
-                }
-            }
-        ?>
-
         <main>
             <section class="forms-input">
                 <!--form inputs-->
-                <form class='form' action="<?php echo($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
+                <form class='form' action="code_admin-accounts.php" method="POST" enctype="multipart/form-data">
                         <div class="first-three">
-                            <input type="text" class="form-control" name="admin_id" id="admin_id" style=" font-size: 16px; color: blue; font-weight: bold; " readonly >        
-                        </div>
-                            <div class="first-three">
                             <input class="input big" type="text" placeholder="Fullname..." name="admin_name" required>
                             <input class="input big" type="email" placeholder="Email..." name="admin_email" required>
                             <input class="input small" type="password" onkeyup="validatePassword(this.value)" placeholder="Password" id="admin_password" name="admin_password" required>
@@ -138,14 +76,6 @@
             <section class="form-output" id="form-output">
                 <div class="output-container">
                     <?php
-                    header("Access-Control-Allow-Origin: *");
-
-                    session_start();
-                    
-                    ini_set('display_errors',1);
-                    //error_reporting(E_ALL & ~E_NOTICE);
-                    Error_reporting(0);
-                    
                     include 'connect_db.php';
 
                     //showing data from tb_accounts to the system
@@ -166,17 +96,16 @@
                             <table style="width:100%">
                                 <tr>
                                     <th style="text-align: left; background-color: #cccccc; color: #ec9006"><h3>Admin Info</h3></th>
-                                    <th style="text-align: right; background-color: #cccccc; color: #ec9006">
-                                    <a style="color:#ec9006; margin: 10px;" href='Update_admin_acc.php?admin_id=<?php echo $row['admin_id']; ?> & admin_email=<?php echo $row['admin_email']; ?> & admin_name=<?php echo $row['admin_name']; ?> & admin_password=<?php echo $row['admin_password']; ?> & admin_department=<?php echo $row['admin_department']; ?> & admin_campus=<?php echo $row['admin_campus']; ?>'>Edit</a>
-                                    <a style="color:#ec9006; margin: 10px;" href='delete_admin_acc.php?id="<?php echo $row['admin_id']; ?>"'>Delete</a></th>
+                                    <th style="background-color: #cccccc; color: #ec9006"></th>
                                 </tr>
                                 <tr>
                                     <td style="width:50%"><p><span style="font-weight:700;">Name: </span><?php echo $row['admin_name']; ?></p></td>
-                                    <td style="width:50%"><p><span style="font-weight:700;">ID: </span><?php echo $row['admin_id']; ?></p></td>
+                                    <td style="width:50%"><p><span style="font-weight:700;">Email: </span><?php echo $row['admin_email']; ?></p></td>
+                                    <!--<td style="width:50%"><p><span style="font-weight:700;">ID: </span><?php //echo $row['admin_id']; ?></p></td> -->
                                 </tr>
                                 <tr>
-                                    <td style="width:50%"><p><span style="font-weight:700;">Email: </span><?php echo $row['admin_email']; ?></p></td>
-                                    <td style="width:50%"><p><span style="font-weight:700;">Password: </span><?php echo $row['admin_password']; ?></p></td>
+                                    
+                                    <!-- <td style="width:50%"><p><span style="font-weight:700;">Password: </span><?php //echo $row['admin_password']; ?></p></td> -->
                                 </tr>
                             </table>
                          </div>

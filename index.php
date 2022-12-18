@@ -371,7 +371,7 @@
                                         <div class="col-md-6 mb-4">
                                             <div class="form-outline">
                                                 <label class="form-label" for="password">Password</label>
-                                                <input class="form-control" type="password" id= "pass" name="password" placeholder="Enter password" required>
+                                                <input class="form-control" type="password" id= "cpass" name="password" placeholder="Enter password" required>
                                             </div>
                                             
                                         </div>
@@ -610,6 +610,19 @@
     // these code are for show password
     function myFunction() {
       var x = document.getElementById("pass");
+      
+      if (x.type === "password") {
+        x.type = "text";
+        
+      } else {
+        x.type = "password";
+        
+      }
+    }
+
+    // these code are for show password
+    function myFunction() {
+      var x = document.getElementById("cpass");
       
       if (x.type === "password") {
         x.type = "text";
