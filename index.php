@@ -60,7 +60,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero" style="height: 550px;">
-    <img src="./assets/img/ibaan.jpg" style="width: 100%;
+    <img src="./assets/img/kultura.jpg" style="width: 100%;
                                              position: absolute;
                                              top: 0px;">
   </section>
