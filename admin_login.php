@@ -55,7 +55,7 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero" style="height: 550px;">
+  <section id="hero" class="hero" style="height: 8800px;">
     <img src="./images/kultura.jpg" style="width: 100%;
                                              position: absolute;
                                              top: 0px;">
