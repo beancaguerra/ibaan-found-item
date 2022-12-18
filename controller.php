@@ -91,7 +91,7 @@
             $update_result = mysqli_query($conn, $update_query);
 
             if ($update_result) {
-                header('location: login-page-user.php');
+                header('location: index.php#signin');
             } else {
                 $errors['db_error'] = "Failed To Insering Data In Database!";
             }
@@ -210,7 +210,7 @@ if(isset($_POST['changePassword'])){
             $updatePass = mysqli_query($conn, $updatePassword) or die("Query Failed");
             //session_unset($email);
             session_destroy();
-            header('location: login-page-user.php');
+            header('location: index.php#signin');
         }
     }
 }
