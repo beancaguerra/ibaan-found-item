@@ -43,12 +43,7 @@
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>Lost Item Finder<span>.</span></h1>
       </a>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#signin">Sign in</a></li>
-        </ul>
-      </nav><!-- .navbar -->
+      
 
     </div>
   </header><!-- End Header -->
@@ -59,21 +54,19 @@
     <img src="./images/kultura.jpg" style="width: 100%;
                                              position: absolute;
                                              top: 0px;">
-  </section>
-  <!-- End Hero Section -->
 
-  <!-- Sign in Section -->
-  <section id="signin">
-      <div class="container position-relative">
-      <div class="row gy-5">
+    <!-- Sign in -->
+      <div class="container position-relative" style="left: 58%;">
+      <div>
         <div class="col-lg-4 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" 
                 style="margin-right: 15%;
-                        margin-top: 0px;
-                        border-radius: 5px;">
-            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 10px; height: 75%; padding-top: 15px;">
+                        margin-top: 38px;
+                        border-radius: 5px;
+                        height: 520px;">
+            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 48px; height: 75%; padding-top: 15px;">
                 <div class="card-body p-12">
                     <div class="mb-md-12 mt-md-12 pb-12">
-                        <h4 style="text-align: center;">Please log in to your account!</h4>
+                        <h4 style="text-align: center; padding-right: 17px;">Please log in to your account!</h4>
                         <div class="d-flex justify-content-center justify-content-lg-start">
                             <form action="admin_signin.php" method="POST">
                                 <?php
@@ -91,13 +84,13 @@
                                     }
                                 ?>
 
-                                <div class="form-outline form-white" style="width: 328px;">
+                                <div class="form-outline form-white" style="width: 328px; margin-bottom:15px;">
                                     <label for="email">Email</label>
                                     <input type="email" id="typeEmailX" class="form-control form-control-sm" id="email" name="admin_email" placeholder="Enter your email..." required />
                                     
                                 </div>
 
-                                <div class="form-outline form-white" style="width: 328px;">
+                                <div class="form-outline form-white" style="width: 328px; margin-bottom:15px;">
                                     <label for="password">Password</label>
                                     <input type="password" id="pass" class="form-control form-control-sm" name="admin_password" placeholder="Enter your password..." required/>
                                     
@@ -114,13 +107,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2">
-          <img src="./images/found.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100" style="width: 80%; height: 80%; margin-top: 8%;">
-        </div>
-      </div>
     </div>
-  </section>
   <!-- End of sign in section -->
+  </section>
+  <!-- End Hero Section -->
 
   <div id="preloader"></div>
 

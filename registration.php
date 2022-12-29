@@ -45,10 +45,10 @@
       </a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a href="#founditem">Found Item</a></li>
           <li><a href="#announcement">Announcement</a></li>
-          <li><a href="registration.php">Sign up</a></li>
+          <li><a href="#hero">Sign up</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -63,19 +63,20 @@
                                              top: 0px;
                                              height: auto;">
 
-    <!-- Sign in Section -->
-    <section id="signin">
-      <div class="container position-relative" style="left: 58%;">
-        <div class="col-lg-4 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" 
+    <!-- Sign up Section -->
+      <div class="container position-relative" style="left: 38%;">
+        <div class="order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" 
                 style="margin-right: 15%;
                         margin-top: 0px;
-                        border-radius: 5px;">
-            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 54px; height: 100%; padding-top: 15px;">
-                <div class="card-body p-12">
-                    <div class="mb-md-12 mt-md-12 pb-12">
-                        <h4 style="text-align: center; margin-bottom:15px; padding-right: 10px;">Please log in to your account!</h4>
-                        <div class="d-flex justify-content-center justify-content-lg-start">
-                            <form action="index.php" method="POST">
+                        border-radius: 5px;
+                        width:61%;
+                        ">
+            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 50px; height: 100%; padding-top: 15px;">
+                <div class="card-body p-8">
+                    <div class="mb-md-8 mt-md-8 pb-8">
+                        <h4 style="text-align: center; margin-bottom: 15px;">Sign up</h4>
+                        <div class="d-flex justify-content-center justify-content-lg-start" style="padding-right:30px;">
+                            <form action="registration.php" method="POST">
 
                                 <?php
                                 
@@ -96,26 +97,81 @@
                                 }
                                 ?>
 
-                                <div class="form-outline form-white" style="width: 328px; margin-bottom:15px;">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="typeEmailX" class="form-control form-control-sm" id="email" name="email" placeholder="Enter your email..." required />
-                                    
-                                </div>
+                                <!-- first and last name -->
+                                    <div class="row">
+                                        <div class="col-md-4 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="firstname">First name</label>
+                                                <input type="text" class="form-control" id= "fname" name="fname" placeholder="Enter first name" required/>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="lastname">Last name</label>
+                                                <input type="text" id="lname" class="form-control" name="lname" placeholder="Enter last name" required />
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="contact">Contact number</label>
+                                                <input class="form-control" type="text" id= "contact" name="contact" placeholder="Enter contact number" required >
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- contact and address -->
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="address">House no./Street/Barangay/City/Municality</label>
+                                                <input type="text" id="address" class="form-control" name="address" placeholder="Enter address" required />
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="gender">Gender</label>
+                                                <select  class="form-control" name="gender" id="gender"  required>
+                                                    <option value="<?php echo $gender ?>">Select Gender</option>
+                                                    <option value="Male"> Male </option>
+                                                    <option value="Female"> Female </option>
+                                                </select>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="email">Email address</label>
+                                                <input class="form-control" type="email" id= "email" name="email" placeholder="Enter email" required>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="password">Password</label>
+                                                <input class="form-control" type="password" id= "pass" name="password" placeholder="Enter password" required>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="cpassword">Confirm Password</label>
+                                                <input class="form-control" type="password" id= "cpass" name="confirmPassword" placeholder="Confirm your password" required>
+                                                
+                                            </div>
 
-                                <div class="form-outline form-white" style="width: 328px; margin-bottom:15px;">
-                                    <label for="password">Password</label>
-                                    <input type="password" id="pass" class="form-control form-control-sm" name="password" placeholder="Enter your password..." required/>
-                                    
-                                </div>
+                                            <input style="margin-top: 22px; margin-bottom:25px; margin-right: 5px;" type="checkbox" onclick="myFunction()">Show Password
+                                        </div>
+                                    </div>
+                                    <!-- Submit button -->
+                                    <button class="sign-btn btn-primary btn-block mb-8" type="submit" name="signup"> Sign up </button>
 
-                                <input style="margin-top: 3px; margin-bottom:25px; margin-right: 12px;" type="checkbox" onclick="myFunction()">Show Password
-
-                                <p class="small mb-4 pb-lg-2 text-center" ><a class="text-white-500" style="color: white;" href="forgot.php">Forgot password?</a></p>
-
-                                <button class="sign-btn" type="submit" name="login">Login</button>
-
-                                <div style="margin-top: 20px;">
-                                    <p class="mb-8 text-center" style="margin-top: -10%;">Don't have an account? <a href="registration.php" class="text-orange-500 fw-bold" style="color: orange;">Sign Up</a>
+                                    <div style="margin-top: 74px; font-weight: 700">
+                                    <p class="mb-8 text-center" style="margin-top: -10%;">Already have an account? <a href="index.php" class="text-orange-500 fw-bold" style="color: orange;">Sign in</a>
                                     </p>
                                 </div>
                             </form>
@@ -124,10 +180,8 @@
                 </div>
             </div>
         </div>
-      </div>
     </div>
-  </section>
-  <!-- End of sign in section -->
+  <!-- end of sign up -->
   </section>
   <!-- End Hero Section -->
 
@@ -448,13 +502,13 @@
     // these code are for show password
     function myFunction() {
       var x = document.getElementById("pass");
-      
-      if (x.type === "password") {
+      var y = document.getElementById("cpass");
+      if ((x.type === "password") && (y.type === "password")) {
         x.type = "text";
-        
+        y.type = "text";
       } else {
         x.type = "password";
-        
+        y.type = "password";
       }
     }
 
