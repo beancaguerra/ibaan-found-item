@@ -57,76 +57,73 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero" style="height: 880px;">
+  <section id="hero" class="hero" style="height: 100%;">
     <img src="./images/kultura.jpg" style="width: 100%;
                                              position: absolute;
                                              top: 0px;
                                              height: auto;">
 
     <!-- Sign in Section -->
-    <section id="signin">
-      <div class="container position-relative" style="left: 58%;">
-        <div class="col-lg-4 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" 
-                style="margin-right: 15%;
-                        margin-top: 0px;
-                        border-radius: 5px;">
-            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 54px; height: 100%; padding-top: 15px;">
-                <div class="card-body p-12">
-                    <div class="mb-md-12 mt-md-12 pb-12">
-                        <h4 style="text-align: center; margin-bottom:15px; padding-right: 10px;">Please log in to your account!</h4>
-                        <div class="d-flex justify-content-center justify-content-lg-start">
-                            <form action="index.php" method="POST">
+    <section id="signin" class="h-100">
+        <div class="container signin">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col">
+                    <div class="card card-registration my-4" style="background-color: rgba(0, 0, 0, 0.592);">
+                        <div class="row g-0">
+                            <div class="col">
+                                <div class="card-body p-md-5 text-white" >
+                                    <h3 class="mb-5 text-uppercase">Sign in form</h3>
+                                    <form action="index.php" method="POST">
 
-                                <?php
-                                
-                                if($errors > 0){
-                                    foreach($errors AS $displayErrors){
-                                    ?>
-                                    <div id="alert" style="height: auto;
-                                                width: 100%;
-                                                background: #ec9006;
-                                                padding: 0 15px;
-                                                font-size: 19px;
-                                                line-height: 40px;
-                                                margin: 10px 0;
-                                                color: #000;
-                                                border-radius: 4px;"><?php echo $displayErrors; ?></div>
-                                    <?php
-                                    }
-                                }
-                                ?>
+                                        <?php
+                                        
+                                        if($errors > 0){
+                                            foreach($errors AS $displayErrors){
+                                            ?>
+                                            <div id="alert" style="height: auto;
+                                                        width: 100%;
+                                                        background: #ec9006;
+                                                        padding: 0 15px;
+                                                        font-size: 19px;
+                                                        line-height: 40px;
+                                                        margin: 10px 0;
+                                                        color: #000;
+                                                        border-radius: 4px;"><?php echo $displayErrors; ?></div>
+                                            <?php
+                                            }
+                                        }
+                                        ?>
+                                        <div class="form-outline form-white" style="width: 315px; margin-bottom:15px;">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="typeEmailX" class="form-control form-control-sm" id="email" name="email" placeholder="Enter your email..." required />
+                                            
+                                        </div>
 
-                                <div class="form-outline form-white" style="width: 328px; margin-bottom:15px;">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="typeEmailX" class="form-control form-control-sm" id="email" name="email" placeholder="Enter your email..." required />
-                                    
+                                        <div class="form-outline form-white" style="width: 315px; margin-bottom:15px;">
+                                            <label for="password">Password</label>
+                                            <input type="password" id="pass" class="form-control form-control-sm" name="password" placeholder="Enter your password..." required/>
+                                            
+                                        </div>
+
+                                        <input style="margin-top: 3px; margin-bottom:25px; margin-right: 12px;" type="checkbox" onclick="myFunction()">Show Password
+
+                                        <p class="small mb-4 pb-lg-2 text-center" ><a class="text-white-500" style="color: white;" href="forgot.php">Forgot password?</a></p>
+
+                                        <button class="sign-btn" type="submit" name="login">Login</button>
+
+                                        <div style="margin-top: 20px;">
+                                            <p class="mb-8 text-center" style="margin-top: -10%;">Don't have an account? <a href="registration.php" class="text-orange-500 fw-bold" style="color: orange;">Sign Up</a>
+                                            </p>
+                                        </div>
+                                    </form>
                                 </div>
-
-                                <div class="form-outline form-white" style="width: 328px; margin-bottom:15px;">
-                                    <label for="password">Password</label>
-                                    <input type="password" id="pass" class="form-control form-control-sm" name="password" placeholder="Enter your password..." required/>
-                                    
-                                </div>
-
-                                <input style="margin-top: 3px; margin-bottom:25px; margin-right: 12px;" type="checkbox" onclick="myFunction()">Show Password
-
-                                <p class="small mb-4 pb-lg-2 text-center" ><a class="text-white-500" style="color: white;" href="forgot.php">Forgot password?</a></p>
-
-                                <button class="sign-btn" type="submit" name="login">Login</button>
-
-                                <div style="margin-top: 20px;">
-                                    <p class="mb-8 text-center" style="margin-top: -10%;">Don't have an account? <a href="registration.php" class="text-orange-500 fw-bold" style="color: orange;">Sign Up</a>
-                                    </p>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
-    </div>
-  </section>
+        </section>
   <!-- End of sign in section -->
   </section>
   <!-- End Hero Section -->
@@ -252,6 +249,19 @@
   <script src="assets/js/main.js"></script>
 
   <style>
+        .signin{
+            width:34%;
+            margin-left: 59%;
+        }
+        .card-registration .select-input.form-control[readonly]:not([disabled]) {
+            font-size: 1rem;
+            line-height: 2.15;
+            padding-left: .75em;
+            padding-right: .75em;
+        }
+        .card-registration .select-arrow {
+            top: 13px;
+        }
         /*found item*/
         .found-class {
             width: 100%;
@@ -420,26 +430,29 @@
         background-color: #717171;
         }
 
-        /* Fading animation */
-        .fade {
-        animation-name: fade;
-        animation-duration: 1000s;
+        @media screen and (min-width: 585px) and (max-width: 640px) {
+            .signin{
+                width: 63%;
+                margin-left:29%;
+                margin-top: -92px;
+            }
+            .card-registration{
+                margin-top: -98px;
+                height: 391px;
+            }
+        }
+        @media screen and (min-width: 640px) and (max-width: 825px) {
+            .signin{
+                width: 56%;
+                margin-left:24%;
+                margin-top: -92px;
+            }
+            .card-registration{
+                margin-top: -98px;
+                height: 473px;
+            }
         }
 
-        @keyframes fade {
-        from {opacity: 4}
-        to {opacity: 4}
-        }
-        @media screen and (min-width: 585px) and (max-width: 640px) {
-            .fade{
-                max-width: 460px;
-                padding-left: 30px;
-            }
-            .fade .text{
-                width: 50%;
-                top:322px;
-            }
-        }
   </style>
 
 </body>

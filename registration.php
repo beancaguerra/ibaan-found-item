@@ -57,236 +57,122 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero" style="height: 880px;">
+  <section id="hero" class="hero" style="height: 100%;">
     <img src="./images/kultura.jpg" style="width: 100%;
                                              position: absolute;
                                              top: 0px;
                                              height: auto;">
 
     <!-- Sign up Section -->
-      <div class="container position-relative" style="left: 38%;">
-        <div class="order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start" 
-                style="margin-right: 15%;
-                        margin-top: 0px;
-                        border-radius: 5px;
-                        width:61%;
-                        ">
-            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 50px; height: 100%; padding-top: 15px;">
-                <div class="card-body p-8">
-                    <div class="mb-md-8 mt-md-8 pb-8">
-                        <h4 style="text-align: center; margin-bottom: 15px;">Sign up</h4>
-                        <div class="d-flex justify-content-center justify-content-lg-start" style="padding-right:30px;">
-                            <form action="registration.php" method="POST">
+    <div class="container py-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col">
+                    <div class="card card-registration my-4" style="background-color: rgba(0, 0, 0, 0.592);">
+                        <div class="row g-0">
+                            <div class="col-lg">
+                                <div class="card-body p-md-5 text-white" >
+                                    <h3 class="mb-5 text-uppercase">Sign up form</h3>
+                                    <form action="registration.php" method="POST">
 
-                                <?php
-                                
-                                if($errors > 0){
-                                    foreach($errors AS $displayErrors){
-                                    ?>
-                                    <div id="alert" style="height: auto;
-                                                width: 100%;
-                                                background: #ec9006;
-                                                padding: 0 15px;
-                                                font-size: 19px;
-                                                line-height: 40px;
-                                                margin: 10px 0;
-                                                color: #000;
-                                                border-radius: 4px;"><?php echo $displayErrors; ?></div>
-                                    <?php
-                                    }
-                                }
-                                ?>
+                                        <?php
+                                        
+                                        if($errors > 0){
+                                            foreach($errors AS $displayErrors){
+                                            ?>
+                                            <div id="alert" style="height: auto;
+                                                        width: 100%;
+                                                        background: #ec9006;
+                                                        padding: 0 15px;
+                                                        font-size: 19px;
+                                                        line-height: 40px;
+                                                        margin: 10px 0;
+                                                        color: #000;
+                                                        border-radius: 4px;"><?php echo $displayErrors; ?></div>
+                                            <?php
+                                            }
+                                        }
+                                        ?>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                <input type="text" id="form3Example1m" name="fname" class="form-control form-control-sm" />
+                                                <label class="form-label" for="form3Example1m">First name</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                <input type="text" id="form3Example1n" name="lname" class="form-control form-control-sm" />
+                                                <label class="form-label" for="form3Example1n">Last name</label>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                <!-- first and last name -->
-                                    <div class="row">
-                                        <div class="col-md-4 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="firstname">First name</label>
-                                                <input type="text" class="form-control" id= "fname" name="fname" placeholder="Enter first name" required/>
-                                                
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                <input type="text" id="form3Example1m1" name="contact" class="form-control form-control-sm" />
+                                                <label class="form-label" for="form3Example1m1">Contact Number</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                <input type="text" id="form3Example1n1" name="address" class="form-control form-control-sm" />
+                                                <label class="form-label" for="form3Example1n1">House no./Street/Barangay/City/Municality</label>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="lastname">Last name</label>
-                                                <input type="text" id="lname" class="form-control" name="lname" placeholder="Enter last name" required />
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="contact">Contact number</label>
-                                                <input class="form-control" type="text" id= "contact" name="contact" placeholder="Enter contact number" required >
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- contact and address -->
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="address">House no./Street/Barangay/City/Municality</label>
-                                                <input type="text" id="address" class="form-control" name="address" placeholder="Enter address" required />
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="gender">Gender</label>
-                                                <select  class="form-control" name="gender" id="gender"  required>
-                                                    <option value="<?php echo $gender ?>">Select Gender</option>
-                                                    <option value="Male"> Male </option>
-                                                    <option value="Female"> Female </option>
-                                                </select>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="email">Email address</label>
-                                                <input class="form-control" type="email" id= "email" name="email" placeholder="Enter email" required>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="password">Password</label>
-                                                <input class="form-control" type="password" id= "pass" name="password" placeholder="Enter password" required>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="cpassword">Confirm Password</label>
-                                                <input class="form-control" type="password" id= "cpass" name="confirmPassword" placeholder="Confirm your password" required>
-                                                
-                                            </div>
 
-                                            <input style="margin-top: 22px; margin-bottom:25px; margin-right: 5px;" type="checkbox" onclick="myFunction()">Show Password
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <select  class="form-control form-control-sm" name="gender" id="gender"  required>
+                                                        <option value="<?php echo $gender ?>">Select Gender</option>
+                                                        <option value="Male"> Male </option>
+                                                        <option value="Female"> Female </option>
+                                                    </select>
+                                                    <label class="form-label" for="form3Example1m1">Gender</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                <input type="email" id= "email" name="email" class="form-control form-control-sm" />
+                                                <label class="form-label" for="form3Example1n1">Email Address</label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!-- Submit button -->
-                                    <button class="sign-btn btn-primary btn-block mb-8" type="submit" name="signup"> Sign up </button>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                <input type="password" id= "pass" name="password" class="form-control form-control-sm" />
+                                                <label class="form-label" for="form3Example1m1">Password</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                <input type="password" id= "cpass" name="confirmPassword" class="form-control form-control-sm" />
+                                                <label class="form-label" for="form3Example1n1">Confirm Password</label>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                    <div style="margin-top: 74px; font-weight: 700">
-                                    <p class="mb-8 text-center" style="margin-top: -10%;">Already have an account? <a href="index.php" class="text-orange-500 fw-bold" style="color: orange;">Sign in</a>
-                                    </p>
+                                        <!-- Submit button -->
+                                        <button class="sign-btn btn-primary btn-block mb-8" type="submit" name="signup"> Sign up </button>
+
+                                        <div style="margin-top: 74px; font-weight: 700">
+                                            <p class="mb-8 text-center" style="margin-top: -6%;">Already have an account? <a href="index.php" class="text-orange-500 fw-bold" style="color: orange;">Sign in</a>
+                                        </p>
+                                        </div>
+                                    </form>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-  <!-- end of sign up -->
+        </div>  
+    <!-- end of sign up -->
   </section>
   <!-- End Hero Section -->
-
-  <!-- ==== Found Item List === -->
-  <section id="founditem" class="services sections-bg">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6">
-            <div class="section-header">
-              <h2>Found Item List</h2>
-            </div>
-            <div class="box">
-                <div class="detail-box" style = "margin: 10px 20px;">
-                    <div class="found-class">
-                        <div class="item-list">
-                            <?php
-                                include 'connect_db.php';
-                            
-                                //showing data from tb_iteminfo to the system
-                                $query = "SELECT * FROM tb_itemrecord Order By itemNo DESC" or die("Error");
-                                $result = mysqli_query($conn, $query);
-                                
-                                if ($result)
-                                {
-                                    // it return number of rows in the table.
-                                    $row = mysqli_num_rows($result);
-                                        
-                                    if ($row)
-                                    {
-                                        echo "<p class='total-item'>Number of Found Item: $row </p>";
-                                    }
-                                    // close the result.
-
-                                    //if table has no data
-                                    if (mysqli_num_rows($result) == 0) {
-                                    echo "<div class='nodata' style='text-align: center'>
-                                            <img src='./images/nodata.png' width='120px' height='120px'>
-                                            <p>No Found Item Record</p>
-                                        </div>";
-                                        exit;
-                                    }   
-                                }
-                                
-                                while($row=mysqli_fetch_assoc($result))         
-                                {
-                                ?>
-                                <div class="item-container">
-                                    <p class="main-title">
-                                        <span class="title-one"> CATEGORY: </span><?php echo $row['itemCategory']; ?><br> 
-                                        <span class="title"> DATE&TIME FOUND: </span><?php echo $row['timedate']; ?><br>
-                                    </p>
-                                </div>
-                            <?php
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div id="announcement" class="section-header">
-              <h2>Announcement</h2>
-            </div>
-            <!-- announcement -->
-            <div class="box ">
-                <div class="detail-box" style = "margin: 10px 20px;">
-                    <div class="announce-class">
-                    
-                        <div class="items">
-                            <?php
-
-                                include 'connect_db.php';
-
-                                //showing data from tb_iteminfo to the system
-                                $result=$conn->query("SELECT * FROM tb_announcement Order By timedate DESC") or die("Error");
-                                //if table has no data
-                                if ($result->num_rows == 0) {
-                                    echo "<div class='nodata' style='text-align:center'>
-                                            <img src='./images/announce.png' width='120px' height='120px'>
-                                            <p>No Announcement</p>
-                                          </div>";
-                                }
-                                while($row=$result->fetch_assoc())         
-                                {
-                                ?>
-                                <div class='post-result'>
-                                    <div class="post-result-child">
-                                        <p class="post-one"><span style='color:#ec9006; font-size: 20px; font-weight:700; margin-right: 20px;'><?php echo $row['subject']; ?></span> </p>
-                                        <p><span style='color:#000000; font-size: 13px; font-weight:500; margin-right: 20px;'><?php echo $row['timedate']; ?></span></p>
-                                        <p class="post-two"><span style='text-align: justify; color:#000000; font-size: 16px; font-weight:500; margin-right: 20px;'><?php echo $row['caption']; ?></span></p>
-                                    </div>
-                                </div>
-                                <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end announcement -->
-          </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End of Found Item Section -->
 
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
