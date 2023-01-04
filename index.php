@@ -462,6 +462,17 @@
                 height: 473px;
             }
         }
+        @media screen and (min-width: 825px) and (max-width: 889px) {
+            .signin{
+                width: 56%;
+                margin-left:24%;
+                margin-top: -92px;
+            }
+            .card-registration{
+                margin-top: -98px;
+                height: 473px;
+            }
+        }
 
   </style>
 
