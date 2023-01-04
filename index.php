@@ -429,6 +429,17 @@
         .active, .dot:hover {
         background-color: #717171;
         }
+        @media screen and (min-width: 40px) and (max-width: 4655px) {
+            .signin{
+                width: 88%;
+                margin-left:6%;
+                margin-top: -92px;
+            }
+            .card-registration{
+                margin-top: -98px;
+                height: 394px;
+            }
+        }
         @media screen and (min-width: 465px) and (max-width: 585px) {
             .signin{
                 width: 78%;
