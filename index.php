@@ -72,7 +72,7 @@
                         <div class="row g-0">
                             <div class="col">
                                 <div class="card-body p-md-5 text-white" >
-                                    <h3 class="mb-5 text-uppercase">Sign in form</h3>
+                                    <h3 class="mb-5 text-uppercase">Please sign in!</h3>
                                     <form action="index.php" method="POST">
 
                                         <?php
@@ -429,7 +429,17 @@
         .active, .dot:hover {
         background-color: #717171;
         }
-
+        @media screen and (min-width: 465px) and (max-width: 585px) {
+            .signin{
+                width: 78%;
+                margin-left:12%;
+                margin-top: -92px;
+            }
+            .card-registration{
+                margin-top: -98px;
+                height: 394px;
+            }
+        }
         @media screen and (min-width: 585px) and (max-width: 640px) {
             .signin{
                 width: 63%;
