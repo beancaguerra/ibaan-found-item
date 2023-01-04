@@ -429,7 +429,7 @@
         .active, .dot:hover {
         background-color: #717171;
         }
-        @media screen and (min-width: 40px) and (max-width: 4655px) {
+        @media screen and (min-width: 400px) and (max-width: 465px) {
             .signin{
                 width: 88%;
                 margin-left:6%;

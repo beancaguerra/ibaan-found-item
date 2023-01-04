@@ -97,6 +97,33 @@
 </div>
 </body>
 <style>
+    @media screen and (min-width: 400px) and (max-width: 465px){
+        .detail-box{
+            width: 432px;
+            margin-left: -138px;
+        }
+        #alert {
+            font-size: 12px;
+        }
+    }
+    @media screen and (min-width: 465px) and (max-width: 667px){
+        .detail-box{
+            width: 432px;
+            margin-left: -138px;
+        }
+        #alert {
+            font-size: 12px;
+        }
+    }
+    @media screen and (min-width: 667px) and (max-width: 867px){
+        .detail-box{
+            width: 432px;
+            margin-left: -138px;
+        }
+        #alert {
+            font-size: 12px;
+        }
+    }
     @media screen and (max-width: 900px){
         .container .box{
             width: 334px;

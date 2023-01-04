@@ -103,9 +103,9 @@
 </body>
 <style>
     @media screen and (max-width: 900px){
-        .container .box{
-            width: 334px;
-            margin-left: -93px;
+        .detail-box{
+            width: 434px;
+            margin-left: -138px;
         }
         #alert {
             font-size: 12px;
