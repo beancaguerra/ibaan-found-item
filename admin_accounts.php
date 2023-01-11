@@ -130,18 +130,17 @@
                             </tr>
                             <tr>
                                 <td style="width:50%"><p><span style="font-weight:700;">Name: </span><?php echo $row['fname']; ?>&nbsp<?php echo $row['lname']; ?></p></td>
-                                <td style="width:50%"><p><span style="font-weight:700;">Account Id: </span><?php echo $row['accountId']; ?></p></td>
-                            </tr>
-                            <tr>
                                 <td style="width:50%"><p><span style="font-weight:700;">Contact No: </span><?php echo $row['contact']; ?></p></td>
+                            </tr>
+                            <tr>
+                                
                                 <td style="width:50%"><p><span style="font-weight:700;">Gender: </span><?php echo $row['gender']; ?></p></td>
-                            </tr>
-                            <tr>
                                 <td style="width:50%"><p><span style="font-weight:700;">Address: </span><?php echo $row['address']; ?></p></td>
-                                <td style="width:50%"><p><span style="font-weight:700;">Email: </span><?php echo $row['email']; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width:50%"><p><span style="font-weight:700;"> </span><input type= 'hidden' value='<?php echo $row['password']; ?>'></p></td>
+                                
+                                <td style="width:50%"><p><span style="font-weight:700;">Email: </span><?php echo $row['email']; ?></p></td>
+                                <td style="width:50%"><p><span style="font-weight:700;"> </span><input type= 'hidden' value='<?php echo $row['password']; ?>'></p></td>    
                             </tr>
                         </table>
                     </div>
