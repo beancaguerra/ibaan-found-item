@@ -115,8 +115,6 @@
                                 <td style="width: 70%; border: none;"><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: black;"><?php echo $loggedin_session; ?></p></td>
                             </tr>
                             <tr>
-                                <td style="width: 30%; border: none;"><p style="text-align: right; margin-top: 5px; margin-bottom: 5px; margin-right: 20px; font-weight: 700; color: #ffffff;">Password:</p></td>
-                                
                                 <td style="width: 70%; border: none;"><input class="input big" type="hidden" value="Change Password"/><p style="text-align: left; margin-top: 5px; margin-bottom: 5px; margin-left: 20px; color: #ffffff; -webkit-text-security: none; display: none;"><?php //echo $password; ?></p></a></td>
                                 
                             </tr>
