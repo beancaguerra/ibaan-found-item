@@ -85,7 +85,7 @@
                         <div class="msg-name" style="display: flex; align-items: center;">
                             <div style="width: 60%; display: flex; align-items: center;">
                                 <p style="margin-left: 20px; color: #FE6E00; font-weight: 700; font-size: 20px;"><?php echo $row['fname'];?>&nbsp<?php echo $row['lname'];?></p>
-                                <p style="margin-left: 10px; color: #000000; font-weight: 600; font-size: 12px;">#<u><?php echo $row['accountId']; ?></u></p>
+                                <!-- <p style="margin-left: 10px; color: #000000; font-weight: 600; font-size: 12px;">#<u></?php echo $row['accountId']; ?></u></p> -->
                             </div>
                             <div style="width: 90%; display: flex; align-items: center;">
                                 <p style="margin-left: 10px; color: #000000; font-weight: 700; font-size: 14px;">Item No: <u style="font-size: 16px; color: #FE6E00"><?php echo $row['itemnumber']; ?></u></p>
