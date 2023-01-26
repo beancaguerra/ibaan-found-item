@@ -77,7 +77,7 @@
                         exit;
                     }
 
-                    echo $_SESSION['admin_id'];
+                    //echo $_SESSION['admin_id'];
                     while($row=$result->fetch_assoc())
                     {
                     ?>
