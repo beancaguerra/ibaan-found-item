@@ -140,7 +140,7 @@
                                 <div class="first-three">
                                     <input class="input big" type="text" name="fname" placeholder="First name" value="<?php echo $fname; ?>" required/>
                                     <input class="input big" type="text" name="lname" placeholder="Last name" value="<?php echo $lname; ?>" />
-                                    <input class="input big" type="text" name="accountId" placeholder="Account Id" readonly value="<?php echo $loggedin_id; ?>" required/>
+                                    <input class="input big" type="hidden" name="accountId" placeholder="Account Id" readonly value="<?php echo $loggedin_id; ?>" required/>
                                 </div>
                                 <div class="second-three">
                                     <input class="input big" type="text" name="contact" placeholder="Contact No" value="<?php echo $contact; ?>" required/>
