@@ -63,10 +63,10 @@
                         margin-top: 38px;
                         border-radius: 5px;
                         height: 520px;">
-            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 48px; height: 75%; padding-top: 15px;">
+            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592); padding-left: 28px; height: 75%; padding-top: 15px;">
                 <div class="card-body p-12">
                     <div class="mb-md-12 mt-md-12 pb-12">
-                        <h4 style="text-align: center; padding-right: 17px;">Please log in to your account!</h4>
+                        <h4 style="text-align: center; padding-right: 25px;">Please log in to your account!</h4>
                         <div class="d-flex justify-content-center justify-content-lg-start">
                             <form action="admin_signin.php" method="POST">
                                 <?php
@@ -84,13 +84,13 @@
                                     }
                                 ?>
 
-                                <div class="form-outline form-white" style="width: 328px; margin-bottom:15px;">
+                                <div class="form-outline form-white" style="width: 318px; margin-bottom:15px;">
                                     <label for="email">Email</label>
                                     <input type="email" id="typeEmailX" class="form-control form-control-sm" id="email" name="admin_email" placeholder="Enter your email..." required />
                                     
                                 </div>
 
-                                <div class="form-outline form-white" style="width: 328px; margin-bottom:15px;">
+                                <div class="form-outline form-white" style="width: 318px; margin-bottom:15px;">
                                     <label for="password">Password</label>
                                     <input type="password" id="pass" class="form-control form-control-sm" name="admin_password" placeholder="Enter your password..." required/>
                                     
