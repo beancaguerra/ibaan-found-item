@@ -32,11 +32,6 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.php">Home</a></li>
-          <li><a href="index.php">Guidelines</a></li>
-          <li><a href="index.php">Found Item</a></li>
-          <li><a href="index.php">Announcement</a></li>
-          <li><a href="index.php">Sign in</a></li>
-          <li><a href="index.php">Sign up</a></li>
         </ul>
       </nav><!-- .navbar -->
 
