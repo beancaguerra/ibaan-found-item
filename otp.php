@@ -21,77 +21,68 @@
 </head>
 <body>
   
-    <header id="header" class="header d-flex align-items-center">
+  <header id="header" class="header d-flex align-items-center">
 
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <a href="index.php" class="logo d-flex align-items-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1>Lost Item Finder<span>.</span></h1>
-        </a>
-        <nav id="navbar" class="navbar">
-            <ul>
-            <li><a href="index.php">Home</a></li>
-            </ul>
-        </nav><!-- .navbar -->
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.php" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Lost Item Finder<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.php">Home</a></li>
+        </ul>
+      </nav><!-- .navbar -->
 
-        </div>
-    </header><!-- End Header -->
-
-    <section id="hero" class="hero" style="height: 100%;">
-        <img src="./images/kultura.jpg" style="width: 100%;
-                                             position: absolute;
-                                             top: 0px;
-                                             height: auto;">
-
-    <!-- End Header -->
-    <div class="offer_section">
-            <div class="offer_container" style="padding: 0px;">
-                <div style="padding: 20px 20% 30px 20%; width: 100%; height: 88vh;">
-                    <!-- log in form -->
-                    <div class="col-md justify-content-center">
-                        <div class="">
-                            <div class="detail-box">
-                                <div class="vh-100">
-                                    <div class="py-12 h-100">
-                                        <div class="row d-flex justify-content-center align-items-center h-100">
-                                            <div class="col-10 col-md-10 col-lg-10 col-xl-10">
-                                                <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592);">
-                                                    <div class="card-body p-4">
-                                                        <div class="mb-md-4 mt-md-4 pb-4">
-                                                        <h2>OTP Verification Code</h2>
-                                                        <hr class="mb-2">
-                                                        <div id="line"></div>
-                                                        <form action="otp.php" method="POST" autocomplete="off">
-                                                            <?php
-                                                            if(isset($_SESSION['message'])){
-                                                                ?>
-                                                                <div id="alert" style="height: auto;
-                                                                                width: 100%;
-                                                                                background: #ec9006;
-                                                                                padding: 0 15px;
-                                                                                font-size: 19px;
-                                                                                line-height: 40px;
-                                                                                margin: 10px 0;
-                                                                                color: #000;
-                                                                                border-radius: 4px;"><?php echo $_SESSION['message']; ?></div>
-                                                                <?php
-                                                            }
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+  <div class="offer_section">
+        <div class="offer_container" style="padding: 0px;">
+            <div style="padding: 20px 20% 30px 20%; width: 100%; height: 88vh;">
+                <div class="col-md justify-content-center">
+                    <div class="">
+                        <div class="detail-box">
+                            <div class="vh-100">
+                                <div class="py-12 h-100">
+                                    <div class="row d-flex justify-content-center align-items-center h-100">
+                                        <div class="col-10 col-md-10 col-lg-10 col-xl-10">
+                                            <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592);">
+                                                <div class="card-body p-4">
+                                                    <div class="mb-md-4 mt-md-4 pb-4">
+                                                    <h2>OTP Verification Code</h2>
+                                                    <hr class="mb-2">
+                                                    <div id="line"></div>
+                                                    <form action="otp.php" method="POST" autocomplete="off">
+                                                        <?php
+                                                        if(isset($_SESSION['message'])){
                                                             ?>
-
+                                                            <div id="alert" style="height: auto;
+                                                                            width: 100%;
+                                                                            background: #ec9006;
+                                                                            padding: 0 15px;
+                                                                            font-size: 19px;
+                                                                            line-height: 40px;
+                                                                            margin: 10px 0;
+                                                                            color: #000;
+                                                                            border-radius: 4px;"><?php echo $_SESSION['message']; ?></div>
                                                             <?php
-                                                            if($errors > 0){
-                                                                foreach($errors AS $displayErrors){
-                                                                ?>
-                                                                <div id="alert"><?php echo $displayErrors; ?></div>
-                                                                <?php
-                                                                }
+                                                        }
+                                                        ?>
+
+                                                        <?php
+                                                        if($errors > 0){
+                                                            foreach($errors AS $displayErrors){
+                                                            ?>
+                                                            <div id="alert"><?php echo $displayErrors; ?></div>
+                                                            <?php
                                                             }
-                                                            ?>      
-                                                            <input class="form-control form-control-lg" type="number" name="otp" placeholder="Verification Code" required><br>
-                                                            <button class="sign-btn" type="submit" name="verify"> Verify </button>
-                                                        </form>
-                                                    </div>
+                                                        }
+                                                        ?>      
+                                                        <input class="form-control form-control-lg" type="number" name="otp" placeholder="Verification Code" required><br>
+                                                        <button class="sign-btn" type="submit" name="verify"> Verify </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -103,7 +94,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>
 </body>
 <style>
