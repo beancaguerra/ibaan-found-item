@@ -58,14 +58,13 @@
 
         
         <!--update form code-->
-        <section style="margin: 20px 0 0 250px;">
+        <section class="update-box"  style="margin: 20px 0 0 250px;">
                 <div style="display: flex;
                             justify-content: center;
-                            width: 100%;
-                            height: 95%;">
+                            width: 53%;
+                            height: 389px;">
 
-                    <div style="width: 85%;
-                                height: 95%;
+                    <div style="margin-left: 480px;
                                 border-radius: 20px;
                                 border: 2px solid var(--color-gray);
                                 box-shadow:  1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
@@ -129,9 +128,8 @@
                             }
                         }
                     ?>
-                        <form style= "update-form" action="code_edit_profile.php" method="POST">
+                        <form action="code_edit_profile.php" method="POST">
                             <div class="card mx-6 mx-md-6 shadow-5-strong" style="
-                                    height: 100%;
                                     width: 100%;
                                     margin-top: 2px;
                                     ">
@@ -218,25 +216,17 @@
         </script>
 
         <style>
-            @media screen and (min-width: 341px) and (max-width: 960px) { 
+            @media screen and (max-width: 900px){ 
             /* portrait tablets, portrait iPad, 
             landscape e-readers, landscape 800x480 
             or 854x480 phones */
-            .profile-form{
-                margin: 10%;
+            .update-box{
+                height: 100%;
+                width: 396px;
+                margin-left: -285px
             }
-            .profile-cont{
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                height: 75vh;
-            }
-            .profile{
-                width: 80%;
-                height: 75vh;
-                border-radius: 20px;
-                border: 2px solid var(--color-gray);
-                background-color: #ffffffde;
+            .card .first-three, .second-three, .third-three{
+                width: 269px;
             }
         }
         </style>
