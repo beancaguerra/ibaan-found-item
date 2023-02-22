@@ -112,6 +112,9 @@
                                             <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['itemCategory']; ?></p>
                                             <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Date&Time: </span><?php echo $row['timedate']; ?></p>
                                         </div>
+                                        <div class="output-two output">
+                                            <a  class="send" href= "viewer-found-display.php?itemno=<?php echo $row['itemNo']; ?> & itemCategory=<?php echo $row['itemCategory']; ?> & timedate=<?php echo $row['timedate']; ?>">Send Proof</a>
+                                        </div>
                                     </div>
                                 <?php
                                 }
