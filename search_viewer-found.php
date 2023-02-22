@@ -126,6 +126,34 @@
         <!--back to top botton-->
         <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop.png" alt="" width="60" height="50"></button>
         <!--These codes are for message form-->
+
+        <!--Responsive Codes-->
+        <style>
+        .send{ 
+            font-size: 1rem; padding: 0 10px; margin-left: 617px;
+            cursor: pointer; width: 15%; margin-top: 1%;
+            margin-bottom: 1%; background-color: gray; border-radius: 5px;
+            height: 25px; color: white; text-decoration: none;
+        }
+        @media only screen and (min-width: 468px) and (max-width: 540px){
+            .send{
+            margin-left: 320px;
+            width: 26%;
+            }
+        }
+        @media screen and (min-width: 481px) and (max-width: 640px) {
+            .send{
+            margin-left: 294px;
+            width: 26%;
+            }
+        }
+        @media screen and (min-width: 300px) and (max-width: 481px) {
+            .send{
+            margin-left: 200px;
+            width: 35%;
+            }
+        }
+        </style>
         
         <!--JavaScript Codes-->
         <script>
