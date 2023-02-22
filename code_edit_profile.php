@@ -58,7 +58,7 @@
 
         
         <!--update form code-->
-        <section class="update-box"  style="margin: 20px 0 0 250px;">
+        <section style="margin: 20px 0 0 250px;">
                 <div style="display: flex;
                             justify-content: center;
                             width: 53%;
@@ -215,20 +215,6 @@
             }
         </script>
 
-        <style>
-            @media screen and (max-width: 900px){ 
-            /* portrait tablets, portrait iPad, 
-            landscape e-readers, landscape 800x480 
-            or 854x480 phones */
-            .update-box{
-                height: 100%;
-                width: 396px;
-                margin-right: -285px
-            }
-            .card .first-three, .second-three, .third-three{
-                width: 269px;
-            }
-        }
-        </style>
+
     </body>
 </html>
