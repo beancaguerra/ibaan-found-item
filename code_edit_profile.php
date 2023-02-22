@@ -61,10 +61,11 @@
         <section style="margin: 20px 0 0 250px;">
                 <div style="display: flex;
                             justify-content: center;
-                            width: 53%;
-                            height: 389px;">
+                            width: 100%;
+                            height: 95%;">
 
-                    <div style="margin-left: 480px;
+                    <div style="width: 85%;
+                                height: 95%;
                                 border-radius: 20px;
                                 border: 2px solid var(--color-gray);
                                 box-shadow:  1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
@@ -130,6 +131,7 @@
                     ?>
                         <form action="code_edit_profile.php" method="POST">
                             <div class="card mx-6 mx-md-6 shadow-5-strong" style="
+                                    height: 100%;
                                     width: 100%;
                                     margin-top: 2px;
                                     ">
@@ -214,7 +216,5 @@
                 }
             }
         </script>
-
-
     </body>
 </html>
