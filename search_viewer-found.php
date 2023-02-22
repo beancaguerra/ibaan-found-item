@@ -123,45 +123,7 @@
         <!--back to top botton-->
         <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop.png" alt="" width="60" height="50"></button>
         <!--These codes are for message form-->
-        <button class="open-button" onclick="openForm()" title="Send Proof"><img src="./images/infocontact-icon.png" alt="" width="60" height="50"></button>
-        <div class="form-popup" id="myForm">
-            <form action="code_message.php" class="form-container" method="POST" enctype="multipart/form-data" autocomplete="off">
-                <div class="message-header">
-                    <h3>Owner's Information(Proof of ownership)</h3>
-                    <button type="button" class="btn-cancel" onclick="closeForm()">&times</button>
-                </div>
-                <div class="msg-input">
-                    <div>
-                        <label for="name">Account Id</label>
-                        <input type="text" value="<?php $t_id = trim($loggedin_id); echo $t_id; ?>" name="accountId" readonly required>
-                    </div>
-                    <div>
-                        <label for="email">Item No.</label>
-                        <input type="text" placeholder="Enter Item No." name="itemnumber" required>
-                    </div>
-                    <div>
-                        <label for="email">Item Location</label>
-                        <input type="text" id="itemLocation" placeholder="Location where the item was lost" name="itemLocation" required>
-                    </div>
-                    <div>
-                        <label for="email">Item Brand</label>
-                        <input type="text" id="itemBrand" placeholder="Enter Brand Name" name="itembrand" required>
-                    </div>
-                    <div>
-                        <label for="email">Item Color</label>
-                        <input type="text" id="itemColor" placeholder="Enter Color" name="itemcolor" required>
-                    </div>
-                </div>
-                <div class="msg-img">
-                    <label for="myfile">Select Image</label>
-                    <input type="file" id="myfile" name="myfile" accept="image/*" style="color: #ffffff;">
-                </div>
-                <div class="msg-submit">
-                    <textarea name="description" style="font: .8rem 'Poppins', Helvetica, sans-serif;" id="description" cols="53" rows="3" placeholder="Write Item's detailed description..."></textarea>
-                    <button type="submit" onClick="sendSuccess()" class="btn" title="Send"><img src="./images/send-icon.png" alt="" width="30" height="30"></button>
-                </div>
-            </form>
-        </div>
+        
         <!--JavaScript Codes-->
         <script>
             //Get the button
