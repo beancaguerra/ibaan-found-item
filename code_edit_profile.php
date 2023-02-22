@@ -129,7 +129,7 @@
                             }
                         }
                     ?>
-                        <form action="code_edit_profile.php" method="POST">
+                        <form style= "update-form" action="code_edit_profile.php" method="POST">
                             <div class="card mx-6 mx-md-6 shadow-5-strong" style="
                                     height: 100%;
                                     width: 100%;
@@ -216,5 +216,13 @@
                 }
             }
         </script>
+
+        <style>
+            @media screen and (max-width: 900px){
+                .update-form{
+                    width: 80%;
+                }
+            }
+        </style>
     </body>
 </html>
