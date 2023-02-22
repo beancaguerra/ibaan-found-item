@@ -223,7 +223,7 @@
             .update-box{
                 height: 100%;
                 width: 396px;
-                margin-left: -285px
+                margin-right: -285px
             }
             .card .first-three, .second-three, .third-three{
                 width: 269px;
