@@ -218,11 +218,27 @@
         </script>
 
         <style>
-            @media screen and (max-width: 900px){
-                .update-form{
-                    width: 80%;
-                }
+            @media screen and (min-width: 341px) and (max-width: 960px) { 
+            /* portrait tablets, portrait iPad, 
+            landscape e-readers, landscape 800x480 
+            or 854x480 phones */
+            .profile-form{
+                margin: 10%;
             }
+            .profile-cont{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 75vh;
+            }
+            .profile{
+                width: 80%;
+                height: 75vh;
+                border-radius: 20px;
+                border: 2px solid var(--color-gray);
+                background-color: #ffffffde;
+            }
+        }
         </style>
     </body>
 </html>
