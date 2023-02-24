@@ -65,13 +65,14 @@
                     <div class="second-three">
                         <select class="input small" id="itemCategory" name="itemCategory" required>
                             <option value="category">Select Item Category</option>
-                            <option value="electronic gadget">Electronic gadget</option>
-                            <option value="bag">Bag</option>
-                            <option value="validID">Valid ID</option>
-                            <option value="documents">Documents</option>
-                            <option value="cash">Cash</option>
-                            <option value="credit/debit cards">Credit/Debit Cards</option>
-                            <option value="validID">Valid ID</option>
+                            <option value="Electronic gadget">Electronic gadget</option>
+                            <option value="Bag">Bag</option>
+                            <option value="Books">Books</option>
+                            <option value="Documents">Documents</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Cards">Cards</option>
+                            <option value="Id">Valid ID</option>
+                            <option value="Jewellery">Jewellery</option>
                         </select>
                         <input class="input medium" id="itemLocation" type="text" placeholder="Location where found" name="itemLocation" required>
                     </div>

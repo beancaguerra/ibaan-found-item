@@ -149,7 +149,7 @@ while($row=mysqli_fetch_assoc($result))
                         </div>
                         <div class="p-two">
                             <label for="email">Item Brand</label>
-                            <input type="text" id="itemBrand" placeholder="Enter Brand Name" name="itembrand" required>
+                            <input type="text" id="itemBrand" placeholder="Enter Brand Name of your Item" name="itembrand" required>
                         </div>
                         <div>
                             <label for="email">Item Color</label>
