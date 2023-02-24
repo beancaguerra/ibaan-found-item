@@ -71,7 +71,7 @@
                             <option value="Documents">Documents</option>
                             <option value="Cash">Cash</option>
                             <option value="Cards">Cards</option>
-                            <option value="Id">Valid ID</option>
+                            <option value="Id">ID</option>
                             <option value="Jewellery">Jewellery</option>
                         </select>
                         <input class="input medium" id="itemLocation" type="text" placeholder="Location where found" name="itemLocation" required>
