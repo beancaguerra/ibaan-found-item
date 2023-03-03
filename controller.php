@@ -57,9 +57,8 @@
                 // Configure Your Server To Send Mail From Local Host Link In Video Description (How To Config LocalHost Server)
                 $subject = 'Email Verification Code';
                 $message = "Your verification code is $code";
-                $sender = 'From: ibaan_founditem@gmail.com';
-                $password = 'gccz ifch xsrw xiyw';
-                
+                $sender = 'From: viabeanca.guerra@g.batstate-u.edu.ph';
+
                 if (mail($email, $subject, $message, $sender)) {
                     $message = "We've sent a verification code to your Email <br> $email";
 
@@ -156,8 +155,7 @@
                 if ($updateResult) {
                     $subject = 'Email Verification Code';
                     $message = "Your verification code is $code";
-                    $sender = 'From: ibaan_founditem@gmail.com';
-                    $password = 'gccz ifch xsrw xiyw';
+                    $sender = 'From: viabeanca.guerra@g.batstate-u.edu.ph';
 
                     if (mail($email, $subject, $message, $sender)) {
                         $message = "We've sent a verification code to your Email <br> $email";
