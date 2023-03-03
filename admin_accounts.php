@@ -43,12 +43,13 @@
                 <a href="admin_admin-accounts.php" class="msg-nav-child"><img src="./images/admin-ico.png" width="18" height="18" style="margin-right: 3px;">Admin</a>
             </div>
         </div>
-        <div class="search-bar">
+        <!--<div class="search-bar">
         <form class="search-box" action="search_account.php" method=POST>
                 <input class="search" type="text" name="accountId" size='20' placeholder="Search id...." required>
                 <button class="search-btn" title="Search" type="submit" name= "search"><img src="./images/search-icon.png" width="15" height="15"></button>
             </form>
         </div>
+        -->
         <main>
             <section class="forms-input">
                 <!--form inputs-->
