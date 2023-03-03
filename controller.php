@@ -58,7 +58,8 @@
                 $subject = 'Email Verification Code';
                 $message = "Your verification code is $code";
                 $sender = 'From: ibaan_founditem@gmail.com';
-
+                $password = 'gccz ifch xsrw xiyw';
+                
                 if (mail($email, $subject, $message, $sender)) {
                     $message = "We've sent a verification code to your Email <br> $email";
 
@@ -156,6 +157,7 @@
                     $subject = 'Email Verification Code';
                     $message = "Your verification code is $code";
                     $sender = 'From: ibaan_founditem@gmail.com';
+                    $password = 'gccz ifch xsrw xiyw';
 
                     if (mail($email, $subject, $message, $sender)) {
                         $message = "We've sent a verification code to your Email <br> $email";
