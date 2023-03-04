@@ -58,7 +58,7 @@
 
         
         <!--update form code-->
-        <section class= "profileCont" style="margin: 20px 0 0 250px;">
+        <section class= "profile" style="margin: 20px 0 0 250px;">
                 <div style="display: flex;
                             justify-content: center;
                             width: 100%;
@@ -169,8 +169,8 @@
         
         <style>
             @media screen and (min-width: 481px) and (max-width: 640px) {
-                .profileCont{
-                    margin-left: -497px;
+                .profile{
+                    margin-left: -897px;
                 }
             }
         </style>
