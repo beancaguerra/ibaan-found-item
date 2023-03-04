@@ -143,6 +143,12 @@
           width: 35%;
         }
       }
+      @media screen and (min-width: 640px) and (max-width: 840px) {
+        .send{
+          margin-left: 304px;
+          width: 26%;
+        }
+      }
     </style>
     <!--JavaScript Codes-->
     <script>

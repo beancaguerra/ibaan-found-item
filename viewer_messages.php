@@ -287,7 +287,9 @@
         function closeNav() {
             document.getElementById("navigation").style.display = "none";
             }
-        
+        function closeForm() {
+            document.getElementById("btnClose").style.display = "none";
+            }
 
         //code in messages
         function getMsg(xID,xfullName){
