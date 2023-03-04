@@ -267,6 +267,11 @@
             .main-msg{
                 width: 70%;
             }
+            .msg-text{
+                height:7%;
+                background-color: #cac9c7;
+                padding:12px;
+            }
             .msgTextbox{
                 line-height:18px;
                 min-height:18px;
