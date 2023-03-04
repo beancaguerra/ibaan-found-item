@@ -64,7 +64,7 @@
                             width: 100%;
                             height: 95%;">
 
-                    <div style="width: 85%;
+                    <div style="width: 100%;
                                 height: 95%;
                                 border-radius: 20px;
                                 border: 2px solid var(--color-gray);
