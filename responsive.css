@@ -251,7 +251,7 @@
         height: 75vh;
         border-radius: 20px;
         border: 2px solid var(--color-gray);
-        background-color: #fe6e00de;
+        background-color: #ffffffde;
     }
 }
 
@@ -379,7 +379,7 @@
         height: 75vh;
         border-radius: 20px;
         border: 2px solid var(--color-gray);
-        background-color: #fe6e00de;
+        background-color: #ffffffde;
     }
     .output-container{
         width: 93%;
