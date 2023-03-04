@@ -64,7 +64,7 @@
                             width: 100%;
                             height: 95%;">
 
-                    <div style="width: 85%;
+                    <div class= "profile_cont" style="width: 85%;
                                 height: 95%;
                                 border-radius: 20px;
                                 border: 2px solid var(--color-gray);
@@ -167,6 +167,14 @@
 
         <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop.png" alt="" width="60" height="50"></button>
         
+        <style>
+            @media screen and (min-width: 481px) and (max-width: 640px) {
+                .profile_cont{
+                    margin-left: 497px;
+                }
+            }
+        </style>
+
         <!--JavaScript Codes-->
         <script>
             //Get the button
