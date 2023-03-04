@@ -261,68 +261,9 @@
         }
 
         @media screen and (min-width: 356px) and (max-width: 840px) {
-            .card-container{
-            padding: 10px 20px 10px 0px;
-            font-size:18px;
-            }
-            .card-container:hover{
-                background-color: #ddd;
-                padding-left: 5px;
-            }
             .chat-list{
                 margin-left: 50px;
                 font-size: 12px;
-            }
-            .main-msg{
-                width:80%;
-                height:100%;
-            }
-
-            .msg-header{
-                height:5%;
-                font-size: 14px;
-            }
-
-            .msgTextbox{
-                line-height:18px;
-                min-height:18px;
-                font-size:10px;
-                width:90%;
-                margin-left:2%;
-            }
-            .sendMessage{
-                
-                line-height:25px;
-                min-height:25px;
-                font-size:1em;
-                width:19%;
-                margin-left:1%;
-            }
-
-            .sent{
-                display:block;
-                width:85%;
-            }
-            .received{
-                width:80%;
-            }
-
-
-            .xtestmessage{
-                float:left !important;
-                text-align:left;
-                display:inline-block;
-                background-color:rgba(100,100,100,0.2);
-                padding:10px 10px 10px 30px;
-                border-radius:15px;
-            }
-            .xtestmessage_sent{
-                float:right !important;
-                text-align:left;
-                display:inline-block;
-                background-color: #ec9006bc;
-                padding:10px 30px 10px 10px;
-                border-radius:15px;
             }
 
         }
