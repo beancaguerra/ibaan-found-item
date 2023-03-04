@@ -94,7 +94,7 @@
 <style>
     @media screen and (max-width: 900px){
         .detail-.box{
-            width: 334px;
+            width: 100%;
             margin-left: -93px;
         }
         #alert {
