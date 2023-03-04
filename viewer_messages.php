@@ -167,10 +167,8 @@
         }
 
         .msg-text{
-            height:10%;
-            background-color: #cac9c7;
-            margin-top: 18px;
-            padding:16px;
+            height:7%;
+            padding:12px;
         }
         .msgTextbox{
             line-height:28px;
@@ -269,13 +267,25 @@
             .main-msg{
                 width: 70%;
             }
+            .msgTextbox{
+                line-height:18px;
+                min-height:18px;
+                font-size:10px;
+                text-align:right;
+                border-radius:9px;
+                border:1px solid rgba(0,0,0,0.1);
+                width:65%;
+                margin-top: -10%;
+                padding:5px 30px 5px 20px;
+                margin-left:1%;
+            }
             .sendMessage{
                 line-height:15px;
                 min-height:15px;
                 text-align:center;
                 border-radius:5px;
                 border:1px solid rgba(0,0,0,0.1);
-                width:8%;
+                width:15%;
                 margin-left:1%;
             }
 
