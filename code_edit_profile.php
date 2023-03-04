@@ -185,7 +185,7 @@
 
             @media screen and (min-width: 482px) and (max-width: 767px) {
                 .box_one{
-                    
+                    margin-left:18px;
                 }
             }
         </style>
