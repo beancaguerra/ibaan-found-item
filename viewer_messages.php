@@ -262,7 +262,7 @@
 
         @media screen and (min-width: 356px) and (max-width: 840px) {
             .chat-list{
-                margin-left: 10%;
+                margin-left: 50px;
             }
         }
     </style>
