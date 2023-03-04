@@ -40,14 +40,14 @@
   <!-- End Header -->
   <div class="offer_section">
         <div class="offer_container" style="padding: 0px;">
-            <div style="padding: 20px 20% 30px 20%; width: 100%; height: 88vh;">
+            <div style="padding-top: 5%; width: 100%; height: 88vh;">
                 <div class="col-md justify-content-center">
                     <div class="">
                         <div class="detail-box">
                             <div class="vh-100">
                                 <div class="py-12 h-100">
                                     <div class="row d-flex justify-content-center align-items-center h-100">
-                                        <div class="col-10 col-md-10 col-lg-10 col-xl-10">
+                                        <div class="col-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592);">
                                                 <div class="card-body p-4">
                                                     <div class="mb-md-4 mt-md-4 pb-4">
@@ -97,18 +97,6 @@
     </div>
 </div>
 </body>
-<style>
-    @media screen and (max-width: 900px){
-        .detail-box{
-            width: 100%;
-            margin-left: -138px;
-        }
-        #alert {
-            font-size: 12px;
-        }
-    }
-</style>
-
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
