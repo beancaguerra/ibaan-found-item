@@ -266,6 +266,9 @@
                 margin-left: 50px;
                 font-size: 12px;
             }
+            .main-msg{
+                width: 100%;
+            }
 
         }
     </style>
