@@ -58,13 +58,13 @@
 
         
         <!--update form code-->
-        <section style="margin: 20px 0 0 250px;">
+        <section class= "profileCont" style="margin: 20px 0 0 250px;">
                 <div style="display: flex;
                             justify-content: center;
                             width: 100%;
                             height: 95%;">
 
-                    <div class= "profileCont" style="width: 85%;
+                    <div  style="width: 85%;
                                 height: 95%;
                                 border-radius: 20px;
                                 border: 2px solid var(--color-gray);
