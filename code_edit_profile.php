@@ -58,19 +58,9 @@
 
         
         <!--update form code-->
-        <section  style="margin: 20px 0 0 250px;">
-                <div class= "edit_profile" style="display: flex;
-                            justify-content: center;
-                            width: 100%;
-                            height: 95%;">
-
-                    <div  style="width: 85%;
-                                height: 95%;
-                                border-radius: 20px;
-                                border: 2px solid var(--color-gray);
-                                box-shadow:  1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
-                                background-color: #ffffff;
-                                padding: 0 5px;">
+        <section class="box_one">
+                <div class="box_two">
+                    <div class="box_three">
 
                         <?php
 
@@ -168,10 +158,28 @@
         <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./images/backtop.png" alt="" width="60" height="50"></button>
         
         <style>
+            .box_one{
+                margin: 20px 0 0 250px;
+            }
+            .box_two{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 95%;
+            }
+            .box_three{
+                width: 85%;
+                height: 95%;
+                border-radius: 20px;
+                border: 2px solid var(--color-gray);
+                box-shadow:  1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+                background-color: #ffffff;
+                padding: 0 5px;
+            }
             @media screen and (min-width: 481px) and (max-width: 640px) {
-                .edit_profile{
-                    margin-left: -897px;
-                    width: 100%;
+                .box_one{
+                    margin-left: 60px;
+                    width: 80%;
                 }
             }
         </style>
