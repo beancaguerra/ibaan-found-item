@@ -285,7 +285,7 @@
                 text-align:center;
                 border-radius:15px;
                 border:1px solid rgba(0,0,0,0.1);
-                width:18%;
+                width:32%;
                 margin-left:1%;
             }
 
