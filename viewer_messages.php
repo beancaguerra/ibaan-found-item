@@ -168,6 +168,7 @@
 
         .msg-text{
             height:7%;
+            background-color: #cac9c7;
             padding:12px;
         }
         .msgTextbox{
