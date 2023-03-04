@@ -280,8 +280,8 @@
                 margin-left:1%;
             }
             .sendMessage{
-                line-height:15px;
-                min-height:15px;
+                line-height:23px;
+                min-height:23px;
                 text-align:center;
                 border-radius:15px;
                 border:1px solid rgba(0,0,0,0.1);
