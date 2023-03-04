@@ -167,7 +167,7 @@
         }
 
         .msg-text{
-            height:13%;
+            height:9%;
             background-color: #cac9c7;
             padding:12px;
         }
