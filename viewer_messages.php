@@ -152,6 +152,7 @@
             position:fixed;
             height:100%;
             border-left:1px solid #dddddd;
+            border-right:1px solid #dddddd;
         }
 
         .msg-header{
