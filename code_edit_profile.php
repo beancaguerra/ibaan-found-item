@@ -171,6 +171,7 @@
             @media screen and (min-width: 481px) and (max-width: 640px) {
                 .edit_profile{
                     margin-left: -897px;
+                    width: 100%;
                 }
             }
         </style>
