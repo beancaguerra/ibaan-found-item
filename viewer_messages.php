@@ -289,6 +289,23 @@
                 margin-left:1%;
             }
 
+            .sent{
+                float:right !important;
+                padding:3px;
+                display:block;
+                width:60%;
+                word-wrap: break-word;
+                font-size:8px;
+            }
+            .received{
+                float:left !important;
+                padding:3px;
+                display:block;
+                width:60%;
+                word-wrap: break-word;
+                font-size:8px;
+            }
+
         }
     </style>
     <script type="text/javascript">
