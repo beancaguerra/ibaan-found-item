@@ -303,7 +303,7 @@
                 display:block;
                 width:60%;
                 word-wrap: break-word;
-                font-size:8px;
+                font-size:10px;
             }
 
         }
