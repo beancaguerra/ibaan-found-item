@@ -265,7 +265,71 @@
                 font-size: 12px;
             }
             .msg-header{
+                height:5%;
+                padding-left:10px;
+                background-color: #f1f1f1;
+            }
+            .msg-container{
+                min-height:55%;
+                max-height:55%;
+                overflow-y:auto;
+            }
+            .main-msg{
+                width: 70%;
+            }
+            .msg-text{
                 height:7%;
+                background-color: #cac9c7;
+                padding:12px;
+            }
+            .msgTextbox{
+                line-height:18px;
+                min-height:18px;
+                font-size:10px;
+                text-align:right;
+                border-radius:9px;
+                border:1px solid rgba(0,0,0,0.1);
+                width:65%;
+                margin-top: -10%;
+                padding:5px 30px 5px 20px;
+                margin-left:1%;
+            }
+            .sendMessage{
+                line-height:23px;
+                min-height:23px;
+                text-align:center;
+                border-radius:15px;
+                border:1px solid rgba(0,0,0,0.1);
+                width:32%;
+                margin-left:1%;
+            }
+
+            .sent{
+                float:right !important;
+                padding:3px;
+                display:block;
+                width:60%;
+                word-wrap: break-word;
+                font-size:8px;
+            }
+            .received{
+                float:left !important;
+                padding:3px;
+                display:block;
+                width:60%;
+                word-wrap: break-word;
+                font-size:10px;
+            }
+
+        }
+
+        @media screen and (min-width: 841px) and (max-width: 900px) {
+            .chat-list{
+                margin-left: 50px;
+                font-size: 12px;
+            }
+            .msg-header{
+                height:5%;
                 padding-left:10px;
                 background-color: #f1f1f1;
             }
