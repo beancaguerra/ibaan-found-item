@@ -58,8 +58,8 @@
 
         
         <!--update form code-->
-        <section class= "edit_profile" style="margin: 20px 0 0 250px;">
-                <div style="display: flex;
+        <section  style="margin: 20px 0 0 250px;">
+                <div class= "edit_profile" style="display: flex;
                             justify-content: center;
                             width: 100%;
                             height: 95%;">
