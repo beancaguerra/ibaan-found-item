@@ -167,7 +167,7 @@
         }
 
         .msg-text{
-            height:7%;
+            height:13%;
             background-color: #cac9c7;
             padding:12px;
         }
@@ -307,6 +307,7 @@
             }
 
         }
+
     </style>
     <script type="text/javascript">
         //Get the button
