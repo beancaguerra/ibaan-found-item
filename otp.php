@@ -47,7 +47,7 @@
                             <div class="vh-100">
                                 <div class="py-12 h-100">
                                     <div class="row d-flex justify-content-center align-items-center h-100">
-                                        <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+                                        <div class="col-12 col-md-5 col-lg-5 col-xl-5">
                                             <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592);">
                                                 <div class="card-body p-4">
                                                     <div class="mb-md-4 mt-md-4 pb-4">
