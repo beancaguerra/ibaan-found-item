@@ -42,7 +42,7 @@
   <!-- End Header -->
   <div class="offer_section">
         <div class="offer_container" style="padding: 0px;">
-            <div style="padding: 20px 20% 30px 20%; width: 100%; height: 88vh;">
+            <div style="padding-top: 5%; width: 100%; height: 88vh;">
                 <!-- log in form -->
                 <div class="col-md justify-content-center">
                     <div class="">
@@ -50,7 +50,7 @@
                             <div class="vh-100">
                                 <div class="py-12 h-100">
                                     <div class="row d-flex justify-content-center align-items-center h-100">
-                                        <div class="col-10 col-md-10 col-lg-10 col-xl-10">
+                                        <div class="col-12 col-md-5 col-lg-5 col-xl-5">
                                             <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592);">
                                                 <div class="card-body p-4">
                                                     <div class="mb-md-4 mt-md-4 pb-4">
