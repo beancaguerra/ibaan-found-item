@@ -176,7 +176,7 @@
                 background-color: #ffffff;
                 padding: 0 5px;
             }
-            @media screen and (min-width: 481px) and (max-width: 640px) {
+            @media screen and (min-width: 346px) and (max-width: 560px) {
                 .box_one{
                     margin-left: 60px;
                     width: 80%;
