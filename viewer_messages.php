@@ -264,6 +264,16 @@
                 margin-left: 50px;
                 font-size: 12px;
             }
+            .msg-header{
+                height:5%;
+                padding-left:10px;
+                background-color: #f1f1f1;
+            }
+            .msg-container{
+                min-height:55%;
+                max-height:55%;
+                overflow-y:auto;
+            }
             .main-msg{
                 width: 70%;
             }
