@@ -176,10 +176,16 @@
                 background-color: #ffffff;
                 padding: 0 5px;
             }
-            @media screen and (min-width: 346px) and (max-width: 560px) {
+            @media screen and (max-width: 480px) {
                 .box_one{
                     margin-left: 28px;
                     width: 90%;
+                }
+            }
+
+            @media screen and (min-width: 482px) and (max-width: 767px) {
+                .box_one{
+                    
                 }
             }
         </style>
