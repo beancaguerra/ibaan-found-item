@@ -259,7 +259,7 @@
             width:50% !important;
         }
 
-        @media screen and (min-width: 356px) and (max-width: 840px) {
+        @media screen and (min-width: 356px) and (max-width: 540px) {
             .chat-list{
                 margin-left: 50px;
                 font-size: 12px;
@@ -323,7 +323,7 @@
 
         }
 
-        @media screen and (min-width: 841px) and (max-width: 900px) {
+        @media screen and (min-width: 541px) and (max-width: 767px) {
             .chat-list{
                 margin-left: 50px;
                 font-size: 12px;
