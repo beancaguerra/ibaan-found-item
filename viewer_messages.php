@@ -259,6 +259,12 @@
         .xqr{
             width:50% !important;
         }
+
+        @media screen and (min-width: 356px) and (max-width: 840px) {
+            .chat-list{
+                margin-left: 10%;
+            }
+        }
     </style>
     <script type="text/javascript">
         //Get the button
