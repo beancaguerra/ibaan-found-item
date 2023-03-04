@@ -178,8 +178,8 @@
             }
             @media screen and (min-width: 346px) and (max-width: 560px) {
                 .box_one{
-                    margin-left: 60px;
-                    width: 80%;
+                    margin-left: 55px;
+                    width: 84%;
                 }
             }
         </style>
