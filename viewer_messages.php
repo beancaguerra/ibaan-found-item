@@ -269,6 +269,15 @@
             .main-msg{
                 width: 70%;
             }
+            .sendMessage{
+                line-height:15px;
+                min-height:15px;
+                text-align:center;
+                border-radius:5px;
+                border:1px solid rgba(0,0,0,0.1);
+                width:8%;
+                margin-left:1%;
+            }
 
         }
     </style>
