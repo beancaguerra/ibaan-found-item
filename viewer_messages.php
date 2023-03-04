@@ -265,7 +265,7 @@
                 font-size: 12px;
             }
             .msg-header{
-                height:5%;
+                height:7%;
                 padding-left:10px;
                 background-color: #f1f1f1;
             }
