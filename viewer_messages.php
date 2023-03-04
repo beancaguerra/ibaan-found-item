@@ -36,7 +36,6 @@
                     <div class="burger --two"></div>
                     <div class="burger --three"></div>
                 </div>
-                <h3><img src="./images/menu-logo.png" height="18" width="18">Menu</h3>
                 <div class="nav-links">
                     <a href="viewer_home.php" class="nav-link"><img src="./images/home-icon.png" width="18" height="18" style="margin-right: 3px;">Home</a>
                     <a href="viewer-found.php" class="nav-link"><img src="./images/found-img.png" width="18" height="18" style="margin-right: 3px;">Found Item</a>
@@ -286,9 +285,6 @@
             }
         function closeNav() {
             document.getElementById("navigation").style.display = "none";
-            }
-        function closeForm() {
-            document.getElementById("btnClose").style.display = "none";
             }
 
         //code in messages
