@@ -267,7 +267,7 @@
                 font-size: 12px;
             }
             .main-msg{
-                width: 78%;
+                width: 70%;
             }
 
         }
