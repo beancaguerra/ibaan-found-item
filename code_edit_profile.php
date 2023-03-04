@@ -64,7 +64,7 @@
                             width: 100%;
                             height: 95%;">
 
-                    <div class= "profile_cont" style="width: 85%;
+                    <div class= "profileCont" style="width: 85%;
                                 height: 95%;
                                 border-radius: 20px;
                                 border: 2px solid var(--color-gray);
@@ -169,8 +169,8 @@
         
         <style>
             @media screen and (min-width: 481px) and (max-width: 640px) {
-                .profile_cont{
-                    margin-left: 497px;
+                .profileCont{
+                    margin-left: -497px;
                 }
             }
         </style>
