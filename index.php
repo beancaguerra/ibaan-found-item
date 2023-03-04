@@ -93,13 +93,13 @@
                                             }
                                         }
                                         ?>
-                                        <div class="form-outline form-white" style="width: 315px; margin-bottom:15px;">
+                                        <div class="form-outline form-white" style="width: 100%; margin-bottom:15px;">
                                             <label for="email">Email</label>
                                             <input type="email" id="typeEmailX" class="form-control form-control-sm" id="email" name="email" placeholder="Enter your email..." required />
                                             
                                         </div>
 
-                                        <div class="form-outline form-white" style="width: 315px; margin-bottom:15px;">
+                                        <div class="form-outline form-white" style="width: 100%; margin-bottom:15px;">
                                             <label for="password">Password</label>
                                             <input type="password" id="pass" class="form-control form-control-sm" name="password" placeholder="Enter your password..." required/>
                                             
@@ -432,7 +432,7 @@
         @media screen and (min-width: 308px) and (max-width: 389px) {
             .signin{
                 width: 88%;
-                margin-left:2%;
+                margin-left:4%;
                 margin-top: -92px;
             }
             .card-registration{
