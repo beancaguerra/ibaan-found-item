@@ -53,7 +53,7 @@
                                             <div class="text-white" style="background-color: rgba(0, 0, 0, 0.592);">
                                                 <div class="card-body p-4">
                                                     <div class="mb-md-4 mt-md-4 pb-4">
-                                                    <h2>Check Email</h2>
+                                                    <h3>Check Email</h3>
                                                     <hr class="mb-2">
                                                     <form action="forgot.php" method="POST" autocomplete="off">
                                                         <?php
