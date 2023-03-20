@@ -4,9 +4,9 @@ include 'config.php';
 
 if($environment == "prod"){
 
-    $dbname = "u538504999_ibaanrecord_db";
+    $dbname = "u760610992_ibaanrecord_db"; //"u538504999_ibaanrecord_db";
     // Create connection
-    $conn = mysqli_connect("localhost", "u538504999_ibaanrecord", "Ibaan@Record!22",$dbname);
+    $conn = mysqli_connect("localhost", /*"u538504999_ibaanrecord"*/ "u760610992_ibaanrecord", "Ibaan@Record!22",$dbname);
 }
 else{
     $dbServername = "localhost";
