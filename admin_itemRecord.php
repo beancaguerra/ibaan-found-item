@@ -77,7 +77,7 @@
                         <input class="input medium" id="itemLocation" type="text" placeholder="Location where found" name="itemLocation" required>
                     </div>
                    <div class="third-three">
-                        <input class="input small" id="itemBrand" type="text" placeholder="Item Found..." name="itemBrand" required>
+                        <input class="input small" id="itemBrand" type="text" placeholder="Item Brand..." name="itemBrand" required>
                         <select class="input small" name="itemColor" id="itemColor">
                             <option>Select Color</option>
                             <option value="not applicable">not applicable</option>
