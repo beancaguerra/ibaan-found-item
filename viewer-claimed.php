@@ -87,26 +87,31 @@
                     {
                     ?>
                         <div class='output-cont-child'>
+                            <!--
                             <div class="output-one output">
-                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Finder: </span><?php echo $row['clfinder']; ?></p>
-                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact: </span><?php echo $row['clcontact']; ?></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Finder: </span><//?php echo $row['clfinder']; ?></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Contact: </span><//?php echo $row['clcontact']; ?></p>
                             </div>
+                            -->
                              <div class="output-two output">
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['clitemno']; ?></p>
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['clitemCategory']; ?></p>
                             </div>
+                            <!--
                             <div class="output-three output">
-                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'> Time </span><?php echo $row['cltime']; ?></p>
-                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'> Date </span><?php echo $row['cldate']; ?></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'> Time </span><//?php echo $row['cltime']; ?></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'> Date </span><//?php echo $row['cldate']; ?></p>
                             </div>
-                            <div class="output-four output">
-                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Description: </span><?php echo $row['clitemDescription']; ?></p>
-                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><?php echo $row['clitemLocation']; ?></p>
+                             <div class="output-four output">
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Description: </span><//?php echo $row['clitemDescription']; ?></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><//?php echo $row['clitemLocation']; ?></p>
                             </div>
+                            -->
                             <div class="output-five output" style="background-color: #ddd;">
                                 <p class="p-one" style='font-style: italic;'><span style='color:#ec9006; font-weight:700; margin-right: 20px; font-style: italic;'>Owner: </span><?php echo $row['owner']; ?></p>
                                 <p class="p-two" style='font-style: italic;'><span style='color:#ec9006; font-weight:700; margin-right: 20px; font-style: italic;'>Recieved at: </span><?php echo $row['tdclaimed']; ?></p>
                             </div>
+                            
                         </div>
                         <?php
                     }
