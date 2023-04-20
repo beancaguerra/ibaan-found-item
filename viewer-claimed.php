@@ -97,11 +97,12 @@
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item No: </span><?php echo $row['clitemno']; ?></p>
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Category: </span><?php echo $row['clitemCategory']; ?></p>
                             </div>
-                            <!--
+                            
                             <div class="output-three output">
-                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'> Time </span><//?php echo $row['cltime']; ?></p>
-                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'> Date </span><//?php echo $row['cldate']; ?></p>
+                                <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'> Time </span><?php echo $row['cltime']; ?></p>
+                                <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'> Date </span><?php echo $row['cldate']; ?></p>
                             </div>
+                            <!--
                              <div class="output-four output">
                                 <p class="p-one"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Description: </span><//?php echo $row['clitemDescription']; ?></p>
                                 <p class="p-two"><span style='color:#ec9006; font-weight:700; margin-right: 20px;'>Item Location: </span><//?php echo $row['clitemLocation']; ?></p>
